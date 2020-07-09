@@ -1,0 +1,23 @@
+<UI version="4.0" >
+ <class>textedit</class>
+ <widget class="QWidget" name="textedit" >
+  <property name="objectName" >
+   <string notr="true">textedit</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>400</width>
+	<height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>textedit</string>
+  </property>
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</UI>

@@ -1,0 +1,6 @@
+﻿  Server.cpp
+  Service.cpp
+d:\lavoro\server\server\server\utente.h(44): warning C4717: 'qHash': funzione ricorsiva su tutti i percorsi di controlli, provocherà un overflow dello stack in fase di esecuzione
+d:\lavoro\server\server\server\file.h(34): warning C4717: 'qHash': funzione ricorsiva su tutti i percorsi di controlli, provocherà un overflow dello stack in fase di esecuzione
+d:\lavoro\server\server\server\service.cpp(96): warning C4715: 'Service::getUserFromPort': non tutti i percorsi di controllo restituiscono un valore
+  Server.vcxproj -> D:\Lavoro\Server\Server\x64\Release\Server.exe

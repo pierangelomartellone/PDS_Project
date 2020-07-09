@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileExplorerWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFirstWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Serialize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Symbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRDT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ProgettoGUI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyFirstWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FileExplorerWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="textedit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Serialize.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RegisterWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ProgettoGUI.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MyFirstWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="textedit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Widget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="FileExplorerWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="RegisterWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Symbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CRDT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\bold.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\copy.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\cut.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\italic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\login.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\new.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\open.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\paste.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\save.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\underline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\textright.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\textleft.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\textjustify.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\textcenter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\register.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\print.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\exportpdf.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\fileExplorer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\defaultpic.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ProgettoGUI.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ProgettoGUI.qrc">
+      <Filter>Source Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>
