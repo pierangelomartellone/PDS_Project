@@ -95,14 +95,17 @@ Message CRDT::localInsert(int index, char value, QFont f, QColor c){    //index,
 	std::vector<int> temp;
 	Symbol s(this->_counter, this->_siteId, value, f, c);
 
+	if(index==0) {
+	temp = { 0 };
+		}
 
-	if (index >= this->_symbols.size()) { //caso di inserimento in coda o in qualunque caso in cui inserisco direttamente nella casella index 
+	else if (index >= this->_symbols.size()) { //caso di inserimento in coda o in qualunque caso in cui inserisco direttamente nella casella index 
 		temp.push_back(index); //l'indice in cui inserisco diventa la parte frazionaria (intero)
 		s.Initialize(temp); //inizializzo la parte frazionaria
 		this->_symbols.insert(this->_symbols.begin() + index, s);
 		this->_counter++;
 	}
-	//qui c'è un bug quando index = 0 CORREGGERE
+	
 	else if (this->_symbols[index - 1].getFrz().size() == this->_symbols[index].getFrz().size()) 
 	{
 		temp = this->_symbols[index - 1].getFrz();
