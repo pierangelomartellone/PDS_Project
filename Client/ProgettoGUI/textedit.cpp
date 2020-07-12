@@ -587,6 +587,8 @@ bool TextEdit::fileSave()
 	// setup timer
 	QTimer::singleShot(3000, qPopup, &QLabel::hide);
 
+	Controller::getInstance().saveFile(this->fileName.toStdString());
+
 	//updateText();
 	return true;
 	//	return fileSaveAs();

@@ -1,1 +1,2 @@
 C:\Users\marte\source\repos\pmartellone13\PDS_Project\Server\Server\x64\Debug\Server.exe
+C:\Users\simon\source\repos\PDS_Project\Server\Server\x64\Debug\Server.exe
