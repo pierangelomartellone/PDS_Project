@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'RegisterWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.0
+** Created by: Qt User Interface Compiler version 5.12.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -50,9 +50,9 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(RegisterWindow->sizePolicy().hasHeightForWidth());
         RegisterWindow->setSizePolicy(sizePolicy);
-#if QT_CONFIG(whatsthis)
+#ifndef QT_NO_WHATSTHIS
         RegisterWindow->setWhatsThis(QString::fromUtf8(""));
-#endif // QT_CONFIG(whatsthis)
+#endif // QT_NO_WHATSTHIS
         RegisterWindow->setWindowFilePath(QString::fromUtf8(""));
         verticalLayoutWidget = new QWidget(RegisterWindow);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
@@ -437,14 +437,14 @@ public:
 
     void retranslateUi(QWidget *RegisterWindow)
     {
-        RegisterWindow->setWindowTitle(QCoreApplication::translate("RegisterWindow", "New User", nullptr));
+        RegisterWindow->setWindowTitle(QApplication::translate("RegisterWindow", "New User", nullptr));
         picture->setText(QString());
-        pictureDescription->setText(QCoreApplication::translate("RegisterWindow", "Drop your profile picture above", nullptr));
-        userLabel->setText(QCoreApplication::translate("RegisterWindow", "Username", nullptr));
-        passLabel->setText(QCoreApplication::translate("RegisterWindow", "Password", nullptr));
-        pushButton->setText(QCoreApplication::translate("RegisterWindow", "Sign up", nullptr));
-        loginButton->setText(QCoreApplication::translate("RegisterWindow", "Already registered?", nullptr));
-        errorDescription->setText(QCoreApplication::translate("RegisterWindow", "Sorry, already existing username", nullptr));
+        pictureDescription->setText(QApplication::translate("RegisterWindow", "Drop your profile picture above", nullptr));
+        userLabel->setText(QApplication::translate("RegisterWindow", "Username", nullptr));
+        passLabel->setText(QApplication::translate("RegisterWindow", "Password", nullptr));
+        pushButton->setText(QApplication::translate("RegisterWindow", "Sign up", nullptr));
+        loginButton->setText(QApplication::translate("RegisterWindow", "Already registered?", nullptr));
+        errorDescription->setText(QApplication::translate("RegisterWindow", "Sorry, already existing username", nullptr));
     } // retranslateUi
 
 };

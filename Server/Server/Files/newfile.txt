@@ -1,1 +1,7 @@
-fff
+{"Sid":0,"blue":0,"carattere":0,"counter":0,"font":",8.25,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[0],"red":0}
+{"Sid":2,"blue":0,"carattere":101,"counter":1,"font":",20,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[1],"red":0}
+{"Sid":2,"blue":0,"carattere":115,"counter":2,"font":",20,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[2],"red":0}
+{"Sid":2,"blue":0,"carattere":97,"counter":3,"font":",20,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[3],"red":0}
+{"Sid":2,"blue":0,"carattere":100,"counter":4,"font":",20,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[4],"red":0}
+{"Sid":2,"blue":0,"carattere":100,"counter":5,"font":",20,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[5],"red":0}
+{"Sid":2,"blue":0,"carattere":115,"counter":6,"font":",20,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[6],"red":0}

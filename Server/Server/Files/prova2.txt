@@ -1,1 +1,1 @@
-Questa prova dal server seconda prova
+{"Sid":0,"blue":0,"carattere":0,"counter":0,"font":",8.25,-1,5,50,0,0,0,0,0","green":0,"parte_frazionaria":[0],"red":0}

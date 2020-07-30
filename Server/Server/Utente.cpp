@@ -10,6 +10,7 @@ Utente::Utente(int id, std::string username, std::string password)
 	this->id = id;
 	this->username = username;
 	this->password = password;
+	this->withimage = false;
 }
 
 
