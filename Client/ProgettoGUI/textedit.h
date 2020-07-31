@@ -25,7 +25,7 @@ public:
 	bool cursorMovefromUpdate = false;
 	bool changedFormat = false;
 	bool cursorMovefromAlignement = false;
-	//bool cursorMovefromEnableAlign = false;
+	bool cursorMovefromBlockFormat = false;
 
 public slots:
 	void fileNew();
@@ -50,6 +50,8 @@ private slots:
 	void textStyle(int styleIndex);
 	void textColor();
 	int getAlignmentCode(Qt::Alignment align);
+	void showColorsfromUsers();
+	void showLink();
 	void textAlign(QAction *a);
 
 	void currentCharFormatChanged(const QTextCharFormat &format);
@@ -74,6 +76,7 @@ private:
 	void colorChanged(const QColor &c);
 	void alignmentChanged(Qt::Alignment a);
 	void enableAlignment();
+	int findStartBlock(int pos);
 	int findEndBlock(int pos);
 	void textChanged();
 	QFont produceFontwithAlignment(QString s, int alignCode);

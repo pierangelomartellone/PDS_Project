@@ -5,14 +5,17 @@
         <file>images/cut.png</file>
         <file>images/italic.png</file>
         <file>images/login.png</file>
+		<file>images/mainicon.png</file>
         <file>images/new.png</file>
         <file>images/open.png</file>
         <file>images/paste.png</file>
         <file>images/save.png</file>
+		<file>images/share.png</file>
         <file>images/textcenter.png</file>
         <file>images/textjustify.png</file>
         <file>images/textleft.png</file>
         <file>images/textright.png</file>
+		<file>images/type.png</file>
         <file>images/exportpdf.png</file>
         <file>images/print.png</file>	
         <file>images/underline.png</file>

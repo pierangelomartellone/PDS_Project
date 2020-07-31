@@ -17,7 +17,7 @@ Controller& Controller::getInstance()
 
 int Controller::connectSocket()
 {
-	int porta = 4200; // scegliere porta
+	int porta = 1500; // scegliere porta
 	socket = new QTcpSocket();
 	socket->connectToHost("localhost", porta);
 	if (socket->waitForConnected(WAITING_TIME)) {

@@ -106,10 +106,26 @@ void RegisterWindow::dropEvent(QDropEvent *e) {
 		if (checkFile.exists() && checkFile.isFile()) {
 			QResource::registerResource(pathstr);
 			QPixmap *nuovaimm = new QPixmap(pathstr);
-			QRect rect(0, 0, IMAGE_DIM, IMAGE_DIM);
-			QPixmap cropped = nuovaimm->copy(rect);
-			ui.picture->setPixmap(*nuovaimm);
-			myimage = cropped;
+			int *start = new int;
+			QRect *rect = new QRect;
+			/*	Clip	*/
+			if (nuovaimm->width() > nuovaimm->height()) {
+				*start = std::round((nuovaimm->width() - nuovaimm->height()) / 2);
+				*rect = QRect(*start, 0, nuovaimm->height(), nuovaimm->height());
+			}
+			else {
+				*start = std::round((nuovaimm->height() - nuovaimm->width()) / 2);
+				*rect = QRect(0, *start, nuovaimm->width(), nuovaimm->width());
+			}
+			QPixmap clipped = nuovaimm->copy(*rect);
+			if (clipped.width() > IMAGE_DIM) {
+				*start = std::round((clipped.width() - IMAGE_DIM) / 2);
+				*rect = QRect(*start, *start, IMAGE_DIM, IMAGE_DIM);
+				clipped = clipped.copy(*rect);
+			}
+			
+			ui.picture->setPixmap(clipped);
+			myimage = clipped;
 		}
 
 	}

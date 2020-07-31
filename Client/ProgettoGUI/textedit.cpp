@@ -302,6 +302,7 @@ void TextEdit::setupTextActions()
 	actionAlignJustify->setCheckable(true);
 	actionAlignJustify->setPriority(QAction::LowPriority);
 
+
 	// Make sure the alignLeft  is always left of the alignRight
 	QActionGroup *alignGroup = new QActionGroup(this);
 	connect(alignGroup, &QActionGroup::triggered, this, &TextEdit::textAlign);
@@ -329,11 +330,24 @@ void TextEdit::setupTextActions()
 	tb->addAction(actionTextColor);
 
 	menu->addSeparator();
+	tb->addSeparator();
 
-	const QIcon shareLinkIcon = QIcon::fromTheme("sharing-link", QIcon(rsrcPath + "/share.png"));
-	//actionTextUnderline = menu->addAction(underlineIcon, tr("&Underline"), this, &TextEdit::textUnderline);
-	//actionTextUnderline->setShortcut(Qt::CTRL + Qt::Key_U);
-	//actionTextUnderline->setPriority(QAction::LowPriority);
+	////
+	QActionGroup *alignGroup2 = new QActionGroup(this);
+	const QIcon shareLinkIcon = QIcon(rsrcPath + "/share.png");
+	QAction* actionSharingLink = menu->addAction(shareLinkIcon, tr("&Share"), this, &TextEdit::showLink);
+	actionSharingLink->setShortcut(Qt::CTRL + Qt::Key_Q);
+	actionSharingLink->setPriority(QAction::LowPriority);
+	alignGroup2->addAction(actionSharingLink);
+
+	const QIcon userColorsIcon = QIcon(rsrcPath + "/type.png");
+	QAction* actionColorsfromUsers = menu->addAction(userColorsIcon, tr("&Who typed"), this, &TextEdit::showColorsfromUsers);
+	actionColorsfromUsers->setShortcut(Qt::CTRL + Qt::Key_P);
+	actionColorsfromUsers->setPriority(QAction::LowPriority);
+	alignGroup2->addAction(actionColorsfromUsers);
+
+	tb->addActions(alignGroup2->actions());
+	menu->addActions(alignGroup2->actions());
 
 	tb = addToolBar(tr("Format Actions"));
 	tb->setAllowedAreas(Qt::TopToolBarArea | Qt::BottomToolBarArea);
@@ -485,6 +499,7 @@ bool TextEdit::load(const QString &f)
 
 	setCurrentFileName(f);
 	Controller::getInstance().openFile(f.toStdString());
+	textEdit->setAlignment(Qt::AlignLeft | Qt::AlignAbsolute);
 	setSavingTimer();
 	updateTextAll();
 	updateCursor(-1);
@@ -515,6 +530,7 @@ bool TextEdit::loadnew(const QString &f)
 
 	setCurrentFileName(f);
 	Controller::getInstance().newFile(f.toStdString());
+	textEdit->setAlignment(Qt::AlignLeft | Qt::AlignAbsolute);
 	setSavingTimer();
 	updateTextAll();
 	updateCursor(-1);
@@ -586,8 +602,6 @@ bool TextEdit::fileSave()
 	qPopup->show();
 	// setup timer
 	QTimer::singleShot(3000, qPopup, &QLabel::hide);
-
-	Controller::getInstance().saveFile(this->fileName.toStdString());
 
 	//updateText();
 	return true;
@@ -804,6 +818,18 @@ int TextEdit::getAlignmentCode(Qt::Alignment align) {
 		return 8;
 	else if (align == 18)
 		return 2;
+	else if (align == 17)
+		return 1;
+
+	return 1;
+}
+
+void TextEdit::showColorsfromUsers() {
+	qDebug() << "userTyped";
+}
+
+void TextEdit::showLink() {
+	qDebug() << "showLink";
 }
 
 void TextEdit::textAlign(QAction *a)
@@ -822,16 +848,33 @@ void TextEdit::textAlign(QAction *a)
 }
 
 void TextEdit::enableAlignment() {
-	char vuota = 255;
+	QString testo = this->lastText;
 	QTextCursor currentCursor = textEdit->textCursor();
-	int newpos = findEndBlock(currentCursor.position());
-	currentCursor.setPosition(newpos, QTextCursor::MoveAnchor);
-	lastCursor = currentCursor.position();
-	currentCursor.insertText(QString(vuota));
+	int startbl = findStartBlock(currentCursor.position());
+	int endbl = findEndBlock(currentCursor.position());
+
+	QString textbl = testo.mid(startbl, endbl);
+	currentCursor.setPosition(endbl, QTextCursor::MoveAnchor);
+	currentCursor.setPosition(startbl, QTextCursor::KeepAnchor);
+	currentCursor.deleteChar();
+
+	// ogni cambiamento si mette il cursore attuale alla fine
+	//lastCursor = currentCursor.position();
+	currentCursor.insertText(QString(textbl));
 }
 
+int TextEdit::findStartBlock(int pos) {
+	QString testo = textEdit->toPlainText();
+	for (int i = pos - 1; i >= 0; i--) {
+		if (testo[i] == '\n') {
+			return i + 1;
+		}
+	}
+	return 0;
+}
+
+
 int TextEdit::findEndBlock(int pos) {
-	// in realtà andrebbe messo all'inizio.
 	QString testo = textEdit->toPlainText();
 	for (int i = pos; i < testo.length(); i++) {
 		if (testo[i] == '\n') {
@@ -964,6 +1007,11 @@ void TextEdit::alignmentChanged(Qt::Alignment a)
 		 cursorMovefromAlignement = false;
 		 return;
 	 } 
+	 if (cursorMovefromBlockFormat == true) {
+		 // antibounce quando una modifica viene da alignmentChanged
+		 cursorMovefromBlockFormat = false;
+		 return;
+	 }
 
 	 CRDT crdt = Controller::getInstance().getCRDT();
 	 int tosee = currentCursor.anchor();
@@ -993,10 +1041,12 @@ void TextEdit::alignmentChanged(Qt::Alignment a)
 
 			 char inserito = qinserito.toLatin1();
 			 int usercode = 0;  // taken from server
+			 qDebug() << inserito;
 
 			 Message m = crdt.localInsert(cursore, inserito, font, color);
 
 			 toSend.append(m);
+
 		 }
 	 }
 	 else if (lastCursor >= currentCursor.anchor()) {
@@ -1004,7 +1054,7 @@ void TextEdit::alignmentChanged(Qt::Alignment a)
 
 		 for (int cursore = lastCursor-1; cursore >= currentCursor.anchor(); cursore--) { 
 			 // for che cicla from last to current all'indietro
-
+			 
 			 QString testo = this->lastText;
 			 QChar qinserito = testo.at(cursore);
 			 char inserito = qinserito.toLatin1();
@@ -1054,6 +1104,11 @@ void TextEdit::alignmentChanged(Qt::Alignment a)
 			 if (actionTextBold->isChecked()) font.setBold(true);
 			 if (actionTextItalic->isChecked()) font.setItalic(true);
 			 if (actionTextUnderline->isChecked()) font.setUnderline(true);
+			 ///
+			 int alignCode = getAlignmentCode(textEdit->alignment());
+			 font = produceFontwithAlignment(font.toString(), alignCode);
+			 QString aa = font.toString();
+			 ///
 
 			 char inserito = qinserito.toLatin1();
 			 int usercode = 0;  // taken from server
@@ -1177,8 +1232,10 @@ QFont TextEdit::produceFontwithAlignment(QString s, int alignCode) {
 			 currentCursor.clearSelection();
 
 			 // formatta il blocco seguendo quanto detto dall'ultimo carattere.
+			 cursorMovefromBlockFormat = true;
 			 QTextBlockFormat textBlockFormat = currentCursor.blockFormat();
 			 textBlockFormat.setAlignment(Qt::Alignment(alignment));
+			 alignmentChanged(textBlockFormat.alignment());
 			 currentCursor.mergeBlockFormat(textBlockFormat);
 			 break;
 		 }
@@ -1241,6 +1298,7 @@ QFont TextEdit::produceFontwithAlignment(QString s, int alignCode) {
 		// formatta il blocco seguendo quanto detto dall'ultimo carattere.
 		QTextBlockFormat textBlockFormat = currentCursor.blockFormat();
 		textBlockFormat.setAlignment(Qt::Alignment(alignment));
+		alignmentChanged(textBlockFormat.alignment());
 		currentCursor.mergeBlockFormat(textBlockFormat);
 		charIndex++;
 	 }

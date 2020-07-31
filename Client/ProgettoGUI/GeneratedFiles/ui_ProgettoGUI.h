@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ProgettoGUI.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.0
+** Created by: Qt User Interface Compiler version 5.12.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -52,7 +52,7 @@ public:
 
     void retranslateUi(QMainWindow *ProgettoGUIClass)
     {
-        ProgettoGUIClass->setWindowTitle(QCoreApplication::translate("ProgettoGUIClass", "ProgettoGUI", nullptr));
+        ProgettoGUIClass->setWindowTitle(QApplication::translate("ProgettoGUIClass", "ProgettoGUI", nullptr));
     } // retranslateUi
 
 };
