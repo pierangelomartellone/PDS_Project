@@ -27,6 +27,8 @@ public:
 	bool cursorMovefromAlignement = false;
 	bool cursorMovefromBlockFormat = false;
 
+	bool whoTypedEnabled = false;
+
 public slots:
 	void fileNew();
 	void setSavingTimer();
@@ -107,6 +109,8 @@ private:
 	QAction *actionCut;
 	QAction *actionCopy;
 	QAction *actionPaste;
+	QAction *actionColorsfromUsers;
+	QAction *actionSharingLink;
 #endif
 
 

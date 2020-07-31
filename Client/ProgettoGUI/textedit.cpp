@@ -335,15 +335,16 @@ void TextEdit::setupTextActions()
 	////
 	QActionGroup *alignGroup2 = new QActionGroup(this);
 	const QIcon shareLinkIcon = QIcon(rsrcPath + "/share.png");
-	QAction* actionSharingLink = menu->addAction(shareLinkIcon, tr("&Share"), this, &TextEdit::showLink);
+	actionSharingLink = menu->addAction(shareLinkIcon, tr("&Share"), this, &TextEdit::showLink);
 	actionSharingLink->setShortcut(Qt::CTRL + Qt::Key_Q);
 	actionSharingLink->setPriority(QAction::LowPriority);
 	alignGroup2->addAction(actionSharingLink);
 
 	const QIcon userColorsIcon = QIcon(rsrcPath + "/type.png");
-	QAction* actionColorsfromUsers = menu->addAction(userColorsIcon, tr("&Who typed"), this, &TextEdit::showColorsfromUsers);
+	actionColorsfromUsers = menu->addAction(userColorsIcon, tr("&Who typed"), this, &TextEdit::showColorsfromUsers);
 	actionColorsfromUsers->setShortcut(Qt::CTRL + Qt::Key_P);
 	actionColorsfromUsers->setPriority(QAction::LowPriority);
+	actionColorsfromUsers->setCheckable(true);
 	alignGroup2->addAction(actionColorsfromUsers);
 
 	tb->addActions(alignGroup2->actions());
@@ -810,7 +811,7 @@ void TextEdit::textColor()
 int TextEdit::getAlignmentCode(Qt::Alignment align) {
 	if (align == Qt::AlignLeft)
 		return 1;
-	else if (align == Qt::AlignHCenter)
+	else if (align == Qt::AlignHCenter || align == 5)
 		return 4;
 	else if (align == Qt::AlignRight)
 		return 2;
@@ -826,6 +827,60 @@ int TextEdit::getAlignmentCode(Qt::Alignment align) {
 
 void TextEdit::showColorsfromUsers() {
 	qDebug() << "userTyped";
+
+	CRDT crdt = Controller::getInstance().getCRDT();
+	QString nuovotesto = Controller::getInstance().toText(crdt.getSymbols());
+
+	// NUOVO caratteri
+	QTextCursor currentCursor = textEdit->textCursor();
+	lastCursor = currentCursor.position();
+	QTextCharFormat fmt;
+
+	if (whoTypedEnabled == false) {
+		whoTypedEnabled = true;
+		textEdit->setDisabled(true);
+		int charIndex = 0;
+
+		// per ottimizzazione sarebbe interessante iterare solo sui nuovi caratteri
+		currentCursor.movePosition(QTextCursor::StartOfBlock, QTextCursor::MoveAnchor);
+		for (Symbol s : crdt.getSymbols()) {
+			// logic to choose the color
+			QBrush colore;
+			fmt.setBackground(Qt::yellow);
+
+			// move a single char to update font and color
+			currentCursor.setPosition(charIndex, QTextCursor::MoveAnchor);
+			currentCursor.setPosition(charIndex + 1, QTextCursor::KeepAnchor);
+			//keep anchor mantiene il cursore, move lo sposta
+			currentCursor.mergeCharFormat(fmt);
+			currentCursor.clearSelection();
+
+			charIndex++;
+		}
+		//  reset original position
+		currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
+	}
+	else {
+		textEdit->setDisabled(false);
+		actionColorsfromUsers->setChecked(false);
+		int charIndex = 0;
+		QTextCharFormat fmt2;
+
+		// per ottimizzazione sarebbe interessante iterare solo sui nuovi caratteri
+		currentCursor.setPosition(QTextCursor::Start, QTextCursor::MoveAnchor);
+		currentCursor.setPosition(nuovotesto.length() -1 , QTextCursor::KeepAnchor);
+
+		fmt2.setBackground(Qt::NoBrush);
+
+		//keep anchor mantiene il cursore, move lo sposta
+		currentCursor.mergeCharFormat(fmt2);
+		currentCursor.clearSelection();
+
+		//  reset original position
+		currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
+		whoTypedEnabled = false;
+	}
+	
 }
 
 void TextEdit::showLink() {
@@ -1010,6 +1065,10 @@ void TextEdit::alignmentChanged(Qt::Alignment a)
 	 if (cursorMovefromBlockFormat == true) {
 		 // antibounce quando una modifica viene da alignmentChanged
 		 cursorMovefromBlockFormat = false;
+		 return;
+	 }
+	 if (whoTypedEnabled == true) {
+		 // antibounce quando una modifica viene da WhoTyped
 		 return;
 	 }
 
