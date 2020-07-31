@@ -13,7 +13,7 @@ Server::Server()
 	e.setService(service);
 	connect(server, SIGNAL(newConnection()), this, SLOT(newConnection()));
 
-	if (!server->listen(QHostAddress::Any, 4200)) {
+	if (!server->listen(QHostAddress::Any, 1500)) {
 		qDebug() << "Server could not start";
 	}
 	else {
