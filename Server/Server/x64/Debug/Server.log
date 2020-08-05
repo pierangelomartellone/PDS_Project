@@ -1,8 +1,20 @@
-﻿  File.cpp
+﻿  Uic'ing Server.ui...
+  Rcc'ing Server.qrc...
+  Moc'ing Server.h...
+  Moc'ing Serialize.h...
+   RCC: Warning: No resources in 'C:\Users\simon\source\repos\PDS_Project1\Server\Server\Server.qrc'.
+  CRDT.cpp
+  File.cpp
+  main.cpp
+  Message.cpp
+  Serialize.cpp
   Server.cpp
   Service.cpp
+  Symbol.cpp
+  The contents of <filesystem> are available only with C++17 or later.
   TaskExecutor.cpp
   Utente.cpp
-  main.cpp
+  qrc_Server.cpp
   moc_Server.cpp
-  Server.vcxproj -> D:\Lavoro\Server\x64\Debug\Server.exe
+  moc_Serialize.cpp
+  Server.vcxproj -> C:\Users\simon\source\repos\PDS_Project1\Server\x64\Debug\Server.exe

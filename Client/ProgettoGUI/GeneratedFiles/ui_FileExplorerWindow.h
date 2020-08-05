@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'FileExplorerWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.3
+** Created by: Qt User Interface Compiler version 5.15.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -180,13 +180,13 @@ public:
 
     void retranslateUi(QWidget *FileExplorerWindow)
     {
-        FileExplorerWindow->setWindowTitle(QApplication::translate("FileExplorerWindow", "Files", nullptr));
-        label1->setText(QApplication::translate("FileExplorerWindow", "Recently used files", nullptr));
+        FileExplorerWindow->setWindowTitle(QCoreApplication::translate("FileExplorerWindow", "Files", nullptr));
+        label1->setText(QCoreApplication::translate("FileExplorerWindow", "Recently used files", nullptr));
         newFilePic->setText(QString());
-        newFileButton->setText(QApplication::translate("FileExplorerWindow", "New file", nullptr));
+        newFileButton->setText(QCoreApplication::translate("FileExplorerWindow", "New file", nullptr));
         loadFilePic->setText(QString());
-        loadFileButton->setText(QApplication::translate("FileExplorerWindow", "Load file", nullptr));
-        myimage->setText(QApplication::translate("FileExplorerWindow", "TextLabel", nullptr));
+        loadFileButton->setText(QCoreApplication::translate("FileExplorerWindow", "Load file", nullptr));
+        myimage->setText(QCoreApplication::translate("FileExplorerWindow", "TextLabel", nullptr));
         myuserText->setText(QString());
     } // retranslateUi
 
