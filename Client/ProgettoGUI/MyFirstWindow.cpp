@@ -14,6 +14,7 @@ MyFirstWindow::MyFirstWindow(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+	this->setWindowTitle("Login");
 	QPixmap pix(":/images/login.png");
 	ui.picture->setPixmap(pix);
 	ui.errorDescription->setVisible(true);

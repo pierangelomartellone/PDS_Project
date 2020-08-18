@@ -61,8 +61,9 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(ProgettoGUI); //nome del progetto
 
     QApplication app(argc, argv);
+	app.setWindowIcon(QIcon(":/images/mainicon.png"));
     QCoreApplication::setOrganizationName("QtProject");
-    QCoreApplication::setApplicationName("Application Example");
+    QCoreApplication::setApplicationName("Shared Editor");
     QCoreApplication::setApplicationVersion(QT_VERSION_STR);
     QCommandLineParser parser;
     parser.setApplicationDescription(QCoreApplication::applicationName());

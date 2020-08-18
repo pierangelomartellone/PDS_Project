@@ -188,6 +188,16 @@
     <Image Include="images\defaultpic.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="images\share.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\type.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap1.bmp" />
+    <Image Include="images\mainicon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ProgettoGUI.rc">
