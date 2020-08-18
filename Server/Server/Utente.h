@@ -17,7 +17,6 @@ private:
 	bool connected = false;
 	bool withimage;
 	QTcpSocket* mysocket;
-	//immagine
 public:
 	Utente();
 	Utente(int id, std::string password, std::string nickname);

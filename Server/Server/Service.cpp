@@ -235,17 +235,13 @@ int Service::setImagefromUser(Utente u, QPixmap img)
 	std::string imagepath("./userimages/" + std::to_string(imgn) + ".jpg");
 	QString imagename = QString::fromStdString(imagepath);
 
-	//QFile file(imagename);
-	//file.open(QIODevice::WriteOnly);
-	//QDataStream out(&file);
-
 	QImageWriter writer(imagename);
 	if (!writer.write(img.toImage()))
 	{
 		qDebug() << writer.errorString();
 		return -1;
 	}
-	
+	u.setImage();
 	return 1;
 }
 
@@ -258,6 +254,7 @@ QPixmap Service::sendImagetoUser(Utente u)
 	imagepath = QString::fromStdString(imgn2);
 	QFileInfo checkFile(imagepath);
 	if (checkFile.exists() && checkFile.isFile()) {
+		u.setImage();
 		immagine.load(imagepath);
 	}
 	//ritorna una qpixmap NULL se l'utente non ha caricato immagine
