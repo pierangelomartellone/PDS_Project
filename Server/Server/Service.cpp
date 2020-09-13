@@ -120,6 +120,16 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 	listaUtenti.push_back(ut);
 	inFile << "\n" << nuser + 1 << " " << u << " " << p;
 	inFile.close();
+
+	/*---Diritti di accesso sui File -> Creazione Riga in filelist---*/
+	inFile.open("filelist.txt", std::ios_base::app);
+	if (!inFile) {
+		std::cout << "Unable to open file";
+		return -1;
+	}
+	inFile << "\n" << nuser + 1 <<" ";
+	inFile.close();
+	/*---*/
 	
 	return listaUtenti.size();
 }
@@ -146,6 +156,15 @@ Utente Service::getUserFromPort(std::string addr, std::string port) {
 		std::string a = u.getAddress();
 		std::string b = u.getPort();
 		if (u.getAddress() == addr && u.getPort() == port && u.getConnection() == true)
+			return u;
+	}
+	Utente error; //exception???
+	return error;
+}
+
+Utente Service::getUserFromID(const int uid) {
+	for (Utente u : listaUtenti) {
+		if (u.getID() == uid)
 			return u;
 	}
 	Utente error; //exception???
@@ -228,6 +247,76 @@ QStringList Service::lookForFiles()
 	return allfiles;
 }
 
+QStringList Service::lookForUserFiles(Utente u) { /* Restituisce la lista dei files su cui l'Utente u ha diritto di accesso */
+	int id;
+	std::string line, word;
+	QStringList filenames;
+	std::ifstream inFile;
+	inFile.open("filelist.txt");
+	if (inFile)
+	{
+		while (inFile >> id >> line) {
+			if (id == u.getID()) {
+				for (auto c : line) {
+					if (c != ',')
+						word.push_back(c);
+					else {
+						filenames.append(QString::fromStdString(word));
+						word = "";
+					}
+				}
+				filenames.append(QString::fromStdString(word));
+				word = "";
+			}
+		}
+	}
+	return filenames;
+}
+
+	int Service::AddFiletoList(Utente u, std::string filename) {
+		int id;
+		std::string line, word;
+		std::vector<std::string> filenames;
+		std::ifstream inFile;
+		std::ofstream outFile;
+
+		inFile.open("filelist.txt");
+		if (!inFile) {
+			std::cout << "Unable to open file";
+			return -1;
+		}
+		outFile.open("temp.txt");
+		if (!inFile) {
+			std::cout << "Unable to open file";
+			return -1;
+		}
+
+		while (inFile >> id >> line) {
+			if (id == u.getID()) {
+				for (auto c : line) {
+					if (c != ',')
+						word.push_back(c);
+					else {
+						filenames.push_back(std::move(word));
+					}
+				}
+				filenames.push_back(std::move(word));
+				std::vector<std::string>::iterator it = std::find(filenames.begin(), filenames.end(), filename);
+				if(it == filenames.end())
+					outFile << id << " " << line << "," << filename << "\n";
+				else
+					outFile << id << " " << line << "\n";
+			}
+			else
+				outFile << id << " " << line << "\n";
+		}
+		inFile.close();
+		outFile.close();
+
+		std::remove("filelist.txt");
+		std::rename("temp.txt", "filelist.txt");
+		return 0;
+}
 
 int Service::setImagefromUser(Utente u, QPixmap img)
 {
@@ -250,15 +339,17 @@ QPixmap Service::sendImagetoUser(Utente u)
 	QString imagepath;
 	QPixmap immagine;
 	int imgn = u.getID();
-	std::string imgn2("userimages\\" + std::to_string(imgn) + ".jpg");
-	imagepath = QString::fromStdString(imgn2);
-	QFileInfo checkFile(imagepath);
-	if (checkFile.exists() && checkFile.isFile()) {
-		u.setImage();
-		immagine.load(imagepath);
+	if (u.checkImage()) {
+		std::string imgn2("userimages\\" + std::to_string(imgn) + ".jpg");
+		imagepath = QString::fromStdString(imgn2);
+		QFileInfo checkFile(imagepath);
+		if (checkFile.exists() && checkFile.isFile()) {
+			u.setImage();
+			immagine.load(imagepath);
+		}
+		//ritorna una qpixmap NULL se l'utente non ha caricato immagine
+		return immagine;
 	}
-	//ritorna una qpixmap NULL se l'utente non ha caricato immagine
-	return immagine;
 }
 
 void Service::insertInAperti(File f) {

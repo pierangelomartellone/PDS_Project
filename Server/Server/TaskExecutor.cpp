@@ -191,6 +191,11 @@ Service& TaskExecutor::start()
 			QStringList filelist = service.lookForFiles();
 		}
 
+		/*---Diritti di accesso sui File -> Aggiunta File in filelist---*/
+		service.AddFiletoList(u, filename.toStdString());
+		//Inserire controllo sul risultato
+		/*---*/
+
 		CRDT crdt;
 		codeth = service.fileOpened(u, filename.toStdString());
 		File aperto = service.searchFile(filename.toStdString(), aperti);
@@ -306,7 +311,7 @@ Service& TaskExecutor::start()
 	}
 	else if (messageType == fileRequest) {
 		// lista dei file apribili da inviare al client
-		QStringList filelist = service.lookForFiles();
+		QStringList filelist = service.lookForUserFiles(u);
 		QString data = serialize.fileListSerialize(filelist, fileRequest);
 
 		actualSocket->write(data.toStdString().c_str());

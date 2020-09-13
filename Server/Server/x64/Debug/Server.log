@@ -1,16 +1,3 @@
-﻿  Moc'ing Server.h...
-  Moc'ing Serialize.h...
-  CRDT.cpp
-  File.cpp
-  main.cpp
-  Message.cpp
-  Serialize.cpp
-  Server.cpp
-  Service.cpp
-  Symbol.cpp
-  TaskExecutor.cpp
-  Utente.cpp
-  qrc_Server.cpp
-  moc_Server.cpp
-  moc_Serialize.cpp
+﻿  Service.cpp
+  C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\Service.cpp(353) : warning C4715: 'Service::sendImagetoUser': non tutti i percorsi di controllo restituiscono un valore
   Server.vcxproj -> C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\x64\Debug\Server.exe

@@ -181,7 +181,7 @@ public:
     void retranslateUi(QWidget *FileExplorerWindow)
     {
         FileExplorerWindow->setWindowTitle(QApplication::translate("FileExplorerWindow", "Files", nullptr));
-        label1->setText(QApplication::translate("FileExplorerWindow", "Recently used files", nullptr));
+        label1->setText(QApplication::translate("FileExplorerWindow", "Your Files", nullptr));
         newFilePic->setText(QString());
         newFileButton->setText(QApplication::translate("FileExplorerWindow", "New file", nullptr));
         loadFilePic->setText(QString());

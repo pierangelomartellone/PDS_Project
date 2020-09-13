@@ -32,10 +32,13 @@ public:
 	int registerNewUser(std::string u, std::string p, std::string addr, std::string port, QTcpSocket *s);
 	int checkUserLogin(std::string user, std::string psw, std::string addr, std::string port, QTcpSocket *s);
 	Utente getUserFromPort(std::string addr, std::string port);
+	Utente getUserFromID(const int uid);
 	int fileOpened(Utente u, std::string filename);
 	int fileClosed(Utente u, std::string filename);
 	File getFilefromUser(Utente u);
 	QStringList lookForFiles();
+	QStringList lookForUserFiles(Utente u);
+	int AddFiletoList(Utente u, std::string filename);
 	int setImagefromUser(Utente u, QPixmap img);
 	QPixmap sendImagetoUser(Utente u);
 	void insertInAperti(File f);

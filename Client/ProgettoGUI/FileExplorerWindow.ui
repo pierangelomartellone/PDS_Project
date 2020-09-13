@@ -35,7 +35,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Recently used files</string>
+       <string>Your Files</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignHCenter|Qt::AlignTop</set>

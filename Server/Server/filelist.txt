@@ -1,5 +1,5 @@
-1 formatted lorem newfile prova prova2
-2 formatted lorem newfile prova prova2
-3 formatted lorem newfile prova prova2
-4 formatted lorem newfile prova prova2
-5 prova
+1 formatted.txt,lorem.txt,newfile.txt,prova.txt,prova2.txt
+2 lorem.txt,newfile.txt,prova.txt,prova2.txt
+3 formatted.txt,lorem.txt,newfile.txt,prova.txt,prova2.txt
+4 formatted.txt,lorem.txt,newfile.txt,prova.txt,prova2.txt
+5 prova.txt

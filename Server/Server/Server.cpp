@@ -33,10 +33,10 @@ void Server::newConnection()
 		std::string tosend = "LOGINOK " + std::to_string(loginResult);
 		QString res = s.responseSerialize(tosend.c_str(), comandAck);
 		socket->write(res.toStdString().c_str());
-
+		Utente u = service.getUserFromID(loginResult);
 		sockets.push_back(socket);
 		e.addSocketToExecutor(socket);
-		QStringList allfiles = service.lookForFiles();
+		QStringList allfiles = service.lookForUserFiles(u);
 		QString jsonlist = s.fileListSerialize(allfiles, fileRequest);
 
 		//send files via socket
