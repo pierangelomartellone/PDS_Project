@@ -91,13 +91,17 @@ void CRDT::fromSymbolstoFile(std::string filename) {
 	
 }
 
-Message CRDT::localInsert(int index, char value, QFont f, QColor c){    //index, color e font bisogna ricavarli dalla casella di testo
+Message CRDT::localInsert(int index, char value, QFont f, QColor c) {    //index, color e font bisogna ricavarli dalla casella di testo
 	std::vector<int> temp;
 	Symbol s(this->_counter, this->_siteId, value, f, c);
 
-	if(index==0) {
-	temp = { 0 };
-		}
+	if (index == 0) {
+		temp = this->_symbols[index].getFrz();
+		temp.at(temp.size() - 1)--;
+		s.Initialize(temp);
+		this->_symbols.insert(this->_symbols.begin() + index, s);
+		this->_counter++;
+	}
 
 	else if (index >= this->_symbols.size()) { //caso di inserimento in coda o in qualunque caso in cui inserisco direttamente nella casella index 
 		temp.push_back(index); //l'indice in cui inserisco diventa la parte frazionaria (intero)
@@ -105,8 +109,8 @@ Message CRDT::localInsert(int index, char value, QFont f, QColor c){    //index,
 		this->_symbols.insert(this->_symbols.begin() + index, s);
 		this->_counter++;
 	}
-	
-	else if (this->_symbols[index - 1].getFrz().size() == this->_symbols[index].getFrz().size()) 
+
+	else if (this->_symbols[index - 1].getFrz().size() == this->_symbols[index].getFrz().size())
 	{
 		temp = this->_symbols[index - 1].getFrz();
 		temp.push_back(5);
