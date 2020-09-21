@@ -54,7 +54,7 @@ void CRDT::fromFiletoSymbols(std::string filename){
 		while (getline(iFile, line)) {
 			for (int i = 1; i <= line.size(); i++) {
 				Symbol s(i * count, 0, line.c_str()[i-1], f, c);
-				ptfrz.push_back(i - 1);
+				ptfrz.push_back(i-1 );
 				s.Initialize(ptfrz);
 				this->_symbols.push_back(s); 
 			}
@@ -96,10 +96,14 @@ Message CRDT::localInsert(int index, char value, QFont f, QColor c){    //index,
 	Symbol s(this->_counter, this->_siteId, value, f, c);
 
 	if(index==0) {
-	temp = { 0 };
-		}
+		temp = this->_symbols[index].getFrz();
+		temp.at(temp.size() - 1)--;
+		s.Initialize(temp);
+		this->_symbols.insert(this->_symbols.begin() + index, s);
+		this->_counter++;
+	}
 
-	else if (index >= this->_symbols.size()) { //caso di inserimento in coda o in qualunque caso in cui inserisco direttamente nella casella index 
+	 else if (index >= this->_symbols.size()) { //caso di inserimento in coda o in qualunque caso in cui inserisco direttamente nella casella index 
 		temp.push_back(index); //l'indice in cui inserisco diventa la parte frazionaria (intero)
 		s.Initialize(temp); //inizializzo la parte frazionaria
 		this->_symbols.insert(this->_symbols.begin() + index, s);
@@ -182,8 +186,7 @@ Message CRDT::localInsert(int index, char value) {    // da non usare
 }
 
 Message CRDT::localErase(int index){
-	Symbol s(this->_symbols[index]);
-	this->_symbols.erase(this->_symbols.begin() + index);
+	Symbol s(this->_symbols[index]);	this->_symbols.erase(this->_symbols.begin() + index);
 	//se faccio un inserimento allora tipo =1 else tipo =0
 	Message m(s, 0, this->getSiteID()); //se faccio un inserimento allora tipo =1 else tipo =0
 	return m;
