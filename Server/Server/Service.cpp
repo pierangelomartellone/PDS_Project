@@ -269,6 +269,11 @@ QStringList Service::lookForUserFiles(Utente u) { /* Restituisce la lista dei fi
 				word = "";
 			}
 		}
+
+		for (QString name : filenames) {
+			File f(name.toStdString());
+			listaFileApribili.append(f);
+		}
 	}
 	return filenames;
 }

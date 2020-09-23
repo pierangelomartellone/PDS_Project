@@ -1,5 +1,2 @@
-﻿  CRDT.cpp
-  Serialize.cpp
-  moc_Controller.cpp
-  moc_Serialize.cpp
-  ProgettoGUI.vcxproj -> D:\Lavoro\PDS_Project\Client\x64\Debug\ProgettoGUI.exe
+﻿  FileExplorerWindow.cpp
+  ProgettoGUI.vcxproj -> C:\Users\cgarg\Source\Repos\pmartellone13\PDS_Project\Client\x64\Debug\ProgettoGUI.exe

@@ -63,6 +63,9 @@
     <ClCompile Include="CRDT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="uri.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ProgettoGUI.h">
@@ -129,6 +132,9 @@
     <ClInclude Include="CRDT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="uri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\bold.png">
@@ -186,16 +192,6 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="images\defaultpic.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="images\share.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="images\type.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="bitmap1.bmp" />
-    <Image Include="images\mainicon.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

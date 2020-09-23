@@ -4,6 +4,7 @@
 #include "textedit.h"
 #include "Controller.h"
 #include "qinputdialog.h"
+#include "uri.h"
 
 
 FileExplorerWindow::FileExplorerWindow(QWidget *parent)
@@ -69,6 +70,14 @@ void FileExplorerWindow::on_loadFileButton_clicked()
 void FileExplorerWindow::on_loadFileURIButton_clicked()
 {
 	bool ok;
-	QString uri = ui.URILineEdit->text();
-	ui.errorDescription->setText("Sorry, you typed a wrong URI");
+	/*-------CONTROLLARE-------*/
+	QString uritexted = ui.URILineEdit->text();
+	uri filename(uritexted.toStdString(), true);
+	/* Fare check sulla validità della URI*/
+	TextEdit* editor = new TextEdit();
+	editor->load(QString::fromStdString(filename.resolveURI()));
+	hide();
+	editor->show();
+	/*-------------------------*/
+	//ui.errorDescription->setText("Sorry, you typed a wrong URI");
 }
