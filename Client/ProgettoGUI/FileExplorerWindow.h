@@ -20,4 +20,5 @@ private:
 private slots:
 	void on_newFileButton_clicked();
 	void on_loadFileButton_clicked();
+	void on_loadFileURIButton_clicked();
 };

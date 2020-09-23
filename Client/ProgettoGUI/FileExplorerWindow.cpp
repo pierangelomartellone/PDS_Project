@@ -44,9 +44,10 @@ void FileExplorerWindow::on_newFileButton_clicked()
 	Dialog->setSizeGripEnabled(false);
 	QString filename = Dialog->getText(this, tr("New File"),
 		tr("How do I call this new file?"), QLineEdit::Normal,
-		tr("newfile.txt"), &ok);
+		tr("newfile"), &ok);
 
 	if (ok && !filename.isEmpty()) {
+		filename += ".txt";
 		TextEdit *editor = new TextEdit();
 		editor->loadnew(filename);
 		hide();
@@ -64,4 +65,10 @@ void FileExplorerWindow::on_loadFileButton_clicked()
 	editor->load(filename);
 	hide();
 	editor->show();
+}
+void FileExplorerWindow::on_loadFileURIButton_clicked()
+{
+	bool ok;
+	QString uri = ui.URILineEdit->text();
+	ui.errorDescription->setText("Sorry, you typed a wrong URI");
 }

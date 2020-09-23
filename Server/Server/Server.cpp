@@ -36,7 +36,7 @@ void Server::newConnection()
 		Utente u = service.getUserFromID(loginResult);
 		sockets.push_back(socket);
 		e.addSocketToExecutor(socket);
-		QStringList allfiles = service.lookForUserFiles(u);
+		QStringList allfiles = service.lookForFiles();
 		QString jsonlist = s.fileListSerialize(allfiles, fileRequest);
 
 		//send files via socket

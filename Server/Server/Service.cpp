@@ -340,16 +340,15 @@ QPixmap Service::sendImagetoUser(Utente u)
 	QPixmap immagine;
 	int imgn = u.getID();
 	if (u.checkImage()) {
-		std::string imgn2("userimages\\" + std::to_string(imgn) + ".jpg");
+		std::string imgn2("./userimages/" + std::to_string(imgn) + ".jpg");
 		imagepath = QString::fromStdString(imgn2);
 		QFileInfo checkFile(imagepath);
 		if (checkFile.exists() && checkFile.isFile()) {
 			u.setImage();
 			immagine.load(imagepath);
 		}
-		//ritorna una qpixmap NULL se l'utente non ha caricato immagine
-		return immagine;
 	}
+	return immagine;
 }
 
 void Service::insertInAperti(File f) {

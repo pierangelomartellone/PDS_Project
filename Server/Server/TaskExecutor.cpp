@@ -311,7 +311,7 @@ Service& TaskExecutor::start()
 	}
 	else if (messageType == fileRequest) {
 		// lista dei file apribili da inviare al client
-		QStringList filelist = service.lookForUserFiles(u);
+		QStringList filelist = service.lookForFiles();
 		QString data = serialize.fileListSerialize(filelist, fileRequest);
 
 		actualSocket->write(data.toStdString().c_str());
