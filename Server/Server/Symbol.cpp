@@ -4,9 +4,10 @@ Symbol::Symbol()
 {
 }
 
-Symbol::Symbol(int index, int sId, char caratt, QFont font, QColor color)
+Symbol::Symbol(int index, int sId, QChar caratt, QFont font, QColor color)
 {
-	this->c = caratt;
+	this->c = caratt.toLatin1();
+	this->qc = caratt;
 	this->id[0] = sId;
 	this->id[1] = index;
 	this->font = font;
@@ -33,9 +34,9 @@ int Symbol::getSID()
 	return this->id[0];
 }
 
-char Symbol::getC()
+QChar Symbol::getC()
 {
-	return this->c;
+	return this->qc;
 }
 
 int Symbol::getCounter()

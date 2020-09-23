@@ -19,7 +19,7 @@ public:
 	void process(const Message& m);
 	void fromFiletoSymbols(std::string filename);
 	void fromSymbolstoFile(std::string filename);
-	Message localInsert(int index, char value, QFont f, QColor c);
+	Message localInsert(int index, QChar value, QFont f, QColor c);
 	Message localInsert(int index, char value);
 	Message localErase(int index);
 	void copySymbols(std::vector<Symbol>& listaSimboli);

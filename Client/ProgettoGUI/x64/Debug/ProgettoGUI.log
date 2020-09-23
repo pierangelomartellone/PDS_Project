@@ -1,8 +1,5 @@
-﻿  Uic'ing FileExplorerWindow.ui...
-  FileExplorerWindow.cpp
-  MyFirstWindow.cpp
-  RegisterWindow.cpp
-  mainwindow.cpp
-  textedit.cpp
-  moc_FileExplorerWindow.cpp
-  ProgettoGUI.vcxproj -> C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\x64\Debug\ProgettoGUI.exe
+﻿  CRDT.cpp
+  Serialize.cpp
+  moc_Controller.cpp
+  moc_Serialize.cpp
+  ProgettoGUI.vcxproj -> D:\Lavoro\PDS_Project\Client\x64\Debug\ProgettoGUI.exe

@@ -94,7 +94,7 @@ void CRDT::fromSymbolstoFile(std::string filename) {
 	std::ofstream oFile("./Files/" + filename);
 	for (Symbol s : this->_symbols) {
 		if (oFile.is_open())
-			oFile << s.getC();
+			oFile << s.getC().toLatin1();
 	}
 	oFile.close();
 	

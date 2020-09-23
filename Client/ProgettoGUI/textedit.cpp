@@ -617,7 +617,7 @@ bool TextEdit::fileSave()
 	QFont myfont("Segoe UI Semilight", 15);
 	QLabel* qPopup = new QLabel(QString::fromLatin1("Non ti preoccupare,\n salvo da solo ;)"), this, Qt::SplashScreen | Qt::WindowStaysOnTopHint);
 	QPalette qPalette = qPopup->palette();
-	qPalette.setBrush(QPalette::Background, QColor(142, 203, 248));
+	qPalette.setBrush(QPalette::Background, QColor(51, 51, 255));
 	qPalette.setColor(QPalette::WindowText, Qt::white);
 	qPopup->setPalette(qPalette);
 	qPopup->setFont(myfont);
@@ -911,6 +911,25 @@ void TextEdit::showColorsfromUsers() {
 
 void TextEdit::showLink() {
 	qDebug() << "showLink";
+	QClipboard* clipboard = QGuiApplication::clipboard();
+	QString link("http://ciaociao");
+	clipboard->setText(link);
+	QFont myfont("Segoe UI Semilight", 15);
+	QLabel* qPopup = new QLabel("Ho salvato il link\n a questo file negli appunti :)", this, Qt::SplashScreen | Qt::WindowStaysOnTopHint);
+	QPalette qPalette = qPopup->palette();
+	qPalette.setBrush(QPalette::Background, QColor(51, 51, 255));
+	qPalette.setColor(QPalette::WindowText, Qt::white);
+	qPopup->setPalette(qPalette);
+	qPopup->setFont(myfont);
+	qPalette.setBrush(QPalette::BrightText, QColor(255, 255, 255));
+	qPopup->setFrameStyle(QLabel::Raised | QLabel::Panel);
+	qPopup->setAlignment(Qt::AlignCenter);
+	qPopup->setFixedSize(300, 100);
+	qPopup->show();
+	// setup timer
+	QTimer::singleShot(5000, qPopup, &QLabel::hide);
+
+	return;
 }
 
 void TextEdit::textAlign(QAction* a)
@@ -1130,7 +1149,7 @@ void TextEdit::textChanged() {
 			int usercode = 0;  // taken from server
 			qDebug() << inserito;
 
-			Message m = crdt.localInsert(cursore, inserito, font, color);
+			Message m = crdt.localInsert(cursore, qinserito, font, color);
 
 			toSend.append(m);
 
@@ -1202,7 +1221,7 @@ void TextEdit::textChanged() {
 
 			//Symbol s(cursore, usercode, inserito, font, color);
 			//Message m(s, insertordelete, usercode);
-			Message m = crdt.localInsert(cursore, inserito, font, color);
+			Message m = crdt.localInsert(cursore, qinserito, font, color);
 
 			toSend.append(m);
 		}
@@ -1282,7 +1301,7 @@ void TextEdit::updateText() {
 	Message lastMessageChar = Controller::getInstance().getLastMessage();
 	int SID = lastMessageChar.getSymbol().getSID();
 	int counter = lastMessageChar.getSymbol().getCounter();
-	int newchar = lastMessageChar.getSymbol().getC();
+	//int newchar = lastMessageChar.getSymbol().getC();
 	bool flagInserito = false;
 
 	cursorMovefromUpdate = true; // va messo prima per le race conditions

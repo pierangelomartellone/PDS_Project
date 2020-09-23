@@ -9,18 +9,19 @@ class Symbol
 	//Q_OBJECT
 private:
 	char c;
+	QChar qc;
 	std::array<int, 2> id;
 	std::vector<int> pt_fraz;
 	QFont font;
 	QColor color;
 public:
 	Symbol();
-	Symbol(int index, int sId, char caratt, QFont font, QColor color);
+	Symbol(int index, int sId, QChar caratt, QFont font, QColor color);
 	~Symbol();
 	void Initialize(std::vector<int> vett);
 	std::vector<int> getFrz();
 	int getSID();
-	char getC();
+	QChar getC();
 	int getCounter();
 	void setSID(int SID);
 	QFont getFont();

@@ -85,13 +85,13 @@ void CRDT::fromSymbolstoFile(std::string filename) {
 	std::ofstream oFile(filename);
 	for (Symbol s : this->_symbols) {
 		if (oFile.is_open())
-			oFile << s.getC();
+			oFile << s.getC().toLatin1();
 	}
 	oFile.close();
 	
 }
 
-Message CRDT::localInsert(int index, char value, QFont f, QColor c) {    //index, color e font bisogna ricavarli dalla casella di testo
+Message CRDT::localInsert(int index, QChar value, QFont f, QColor c) {    //index, color e font bisogna ricavarli dalla casella di testo
 	std::vector<int> temp;
 	Symbol s(this->_counter, this->_siteId, value, f, c);
 

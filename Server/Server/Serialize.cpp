@@ -56,10 +56,10 @@ QString Serialize::messageSerialize(Message m, int type)
 	obj.insert("type", QJsonValue(type));
 	obj.insert("option", QJsonValue(option));
 	obj.insert("sender", QJsonValue(sender));
-	char c = s.getC();
+	QChar c = s.getC();
 	int id = s.getSID(); int counter = s.getCounter(); QFont font = s.getFont(); QColor color = s.getColor();
 	QString f = font.toString(); int red = color.red(); int green = color.green(); int blue = color.blue();
-	obj.insert("carattere", QJsonValue(c));
+	obj.insert("carattere", QJsonValue(c.unicode()));
 	obj.insert("Sid", QJsonValue(id));
 	obj.insert("counter", QJsonValue(counter));
 	obj.insert("font", QJsonValue(f));
@@ -84,7 +84,7 @@ Message Serialize::messageUnserialize(QString mes)
 	QJsonObject obj = doc.object();
 	int id = obj.value("Sid").toInt();
 	int counter = obj.value("counter").toInt();
-	char c = obj.value("carattere").toInt();
+	QChar c = QChar(obj.value("carattere").toInt());
 	QFont font; font.fromString(obj.value("font").toString());
 	int red = obj.value("red").toInt(); int green = obj.value("green").toInt(); int blue = obj.value("blue").toInt();
 	QColor color(red, green, blue);
@@ -202,11 +202,11 @@ QStringList Serialize::symbolsSerialize(std::vector<Symbol> symbols, int type)
 	for (auto i = 0; i < symbols.size(); i++) {
 		QJsonObject obj;
 		Symbol s = symbols.at(i);
-		char c = s.getC();
+		QChar c = s.getC();
 		int id = s.getSID(); int counter = s.getCounter(); QFont font = s.getFont(); QColor color = s.getColor();
 		QString f = font.toString(); int red = color.red(); int green = color.green(); int blue = color.blue();
 		obj.insert("type", QJsonValue(type));
-		obj.insert("carattere", QJsonValue(c));
+		obj.insert("carattere", QJsonValue(c.unicode()));
 		obj.insert("Sid", QJsonValue(id));
 		obj.insert("counter", QJsonValue(counter));
 		obj.insert("font", QJsonValue(f));
@@ -235,7 +235,7 @@ std::vector<Symbol> Serialize::symbolsUnserialize(QStringList symbols)
 		QJsonObject obj = doc.object();
 		int id = obj.value("Sid").toInt();
 		int counter = obj.value("counter").toInt();
-		char c = obj.value("carattere").toInt();
+		QChar c = QChar(obj.value("carattere").toInt());
 		QFont font; font.fromString(obj.value("font").toString());
 		int red = obj.value("red").toInt(); int green = obj.value("green").toInt(); int blue = obj.value("blue").toInt();
 		QColor color(red, green, blue);
@@ -273,10 +273,10 @@ QStringList Serialize::fromBlockToList(QString read) {
 QString Serialize::fromSymbolToJson(Symbol s)
 {
 	QJsonObject obj;
-	char c = s.getC();
+	QChar c = s.getC();
 	int id = s.getSID(); int counter = s.getCounter(); QFont font = s.getFont(); QColor color = s.getColor();
 	QString f = font.toString(); int red = color.red(); int green = color.green(); int blue = color.blue();
-	obj.insert("carattere", QJsonValue(c));
+	obj.insert("carattere", QJsonValue(c.unicode()));
 	obj.insert("Sid", QJsonValue(id));
 	obj.insert("counter", QJsonValue(counter));
 	obj.insert("font", QJsonValue(f));
@@ -301,7 +301,7 @@ Symbol Serialize::fromJsonToSymbol(QString json)
 	QJsonObject obj = doc.object();
 	int id = obj.value("Sid").toInt();
 	int counter = obj.value("counter").toInt();
-	char c = obj.value("carattere").toInt();
+	QChar c = QChar(obj.value("carattere").toInt());
 	QFont font; font.fromString(obj.value("font").toString());
 	int red = obj.value("red").toInt(); int green = obj.value("green").toInt(); int blue = obj.value("blue").toInt();
 	QColor color(red, green, blue);
