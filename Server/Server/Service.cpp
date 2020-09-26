@@ -10,6 +10,18 @@
 #include <qurl.h>
 #include <qimagewriter.h>
 #include <qdebug.h>
+#include <mysql.h>
+#include <openssl/rand.h>
+#include <openssl/evp.h>
+#include <openssl/sha.h>
+#include <sstream>
+#include <Base64.h>
+
+
+
+
+
+
 
 Service::Service()
 {
@@ -81,72 +93,185 @@ int Service::lookForUser() {
 	std::string user;
 	std::string psw;
 
-	std::ifstream inFile;
+	MYSQL* conn;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+	conn = mysql_init(0);
+	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+	if (conn) {
+		if (!mysql_query(conn, "SELECT * from user")) {
+			res = mysql_store_result(conn);
+			while (row = mysql_fetch_row(res)) {
+				id = std::stoi(row[0]);
+				user = row[1];
+				psw = row[2];
+				Utente u(id, user, psw);
 
-	inFile.open("userlist.txt");
-	if (!inFile) {
-		std::cout << "Unable to open file";
+				listaUtenti.push_back(u);   // VERIFICARE L'UTILITA
+			}
+		}
+		mysql_close(conn);
+	}
+	else {
+		qDebug() << "Unable to connect to Database";
 		return -1;
 	}
 
-	while (inFile >> id >> user >> psw) {
-		Utente u(id, user, psw);
-		listaUtenti.push_back(u);
-	}
-
-	inFile.close();
 	return listaUtenti.size();
 }
 
 int Service::registerNewUser(std::string u, std::string p, std::string addr, std::string port, QTcpSocket *s) {
 	int nuser = listaUtenti.size();
+	unsigned char salt[8] = "\0";
+	std::stringstream hexsalt;
+	unsigned char pwd[40] = "\0";
+	unsigned char hashed_pwd[EVP_MAX_MD_SIZE];
+	
+	
+	/*std::string pwd;
+	std::string hashed_pwd;*/
+	SHA256_CTX ctx;
+	
 
-	std::ofstream inFile;
+	MYSQL* conn;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+	std::string str = "SELECT * FROM user WHERE Username = '"+u+"'";
+	conn = mysql_init(0);
+	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+	if (conn) {
+		if (mysql_query(conn, str.c_str()) == 0) {
+			res = mysql_store_result(conn);
+			if (res->row_count != 0) {
+				mysql_free_result(res);
+				if (mysql_errno(conn) != 0)
+					return -1; //error in the query
+				else
+					return -5; // already existing
+			}
 
-	inFile.open("userlist.txt", std::ios_base::app);
-	if (!inFile) {
-		std::cout << "Unable to open file";
+			else {
+				//hashing of password
+				RAND_bytes(salt, 8);
+				qDebug() << salt;
+				/*hexsalt << std::hex << std::setfill('0');
+				for (int i = 0; i < sizeof(salt); ++i)
+				{
+					hexsalt << std::setw(2) << static_cast<unsigned>(salt[i]);
+				}*/
+
+				memcpy(pwd, p.c_str(), strlen(p.c_str()));
+				memcpy(pwd + (strlen(p.c_str())), salt, 8);
+				qDebug() << pwd;
+				SHA256_Init(&ctx);    //aggiungere gestione errrori
+				SHA256_Update(&ctx, pwd, strlen((const char*)pwd));
+				SHA256_Final(hashed_pwd, &ctx);
+				
+				
+				std::string base64_pwd = base64_encode(hashed_pwd, sizeof(hashed_pwd));
+				std::string base64_salt = base64_encode(salt, sizeof(salt));
+				Utente ut(nuser + 1, u, std::string((char*)hashed_pwd));
+				ut.setConnected(addr, port);
+				ut.setSocket(s);
+				listaUtenti.push_back(ut);
+				str.clear();
+				str = "INSERT INTO user (ID, Username, Password, Salt) VALUES ('" + std::to_string(ut.getID()) +"','" +  u + "','"+ base64_pwd+"','"+ base64_salt+"')";
+			
+				if (mysql_query(conn, str.c_str())!=0)
+					return -1; //error in the query
+
+			}
+
+		}
+		mysql_close(conn);
+	}
+	else {
+		qDebug() << "Unable to connect to Database";
 		return -1;
 	}
-	
-	for (Utente ut : listaUtenti) {
-		if (ut.getUsername() == u)
-			return -5; // already existing
-	}
 
-	Utente ut(nuser+1, u, p);
-	ut.setConnected(addr, port);
-	ut.setSocket(s);
-	listaUtenti.push_back(ut);
-	inFile << "\n" << nuser + 1 << " " << u << " " << p;
-	inFile.close();
+
+	
 
 	/*---Diritti di accesso sui File -> Creazione Riga in filelist---*/
-	inFile.open("filelist.txt", std::ios_base::app);
-	if (!inFile) {
-		std::cout << "Unable to open file";
-		return -1;
-	}
-	inFile << "\n" << nuser + 1 <<" ";
-	inFile.close();
-	/*---*/
+	//inFile.open("filelist.txt", std::ios_base::app);
+	//if (!inFile) {
+	//	std::cout << "Unable to open file";
+	//	return -1;
+	//}
+	//inFile << "\n" << nuser + 1 <<" ";
+	//inFile.close();
+	///*---*/
 	
 	return listaUtenti.size();
 }
 
-int Service::checkUserLogin(std::string user, std::string psw, std::string addr, std::string port, QTcpSocket *s)
+int Service::checkUserLogin(std::string user, std::string psw, std::string addr, std::string port, QTcpSocket* s)
 {
-	for (auto it = listaUtenti.begin(); it < listaUtenti.end(); it++) {
+	MYSQL* conn;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+	unsigned char pwd[40] = "\0";
+	SHA256_CTX ctx;
+	unsigned char hashed_pwd[EVP_MAX_MD_SIZE];
+
+	std::string str = "SELECT * FROM user WHERE Username = '" + user + "'";
+	conn = mysql_init(0);
+	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+	if (conn) {
+		if (mysql_query(conn, str.c_str()) == 0) {
+			res = mysql_store_result(conn);
+			if (res->row_count != 0) {
+
+				if (mysql_errno(conn) != 0)
+					return -1; //error in the query
+				else
+				{
+					row = mysql_fetch_row(res);
+					memcpy(pwd, psw.c_str(), sizeof(psw));
+					qDebug() << strlen(row[3]);
+					qDebug() << row[3];
+					std::string str1 = base64_decode((unsigned char*)row[3], strlen(row[3]));
+					
+					memcpy(pwd + (strlen(psw.c_str())), str1.c_str(), strlen(row[3]));
+
+					SHA256_Init(&ctx);    //aggiungere gestione errrori
+					SHA256_Update(&ctx, pwd, strlen((const char*)pwd));
+					SHA256_Final(hashed_pwd, &ctx);
+					std::string str2 = base64_decode((unsigned char*)row[2], strlen(row[2]));
+					if (CRYPTO_memcmp(hashed_pwd, str2.c_str() , sizeof(str2.c_str()))==0) {
+						for (auto it = listaUtenti.begin(); it < listaUtenti.end(); it++) {
+							if (it->getUsername() == user) {
+									it->setConnected(addr, port);
+									it->setSocket(s);
+								return true;
+							}
+						}
+
+					}
+
+
+					//controllo password
+					mysql_free_result(res);
+				}
+			}
+		}
+
+
+		/*for (auto it = listaUtenti.begin(); it < listaUtenti.end(); it++) {
 		if (it->getUsername() == user) {
 			bool res = it->loginCheck(user, psw);
 			if (res == true) {
 				it->setConnected(addr, port);
 				it->setSocket(s);
 			}
-				
-			
+
+
 			return res;
 		}
+	}*/
+
+
 	}
 	return 0;
 }

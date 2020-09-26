@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'FileExplorerWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.3
+** Created by: Qt User Interface Compiler version 5.15.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -366,19 +366,19 @@ public:
 
     void retranslateUi(QWidget *FileExplorerWindow)
     {
-        FileExplorerWindow->setWindowTitle(QApplication::translate("FileExplorerWindow", "Files", nullptr));
-        label1->setText(QApplication::translate("FileExplorerWindow", "Your Files", nullptr));
-        loadDesc->setText(QApplication::translate("FileExplorerWindow", "Select a file, then press Load file", nullptr));
+        FileExplorerWindow->setWindowTitle(QCoreApplication::translate("FileExplorerWindow", "Files", nullptr));
+        label1->setText(QCoreApplication::translate("FileExplorerWindow", "Your Files", nullptr));
+        loadDesc->setText(QCoreApplication::translate("FileExplorerWindow", "Select a file, then press Load file", nullptr));
         newFilePic->setText(QString());
-        newFileButton->setText(QApplication::translate("FileExplorerWindow", "New File", nullptr));
+        newFileButton->setText(QCoreApplication::translate("FileExplorerWindow", "New File", nullptr));
         loadFilePic->setText(QString());
-        loadFileButton->setText(QApplication::translate("FileExplorerWindow", "Load from List", nullptr));
+        loadFileButton->setText(QCoreApplication::translate("FileExplorerWindow", "Load from List", nullptr));
         myuserText->setText(QString());
-        myimage->setText(QApplication::translate("FileExplorerWindow", "TextLabel", nullptr));
-        label1_2->setText(QApplication::translate("FileExplorerWindow", "Load from URI", nullptr));
-        loadDesc_2->setText(QApplication::translate("FileExplorerWindow", "Paste an URI, then press Load File", nullptr));
+        myimage->setText(QCoreApplication::translate("FileExplorerWindow", "TextLabel", nullptr));
+        label1_2->setText(QCoreApplication::translate("FileExplorerWindow", "Load from URI", nullptr));
+        loadDesc_2->setText(QCoreApplication::translate("FileExplorerWindow", "Paste an URI, then press Load File", nullptr));
         loadFilePic_2->setText(QString());
-        loadFileURIButton->setText(QApplication::translate("FileExplorerWindow", "Load from URI", nullptr));
+        loadFileURIButton->setText(QCoreApplication::translate("FileExplorerWindow", "Load from URI", nullptr));
         errorDescription->setText(QString());
     } // retranslateUi
 
