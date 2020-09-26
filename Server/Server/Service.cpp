@@ -109,6 +109,7 @@ int Service::lookForUser() {
 
 				listaUtenti.push_back(u);   // VERIFICARE L'UTILITA
 			}
+			mysql_free_result(res);
 		}
 		mysql_close(conn);
 	}
@@ -123,13 +124,9 @@ int Service::lookForUser() {
 int Service::registerNewUser(std::string u, std::string p, std::string addr, std::string port, QTcpSocket *s) {
 	int nuser = listaUtenti.size();
 	unsigned char salt[8] = "\0";
-	std::stringstream hexsalt;
 	unsigned char pwd[40] = "\0";
 	unsigned char hashed_pwd[EVP_MAX_MD_SIZE];
 	
-	
-	/*std::string pwd;
-	std::string hashed_pwd;*/
 	SHA256_CTX ctx;
 	
 
@@ -153,19 +150,17 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 			else {
 				//hashing of password
 				RAND_bytes(salt, 8);
-				qDebug() << salt;
-				/*hexsalt << std::hex << std::setfill('0');
-				for (int i = 0; i < sizeof(salt); ++i)
-				{
-					hexsalt << std::setw(2) << static_cast<unsigned>(salt[i]);
-				}*/
+				
 
 				memcpy(pwd, p.c_str(), strlen(p.c_str()));
 				memcpy(pwd + (strlen(p.c_str())), salt, 8);
-				qDebug() << pwd;
-				SHA256_Init(&ctx);    //aggiungere gestione errrori
-				SHA256_Update(&ctx, pwd, strlen((const char*)pwd));
-				SHA256_Final(hashed_pwd, &ctx);
+				
+				if (SHA256_Init(&ctx) == 0)
+					return -1;
+				if (SHA256_Update(&ctx, pwd, strlen((const char*)pwd)) == 0)
+					return -1;
+				if (SHA256_Final(hashed_pwd, &ctx) == 0)
+					return -1;
 				
 				
 				std::string base64_pwd = base64_encode(hashed_pwd, sizeof(hashed_pwd));
@@ -223,21 +218,26 @@ int Service::checkUserLogin(std::string user, std::string psw, std::string addr,
 			res = mysql_store_result(conn);
 			if (res->row_count != 0) {
 
-				if (mysql_errno(conn) != 0)
+				if (mysql_errno(conn) != 0) {
+					mysql_free_result(res);
 					return -1; //error in the query
+				}
+					
 				else
 				{
 					row = mysql_fetch_row(res);
 					memcpy(pwd, psw.c_str(), sizeof(psw));
-					qDebug() << strlen(row[3]);
-					qDebug() << row[3];
+				
 					std::string str1 = base64_decode((unsigned char*)row[3], strlen(row[3]));
 					
 					memcpy(pwd + (strlen(psw.c_str())), str1.c_str(), strlen(row[3]));
 
-					SHA256_Init(&ctx);    //aggiungere gestione errrori
-					SHA256_Update(&ctx, pwd, strlen((const char*)pwd));
-					SHA256_Final(hashed_pwd, &ctx);
+					if (SHA256_Init(&ctx) == 0)
+						return -1;
+					if (SHA256_Update(&ctx, pwd, strlen((const char*)pwd))==0)
+						return -1;
+					if (SHA256_Final(hashed_pwd, &ctx) == 0)
+						return -1;
 					std::string str2 = base64_decode((unsigned char*)row[2], strlen(row[2]));
 					if (CRYPTO_memcmp(hashed_pwd, str2.c_str() , sizeof(str2.c_str()))==0) {
 						for (auto it = listaUtenti.begin(); it < listaUtenti.end(); it++) {
@@ -250,27 +250,10 @@ int Service::checkUserLogin(std::string user, std::string psw, std::string addr,
 
 					}
 
-
-					//controllo password
 					mysql_free_result(res);
 				}
 			}
 		}
-
-
-		/*for (auto it = listaUtenti.begin(); it < listaUtenti.end(); it++) {
-		if (it->getUsername() == user) {
-			bool res = it->loginCheck(user, psw);
-			if (res == true) {
-				it->setConnected(addr, port);
-				it->setSocket(s);
-			}
-
-
-			return res;
-		}
-	}*/
-
 
 	}
 	return 0;
