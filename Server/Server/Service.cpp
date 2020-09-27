@@ -107,7 +107,7 @@ int Service::lookForUser() {
 				psw = row[2];
 				Utente u(id, user, psw);
 
-				listaUtenti.push_back(u);   // VERIFICARE L'UTILITA
+				listaUtenti.push_back(u);   
 			}
 			mysql_free_result(res);
 		}
@@ -134,13 +134,18 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 	MYSQL_RES* res;
 	MYSQL_ROW row;
 	std::string str = "SELECT * FROM user WHERE Username = '"+u+"'";
-	conn = mysql_init(0);
+	conn = mysql_init(NULL);
+	if (conn == NULL) {
+		qDebug() << "Can't initialize MYSQL ";
+		return -1;
+	}
 	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
-	if (conn) {
+	if (conn!=NULL) {
 		if (mysql_query(conn, str.c_str()) == 0) {
-			res = mysql_store_result(conn);
+			if ((res = mysql_store_result(conn)) == NULL)
+				return -1;
 			if (res->row_count != 0) {
-				mysql_free_result(res);
+				//mysql_free_result(res);
 				if (mysql_errno(conn) != 0)
 					return -1; //error in the query
 				else
@@ -185,19 +190,6 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 		return -1;
 	}
 
-
-	
-
-	/*---Diritti di accesso sui File -> Creazione Riga in filelist---*/
-	//inFile.open("filelist.txt", std::ios_base::app);
-	//if (!inFile) {
-	//	std::cout << "Unable to open file";
-	//	return -1;
-	//}
-	//inFile << "\n" << nuser + 1 <<" ";
-	//inFile.close();
-	///*---*/
-	
 	return listaUtenti.size();
 }
 
@@ -211,15 +203,20 @@ int Service::checkUserLogin(std::string user, std::string psw, std::string addr,
 	unsigned char hashed_pwd[EVP_MAX_MD_SIZE];
 
 	std::string str = "SELECT * FROM user WHERE Username = '" + user + "'";
-	conn = mysql_init(0);
+	conn = mysql_init(NULL);
+	if (conn == NULL) {
+		qDebug() << "Can't initialize MYSQL ";
+		return -1;
+	}
 	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
-	if (conn) {
+	if (conn!=NULL) {
 		if (mysql_query(conn, str.c_str()) == 0) {
-			res = mysql_store_result(conn);
+			if ((res = mysql_store_result(conn)) == NULL)
+				return -1;
 			if (res->row_count != 0) {
 
 				if (mysql_errno(conn) != 0) {
-					mysql_free_result(res);
+					//mysql_free_result(res);
 					return -1; //error in the query
 				}
 					
@@ -254,7 +251,10 @@ int Service::checkUserLogin(std::string user, std::string psw, std::string addr,
 				}
 			}
 		}
-
+		mysql_close(conn);
+	}
+	else {
+		return -1;
 	}
 	return 0;
 }
@@ -359,75 +359,86 @@ QStringList Service::lookForUserFiles(Utente u) { /* Restituisce la lista dei fi
 	int id;
 	std::string line, word;
 	QStringList filenames;
-	std::ifstream inFile;
-	inFile.open("filelist.txt");
-	if (inFile)
-	{
-		while (inFile >> id >> line) {
-			if (id == u.getID()) {
-				for (auto c : line) {
-					if (c != ',')
-						word.push_back(c);
-					else {
-						filenames.append(QString::fromStdString(word));
-						word = "";
-					}
+
+	MYSQL* conn;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+
+	std::string str = "SELECT File FROM files WHERE ID = '" + std::to_string(u.getID()) + "'";
+	conn = mysql_init(NULL);
+	if (conn == NULL) {
+		qDebug() << "Can't initialize MYSQL ";
+		return filenames;
+	}
+	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+	if (conn!=NULL) {
+		if (mysql_query(conn, str.c_str()) == 0) {
+			if ((res = mysql_store_result(conn)) == NULL)
+				return filenames;
+			if (res->row_count != 0) {
+
+				if (mysql_errno(conn) != 0) {
+					return filenames;
 				}
-				filenames.append(QString::fromStdString(word));
-				word = "";
+				else {
+					while (row = mysql_fetch_row(res)) {
+						File f(row[0]);
+						listaFileApribili.append(f);
+						filenames.append(row[0]);
+					}
+					mysql_free_result(res);
+				}
+				
 			}
 		}
-
-		for (QString name : filenames) {
-			File f(name.toStdString());
-			listaFileApribili.append(f);
-		}
+		mysql_close(conn);
+	}
+	else {
+		qDebug() << "Can't connect to database ";
 	}
 	return filenames;
 }
 
 	int Service::AddFiletoList(Utente u, std::string filename) {
-		int id;
-		std::string line, word;
-		std::vector<std::string> filenames;
-		std::ifstream inFile;
-		std::ofstream outFile;
+		
+		MYSQL* conn;
+		MYSQL_RES* res;
+		MYSQL_ROW row;
 
-		inFile.open("filelist.txt");
-		if (!inFile) {
-			std::cout << "Unable to open file";
-			return -1;
+		std::string str = "SELECT * FROM files WHERE File = '" + filename + "'";
+		conn = mysql_init(NULL);
+		if (conn == NULL) {
+			qDebug() << "Can't initialize MYSQL ";
+			abort();
 		}
-		outFile.open("temp.txt");
-		if (!inFile) {
-			std::cout << "Unable to open file";
-			return -1;
-		}
-
-		while (inFile >> id >> line) {
-			if (id == u.getID()) {
-				for (auto c : line) {
-					if (c != ',')
-						word.push_back(c);
+		conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+		if (conn != NULL) {
+			if (mysql_query(conn, str.c_str()) == 0) {
+				if ((res = mysql_store_result(conn)) == NULL)
+					return -1;
+				if (res->row_count != 0) {
+					if (mysql_errno(conn) != 0)
+						return -1;
 					else {
-						filenames.push_back(std::move(word));
+						qDebug() << "File already exist";
+						mysql_free_result(res);
+						return -1;
 					}
 				}
-				filenames.push_back(std::move(word));
-				std::vector<std::string>::iterator it = std::find(filenames.begin(), filenames.end(), filename);
-				if(it == filenames.end())
-					outFile << id << " " << line << "," << filename << "\n";
-				else
-					outFile << id << " " << line << "\n";
-			}
-			else
-				outFile << id << " " << line << "\n";
-		}
-		inFile.close();
-		outFile.close();
+				else {
+					str.clear();
+					str = "INSERT INTO files (ID, File) VALUES ('"+ std::to_string(u.getID()) + "','" + filename + "')";
+					if (mysql_query(conn, str.c_str()) != 0)
+						return -1; //error in the query
 
-		std::remove("filelist.txt");
-		std::rename("temp.txt", "filelist.txt");
+				}
+			}
+			mysql_close(conn);
+		}
+		else {
+			qDebug() << "Can't connect to database ";
+		}
+
 		return 0;
 }
 

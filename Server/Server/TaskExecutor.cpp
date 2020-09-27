@@ -191,7 +191,7 @@ Service& TaskExecutor::start()
 			QStringList filelist = service.lookForFiles();
 		}
 
-		/*---Diritti di accesso sui File -> Aggiunta File in filelist---*/
+		
 		service.AddFiletoList(u, filename.toStdString());
 		//Inserire controllo sul risultato
 		/*---*/

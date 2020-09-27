@@ -14,13 +14,13 @@ Utente::Utente(int id, std::string username, std::string password)
 }
 
 
-bool Utente::loginCheck(std::string user, std::string password) {
-	if (this->username == user && this->password == password) {
-		setConnected();
-		return true;
-	}
-	return false;
-}
+//bool Utente::loginCheck(std::string user, std::string password) {
+//	if (this->username == user && this->password == password) {
+//		setConnected();
+//		return true;
+//	}
+//	return false;
+//}
 
 std::string Utente::getUsername() const
 {

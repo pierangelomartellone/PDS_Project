@@ -19,8 +19,8 @@ private:
 	QTcpSocket* mysocket;
 public:
 	Utente();
-	Utente(int id, std::string password, std::string nickname);
-	bool loginCheck(std::string user, std::string password);
+	Utente(int id, std::string nickname, std::string password);
+	//bool loginCheck(std::string user, std::string password);
 	std::string getUsername() const;
 	std::string getUsername();
 	std::string getPassword() const;
