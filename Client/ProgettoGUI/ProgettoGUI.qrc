@@ -21,6 +21,7 @@
         <file>images/underline.png</file>
 		<file>images/undo.png</file>
 		<file>images/redo.png</file>
+		<file>darkstyle.qss</file>
 
     </qresource>
 </RCC>

@@ -16,6 +16,7 @@ public:
 private:
 	Ui::FileExplorerWindow ui;
 	QStringListModel *model;
+	QStringList temp;
 
 private slots:
 	void on_newFileButton_clicked();
