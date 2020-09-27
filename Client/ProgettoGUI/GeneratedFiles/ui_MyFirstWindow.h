@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'MyFirstWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.3
+** Created by: Qt User Interface Compiler version 5.15.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -395,13 +395,13 @@ public:
 
     void retranslateUi(QWidget *MyFirstWindow)
     {
-        MyFirstWindow->setWindowTitle(QApplication::translate("MyFirstWindow", "MyFirstWindow", nullptr));
+        MyFirstWindow->setWindowTitle(QCoreApplication::translate("MyFirstWindow", "MyFirstWindow", nullptr));
         picture->setText(QString());
-        userLabel->setText(QApplication::translate("MyFirstWindow", "Username", nullptr));
-        passLabel->setText(QApplication::translate("MyFirstWindow", "Password", nullptr));
-        pushButton->setText(QApplication::translate("MyFirstWindow", "Login", nullptr));
-        newAccountButton->setText(QApplication::translate("MyFirstWindow", "Nuovo account?", nullptr));
-        errorDescription->setText(QApplication::translate("MyFirstWindow", "Sorry, you typed wrong username or password", nullptr));
+        userLabel->setText(QCoreApplication::translate("MyFirstWindow", "Username", nullptr));
+        passLabel->setText(QCoreApplication::translate("MyFirstWindow", "Password", nullptr));
+        pushButton->setText(QCoreApplication::translate("MyFirstWindow", "Login", nullptr));
+        newAccountButton->setText(QCoreApplication::translate("MyFirstWindow", "Nuovo account?", nullptr));
+        errorDescription->setText(QCoreApplication::translate("MyFirstWindow", "Sorry, you typed wrong username or password", nullptr));
     } // retranslateUi
 
 };
