@@ -1,6 +1,20 @@
-﻿  Server.cpp
+﻿  Uic'ing Server.ui...
+  Rcc'ing Server.qrc...
+  Moc'ing Server.h...
+  Moc'ing Serialize.h...
+   RCC: Warning: No resources in 'C:\Users\simon\source\repos\PDS_Project\Server\Server\Server.qrc'.
+  CRDT.cpp
+  File.cpp
+  main.cpp
+  Message.cpp
+  Serialize.cpp
+  Server.cpp
   Service.cpp
-d:\lavoro\server\server\server\utente.h(44): warning C4717: 'qHash': funzione ricorsiva su tutti i percorsi di controlli, provocherà un overflow dello stack in fase di esecuzione
-d:\lavoro\server\server\server\file.h(34): warning C4717: 'qHash': funzione ricorsiva su tutti i percorsi di controlli, provocherà un overflow dello stack in fase di esecuzione
-d:\lavoro\server\server\server\service.cpp(96): warning C4715: 'Service::getUserFromPort': non tutti i percorsi di controllo restituiscono un valore
-  Server.vcxproj -> D:\Lavoro\Server\Server\x64\Release\Server.exe
+  Symbol.cpp
+  TaskExecutor.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+  Utente.cpp
+  qrc_Server.cpp
+  moc_Server.cpp
+  moc_Serialize.cpp
+  Server.vcxproj -> C:\Users\simon\source\repos\PDS_Project\Server\x64\Release\Server.exe
