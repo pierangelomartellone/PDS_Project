@@ -55,7 +55,7 @@ MyFirstWindow::MyFirstWindow(QWidget *parent)
 
 	this->setWindowTitle("Login");
 	QPixmap pix(":/images/login.png");
-	ui.picture->setPixmap(pix);
+	//ui.picture->setPixmap(pix);
 	ui.errorDescription->setVisible(true);
 	ui.errorDescription->setText("");
 

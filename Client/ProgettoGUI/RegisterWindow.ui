@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>593</width>
-    <height>718</height>
+    <width>1040</width>
+    <height>1079</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,17 +22,25 @@
   <property name="whatsThis">
    <string notr="true"/>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background:qlineargradient(spread:pad, x1:0.103, y1:0.914409, x2:1, y2:0, stop:0 rgba(33, 119, 219, 255), stop:0.745946 rgba(103, 209, 255, 255), stop:1 rgba(252, 252, 252, 255))</string>
+  </property>
   <property name="windowFilePath">
    <string notr="true"/>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
+  <widget class="QFrame" name="verticalFrame">
    <property name="geometry">
     <rect>
-     <x>35</x>
-     <y>30</y>
-     <width>531</width>
-     <height>661</height>
+     <x>220</x>
+     <y>110</y>
+     <width>621</width>
+     <height>831</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(53,53,53);
+border-radius: 30px;
+</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0">
     <property name="spacing">
@@ -105,10 +113,17 @@
           </property>
           <property name="font">
            <font>
-            <family>Segoe UI Light</family>
+            <family>Segoe UI Emoji</family>
             <pointsize>9</pointsize>
-            <italic>true</italic>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:white;
+font: 9pt &quot;Segoe UI Emoji&quot;;
+</string>
           </property>
           <property name="text">
            <string>Drop your profile picture above</string>
@@ -135,18 +150,25 @@
       </property>
       <property name="font">
        <font>
-        <family>Segoe UI Semibold</family>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>Segoe UI Emoji</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 13pt &quot;Segoe UI Emoji&quot;;
+background:rgb(53,53,53);
+color:white;
+</string>
       </property>
       <property name="text">
        <string>Username</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignHCenter">
      <widget class="QLineEdit" name="userText">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -156,8 +178,8 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>300</width>
-        <height>0</height>
+        <width>550</width>
+        <height>60</height>
        </size>
       </property>
       <property name="font">
@@ -167,6 +189,10 @@
         <weight>50</weight>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 15px;
+background: white;</string>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Normal</enum>
@@ -181,20 +207,33 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>5</height>
+       </size>
+      </property>
       <property name="font">
        <font>
-        <family>Segoe UI Semibold</family>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>Segoe UI Emoji</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 13pt &quot;Segoe UI Emoji&quot;;
+background:rgb(53,53,53);
+color:white;
+</string>
       </property>
       <property name="text">
        <string>Password</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignHCenter">
      <widget class="QLineEdit" name="passText">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -204,8 +243,8 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>300</width>
-        <height>0</height>
+        <width>550</width>
+        <height>60</height>
        </size>
       </property>
       <property name="font">
@@ -215,6 +254,10 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 15px;
+background: white;</string>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
@@ -229,7 +272,7 @@
       <property name="topMargin">
        <number>70</number>
       </property>
-      <item>
+      <item alignment="Qt::AlignTop">
        <widget class="QPushButton" name="pushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -239,8 +282,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>200</width>
-          <height>50</height>
+          <width>300</width>
+          <height>80</height>
          </size>
         </property>
         <property name="palette">
@@ -258,9 +301,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -339,9 +382,9 @@
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -404,9 +447,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -485,9 +528,9 @@
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -550,9 +593,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -622,18 +665,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -687,11 +730,20 @@
         </property>
         <property name="font">
          <font>
-          <family>Segoe UI Semibold</family>
-          <pointsize>11</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>Segoe UI Emoji</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>OpenHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 20px;
+font: 10pt &quot;Segoe UI Emoji&quot;;
+background: white;</string>
         </property>
         <property name="text">
          <string>Sign up</string>
@@ -706,9 +758,9 @@
        <number>0</number>
       </property>
       <property name="bottomMargin">
-       <number>50</number>
+       <number>45</number>
       </property>
-      <item>
+      <item alignment="Qt::AlignBottom">
        <widget class="QPushButton" name="loginButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -718,8 +770,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>200</width>
-          <height>40</height>
+          <width>300</width>
+          <height>80</height>
          </size>
         </property>
         <property name="palette">
@@ -737,9 +789,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -818,9 +870,9 @@
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -883,9 +935,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -964,9 +1016,9 @@
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -1029,9 +1081,9 @@
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -1101,18 +1153,18 @@
            <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>9</red>
-              <green>240</green>
-              <blue>132</blue>
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -1166,11 +1218,17 @@
         </property>
         <property name="font">
          <font>
-          <family>Segoe UI Semibold</family>
-          <pointsize>8</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <family>Segoe UI Emoji</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 20px;
+background:white;
+font: 10pt &quot;Segoe UI Emoji&quot;;</string>
         </property>
         <property name="text">
          <string>Already registered?</string>
@@ -1641,6 +1699,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background:none;</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
       </property>
@@ -1656,6 +1717,8 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="ProgettoGUI.qrc"/>
+ </resources>
  <connections/>
 </ui>

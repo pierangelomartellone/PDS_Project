@@ -1,27 +1,28 @@
 <RCC>
-    <qresource prefix="/">
-        <file>images/bold.png</file>
-        <file>images/copy.png</file>
-        <file>images/cut.png</file>
-        <file>images/italic.png</file>
-        <file>images/login.png</file>
-		<file>images/mainicon.png</file>
-        <file>images/new.png</file>
-        <file>images/open.png</file>
-        <file>images/paste.png</file>
-        <file>images/save.png</file>
-		<file>images/share.png</file>
-        <file>images/textcenter.png</file>
-        <file>images/textjustify.png</file>
-        <file>images/textleft.png</file>
-        <file>images/textright.png</file>
-		<file>images/type.png</file>
-        <file>images/exportpdf.png</file>
-        <file>images/print.png</file>	
-        <file>images/underline.png</file>
-		<file>images/undo.png</file>
-		<file>images/redo.png</file>
-		<file>darkstyle.qss</file>
-
-    </qresource>
+  <qresource prefix="/">
+    <file>images/32b877ed4aa7778cc7d43ebb7d95a6f1.png</file>
+    <file>images/blu.jpg</file>
+    <file>images/bold.png</file>
+    <file>images/copy.png</file>
+    <file>images/cut.png</file>
+    <file>images/italic.png</file>
+    <file>images/login.png</file>
+    <file>images/mainicon.png</file>
+    <file>images/new.png</file>
+    <file>images/open.png</file>
+    <file>images/paste.png</file>
+    <file>images/save.png</file>
+    <file>images/share.png</file>
+    <file>images/textcenter.png</file>
+    <file>images/textjustify.png</file>
+    <file>images/textleft.png</file>
+    <file>images/textright.png</file>
+    <file>images/type.png</file>
+    <file>images/exportpdf.png</file>
+    <file>images/print.png</file>
+    <file>images/underline.png</file>
+    <file>images/undo.png</file>
+    <file>images/redo.png</file>
+    <file>darkstyle.qss</file>
+  </qresource>
 </RCC>
