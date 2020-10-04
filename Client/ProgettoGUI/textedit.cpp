@@ -911,10 +911,10 @@ void TextEdit::showColorsfromUsers() {
 }
 
 void TextEdit::showLink() {
-	qDebug() << "showLink";
+	//qDebug() << "showLink";
 	QClipboard* clipboard = QGuiApplication::clipboard();
 	uri u = uri(this->fileName.toStdString(), false);
-	QString link = QString::fromStdString(u.getURI());
+	QString link = QString::fromStdString("http://shared." + u.getURI());
 	clipboard->setText(link);
 	QFont myfont("Segoe UI Semilight", 15);
 	QLabel* qPopup = new QLabel("Ho salvato il link\n a questo file negli appunti :)", this, Qt::SplashScreen | Qt::WindowStaysOnTopHint);

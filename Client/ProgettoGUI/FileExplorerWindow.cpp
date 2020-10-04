@@ -135,7 +135,9 @@ void FileExplorerWindow::on_loadFileURIButton_clicked()
 	bool ok;
 	/*-------CONTROLLARE-------*/
 	QString uritexted = ui.URILineEdit->text();
+	uritexted = uritexted.mid(14, -1);
 	uri filename(uritexted.toStdString(), true);
+	qDebug() << uritexted;
 	/* Fare check sulla validità della URI*/
 	TextEdit* editor = new TextEdit();
 	editor->load(QString::fromStdString(filename.resolveURI()));
