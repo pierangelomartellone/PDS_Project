@@ -96,11 +96,19 @@ Message CRDT::localInsert(int index, QChar value, QFont f, QColor c) {    //inde
 	Symbol s(this->_counter, this->_siteId, value, f, c);
 
 	if (index == 0) {
-		temp = this->_symbols[index].getFrz();
-		temp.at(temp.size() - 1)--;
-		s.Initialize(temp);
-		this->_symbols.insert(this->_symbols.begin() + index, s);
-		this->_counter++;
+		if (this->_symbols.size() != 0) {
+			temp = this->_symbols[index].getFrz();
+			temp.at(temp.size() - 1)--;
+			s.Initialize(temp);
+			this->_symbols.insert(this->_symbols.begin() + index, s);
+			this->_counter++;
+		}
+		else {
+			temp.push_back(0);
+			s.Initialize(temp);
+			this->_symbols.insert(this->_symbols.begin() + index, s);
+			this->_counter++;
+		}
 	}
 
 	else if (index >= this->_symbols.size()) { //caso di inserimento in coda o in qualunque caso in cui inserisco direttamente nella casella index 

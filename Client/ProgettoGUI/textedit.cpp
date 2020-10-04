@@ -47,6 +47,7 @@
 #endif
 
 #include "textedit.h"
+#include "uri.h"
 
 const QString rsrcPath = ":/images/";
 
@@ -912,7 +913,8 @@ void TextEdit::showColorsfromUsers() {
 void TextEdit::showLink() {
 	qDebug() << "showLink";
 	QClipboard* clipboard = QGuiApplication::clipboard();
-	QString link("http://ciaociao");
+	uri u = uri(this->fileName.toStdString(), false);
+	QString link = QString::fromStdString(u.getURI());
 	clipboard->setText(link);
 	QFont myfont("Segoe UI Semilight", 15);
 	QLabel* qPopup = new QLabel("Ho salvato il link\n a questo file negli appunti :)", this, Qt::SplashScreen | Qt::WindowStaysOnTopHint);
@@ -1135,7 +1137,8 @@ void TextEdit::textChanged() {
 			QChar qinserito = testo.at(cursore);
 			QColor color = textEdit->textColor();  // prende il colore generale settato nell'editor
 			QFont font = textEdit->currentFont();	// prende il font generale settato nell'editor
-			font.setPointSize(textEdit->fontPointSize()); // prende la dimensione generale settata nell'editor
+			int textSize = textEdit->fontPointSize() > 0 ? textEdit->fontPointSize() : 20;
+			font.setPointSize(textSize); // prende la dimensione generale settata nell'editor
 			if (actionTextBold->isChecked()) font.setBold(true);
 			if (actionTextItalic->isChecked()) font.setItalic(true);
 			if (actionTextUnderline->isChecked()) font.setUnderline(true);
@@ -1206,7 +1209,8 @@ void TextEdit::textChanged() {
 			QChar qinserito = testo.at(cursore);
 			QColor color = textEdit->textColor();  // prende il colore generale settato nell'editor
 			QFont font = textEdit->currentFont();	// prende il font generale settato nell'editor
-			font.setPointSize(textEdit->fontPointSize()); // prende la dimensione generale settata nell'editor
+			int textSize = textEdit->fontPointSize() > 0 ? textEdit->fontPointSize() : 20;
+			font.setPointSize(textSize); // prende la dimensione generale settata nell'editor
 			if (actionTextBold->isChecked()) font.setBold(true);
 			if (actionTextItalic->isChecked()) font.setItalic(true);
 			if (actionTextUnderline->isChecked()) font.setUnderline(true);

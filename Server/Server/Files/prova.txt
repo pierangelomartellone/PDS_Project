@@ -1,103 +1,161 @@
-{"Sid":4,"blue":0,"carattere":67,"counter":1,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[0],"red":0}
-{"Sid":4,"blue":0,"carattere":105,"counter":2,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[1],"red":0}
-{"Sid":4,"blue":0,"carattere":97,"counter":3,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[2],"red":0}
-{"Sid":4,"blue":0,"carattere":111,"counter":4,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[3],"red":0}
-{"Sid":4,"blue":0,"carattere":44,"counter":5,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[4],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":6,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[5],"red":0}
-{"Sid":4,"blue":0,"carattere":99,"counter":7,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[6],"red":0}
-{"Sid":4,"blue":0,"carattere":111,"counter":10,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[7],"red":0}
-{"Sid":4,"blue":0,"carattere":109,"counter":11,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[8],"red":0}
-{"Sid":4,"blue":0,"carattere":101,"counter":12,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[9],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":13,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[10],"red":0}
-{"Sid":4,"blue":0,"carattere":115,"counter":14,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[11],"red":0}
-{"Sid":4,"blue":0,"carattere":116,"counter":15,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[12],"red":0}
-{"Sid":4,"blue":0,"carattere":97,"counter":16,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[13],"red":0}
-{"Sid":4,"blue":0,"carattere":105,"counter":17,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[14],"red":0}
-{"Sid":4,"blue":0,"carattere":63,"counter":20,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[15],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":21,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[16],"red":0}
-{"Sid":4,"blue":0,"carattere":84,"counter":22,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[17],"red":0}
-{"Sid":4,"blue":0,"carattere":117,"counter":23,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[18],"red":0}
-{"Sid":4,"blue":0,"carattere":116,"counter":24,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[19],"red":0}
-{"Sid":4,"blue":0,"carattere":116,"counter":25,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[20],"red":0}
-{"Sid":4,"blue":0,"carattere":111,"counter":26,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[21],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":27,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[22],"red":0}
-{"Sid":4,"blue":0,"carattere":98,"counter":28,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[23],"red":0}
-{"Sid":4,"blue":0,"carattere":101,"counter":29,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[24],"red":0}
-{"Sid":4,"blue":0,"carattere":110,"counter":30,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[25],"red":0}
-{"Sid":4,"blue":0,"carattere":101,"counter":31,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[26],"red":0}
-{"Sid":2,"blue":0,"carattere":44,"counter":3,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[27],"red":0}
-{"Sid":2,"blue":0,"carattere":32,"counter":4,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[28],"red":0}
-{"Sid":3,"blue":0,"carattere":109,"counter":16,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[29],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":18,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[30],"red":0}
-{"Sid":3,"blue":0,"carattere":110,"counter":19,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[31],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":20,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[32],"red":0}
-{"Sid":3,"blue":0,"carattere":109,"counter":21,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[33],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":22,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[34],"red":0}
-{"Sid":3,"blue":0,"carattere":108,"counter":23,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[35],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":24,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[36],"red":0}
-{"Sid":5,"blue":0,"carattere":44,"counter":1,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[37],"red":0}
-{"Sid":5,"blue":0,"carattere":32,"counter":2,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[38],"red":0}
-{"Sid":4,"blue":0,"carattere":109,"counter":34,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[39],"red":0}
-{"Sid":4,"blue":0,"carattere":101,"counter":35,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[40],"red":0}
-{"Sid":4,"blue":0,"carattere":110,"counter":36,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[41],"red":0}
-{"Sid":4,"blue":0,"carattere":111,"counter":37,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[42],"red":0}
-{"Sid":4,"blue":0,"carattere":109,"counter":38,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[43],"red":0}
-{"Sid":4,"blue":0,"carattere":97,"counter":39,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[44],"red":0}
-{"Sid":4,"blue":0,"carattere":108,"counter":40,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[45],"red":0}
-{"Sid":4,"blue":0,"carattere":101,"counter":41,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[46],"red":0}
-{"Sid":4,"blue":0,"carattere":46,"counter":43,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[47],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":25,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[48],"red":0}
-{"Sid":3,"blue":0,"carattere":99,"counter":26,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[49],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":27,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[50],"red":0}
-{"Sid":3,"blue":0,"carattere":109,"counter":28,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[51],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":29,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[52],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":30,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[53],"red":0}
-{"Sid":3,"blue":0,"carattere":118,"counter":31,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[54],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":32,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[55],"red":0}
-{"Sid":3,"blue":0,"carattere":110,"counter":33,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[56],"red":0}
-{"Sid":3,"blue":0,"carattere":110,"counter":34,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[57],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":35,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[58],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":36,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[59],"red":0}
-{"Sid":3,"blue":0,"carattere":108,"counter":37,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[60],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":38,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[61],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":39,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[62],"red":0}
-{"Sid":3,"blue":0,"carattere":118,"counter":40,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[63],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":41,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[64],"red":0}
-{"Sid":3,"blue":0,"carattere":99,"counter":42,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[65],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":44,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[66],"red":0}
-{"Sid":3,"blue":0,"carattere":110,"counter":45,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[67],"red":0}
-{"Sid":3,"blue":0,"carattere":122,"counter":46,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[68],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":47,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[69],"red":0}
-{"Sid":3,"blue":0,"carattere":63,"counter":48,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[70],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":49,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[71],"red":0}
-{"Sid":3,"blue":0,"carattere":77,"counter":50,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[72],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":51,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[73],"red":0}
-{"Sid":3,"blue":0,"carattere":104,"counter":52,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[74],"red":0}
-{"Sid":4,"blue":0,"carattere":44,"counter":45,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[75],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":46,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[76],"red":0}
-{"Sid":4,"blue":0,"carattere":116,"counter":47,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[77],"red":0}
-{"Sid":4,"blue":0,"carattere":105,"counter":48,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[78],"red":0}
-{"Sid":4,"blue":0,"carattere":114,"counter":49,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[79],"red":0}
-{"Sid":4,"blue":0,"carattere":105,"counter":51,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[80],"red":0}
-{"Sid":4,"blue":0,"carattere":97,"counter":52,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[81],"red":0}
-{"Sid":4,"blue":0,"carattere":109,"counter":53,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[82],"red":0}
-{"Sid":4,"blue":0,"carattere":111,"counter":54,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[83],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":55,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[84],"red":0}
-{"Sid":4,"blue":0,"carattere":97,"counter":56,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[85],"red":0}
-{"Sid":4,"blue":0,"carattere":118,"counter":57,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[86],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":80,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[87],"red":0}
-{"Sid":3,"blue":0,"carattere":110,"counter":81,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[88],"red":0}
-{"Sid":3,"blue":0,"carattere":116,"counter":82,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[89],"red":0}
-{"Sid":3,"blue":0,"carattere":105,"counter":83,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[90],"red":0}
-{"Sid":4,"blue":0,"carattere":46,"counter":76,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[91],"red":0}
-{"Sid":4,"blue":0,"carattere":32,"counter":77,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[92],"red":0}
-{"Sid":3,"blue":0,"carattere":72,"counter":90,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[93],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":91,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[94],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":92,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[95],"red":0}
-{"Sid":3,"blue":0,"carattere":99,"counter":93,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[96],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":94,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[97],"red":0}
-{"Sid":3,"blue":0,"carattere":112,"counter":95,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[98],"red":0}
-{"Sid":3,"blue":0,"carattere":105,"counter":99,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[99],"red":0}
-{"Sid":3,"blue":0,"carattere":116,"counter":100,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[100],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":101,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[101],"red":0}
-{"Sid":3,"blue":0,"carattere":46,"counter":102,"font":"Segoe UI Semilight,20,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[102],"red":0}
+{"Sid":2,"blue":0,"carattere":86,"counter":119,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36],"red":0}
+{"Sid":2,"blue":0,"carattere":111,"counter":120,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,5],"red":0}
+{"Sid":2,"blue":0,"carattere":103,"counter":121,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,6],"red":0}
+{"Sid":2,"blue":0,"carattere":108,"counter":122,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,7],"red":0}
+{"Sid":2,"blue":0,"carattere":105,"counter":123,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,8],"red":0}
+{"Sid":2,"blue":0,"carattere":111,"counter":124,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,9],"red":0}
+{"Sid":2,"blue":0,"carattere":32,"counter":125,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,10],"red":0}
+{"Sid":2,"blue":0,"carattere":115,"counter":126,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,11],"red":0}
+{"Sid":2,"blue":0,"carattere":99,"counter":127,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,12],"red":0}
+{"Sid":2,"blue":0,"carattere":114,"counter":128,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,13],"red":0}
+{"Sid":2,"blue":0,"carattere":105,"counter":129,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,14],"red":0}
+{"Sid":2,"blue":0,"carattere":118,"counter":130,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,15],"red":0}
+{"Sid":2,"blue":0,"carattere":101,"counter":131,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,16],"red":0}
+{"Sid":2,"blue":0,"carattere":114,"counter":132,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,17],"red":0}
+{"Sid":2,"blue":0,"carattere":101,"counter":133,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,18],"red":0}
+{"Sid":2,"blue":0,"carattere":32,"counter":134,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,19],"red":0}
+{"Sid":2,"blue":0,"carattere":102,"counter":135,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,20],"red":0}
+{"Sid":2,"blue":0,"carattere":111,"counter":136,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,21],"red":0}
+{"Sid":2,"blue":0,"carattere":114,"counter":137,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,22],"red":0}
+{"Sid":2,"blue":0,"carattere":109,"counter":138,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,23],"red":0}
+{"Sid":2,"blue":0,"carattere":97,"counter":139,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,24],"red":0}
+{"Sid":2,"blue":0,"carattere":116,"counter":140,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,25],"red":0}
+{"Sid":2,"blue":0,"carattere":116,"counter":141,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,26],"red":0}
+{"Sid":2,"blue":0,"carattere":97,"counter":142,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,27],"red":0}
+{"Sid":2,"blue":0,"carattere":116,"counter":143,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,28],"red":0}
+{"Sid":2,"blue":0,"carattere":111,"counter":144,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,29],"red":0}
+{"Sid":2,"blue":0,"carattere":32,"counter":145,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,30],"red":0}
+{"Sid":2,"blue":0,"carattere":97,"counter":146,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,31],"red":0}
+{"Sid":2,"blue":0,"carattere":110,"counter":147,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,32],"red":0}
+{"Sid":2,"blue":0,"carattere":99,"counter":148,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,33],"red":0}
+{"Sid":2,"blue":0,"carattere":104,"counter":149,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,34],"red":0}
+{"Sid":2,"blue":0,"carattere":101,"counter":150,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,35],"red":0}
+{"Sid":2,"blue":0,"carattere":32,"counter":151,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,36],"red":0}
+{"Sid":2,"blue":0,"carattere":113,"counter":152,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,37],"red":0}
+{"Sid":2,"blue":0,"carattere":117,"counter":153,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,38],"red":0}
+{"Sid":2,"blue":0,"carattere":105,"counter":154,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,39],"red":0}
+{"Sid":2,"blue":0,"carattere":46,"counter":155,"font":"Segoe UI Semilight,20,-1,2,50,0,0,0,0,0","green":0,"parte_frazionaria":[36,40],"red":0}
+{"Sid":1,"blue":250,"carattere":10,"counter":1,"font":"Sitka Heading,20,-1,1,50,0,0,0,0,0","green":36,"parte_frazionaria":[37],"red":21}
+{"Sid":2,"blue":250,"carattere":83,"counter":157,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4],"red":21}
+{"Sid":2,"blue":250,"carattere":99,"counter":158,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,5],"red":21}
+{"Sid":2,"blue":250,"carattere":114,"counter":159,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,6],"red":21}
+{"Sid":2,"blue":250,"carattere":105,"counter":160,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,7],"red":21}
+{"Sid":2,"blue":250,"carattere":118,"counter":161,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,8],"red":21}
+{"Sid":2,"blue":250,"carattere":105,"counter":162,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,9],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":163,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,10],"red":21}
+{"Sid":2,"blue":250,"carattere":109,"counter":164,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,11],"red":21}
+{"Sid":2,"blue":250,"carattere":111,"counter":165,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,12],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":166,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,13],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":167,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,14],"red":21}
+{"Sid":2,"blue":250,"carattere":108,"counter":168,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,15],"red":21}
+{"Sid":2,"blue":250,"carattere":116,"counter":169,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,16],"red":21}
+{"Sid":2,"blue":250,"carattere":114,"counter":170,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,17],"red":21}
+{"Sid":2,"blue":250,"carattere":101,"counter":171,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,18],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":172,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,19],"red":21}
+{"Sid":2,"blue":250,"carattere":99,"counter":173,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,20],"red":21}
+{"Sid":2,"blue":250,"carattere":111,"counter":174,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,21],"red":21}
+{"Sid":2,"blue":250,"carattere":115,"counter":175,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,22],"red":21}
+{"Sid":2,"blue":250,"carattere":101,"counter":176,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,23],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":177,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,24],"red":21}
+{"Sid":2,"blue":250,"carattere":100,"counter":178,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,25],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":179,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,26],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":180,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,27],"red":21}
+{"Sid":2,"blue":250,"carattere":113,"counter":181,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,28],"red":21}
+{"Sid":2,"blue":250,"carattere":117,"counter":182,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,29],"red":21}
+{"Sid":2,"blue":250,"carattere":101,"counter":183,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,30],"red":21}
+{"Sid":2,"blue":250,"carattere":115,"counter":184,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,31],"red":21}
+{"Sid":2,"blue":250,"carattere":116,"counter":185,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,32],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":186,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,33],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":187,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,34],"red":21}
+{"Sid":2,"blue":250,"carattere":112,"counter":188,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,35],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":189,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,36],"red":21}
+{"Sid":2,"blue":250,"carattere":114,"counter":190,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,37],"red":21}
+{"Sid":2,"blue":250,"carattere":116,"counter":191,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,38],"red":21}
+{"Sid":2,"blue":250,"carattere":101,"counter":192,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,39],"red":21}
+{"Sid":2,"blue":250,"carattere":46,"counter":193,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,40],"red":21}
+{"Sid":2,"blue":250,"carattere":10,"counter":194,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,41],"red":21}
+{"Sid":2,"blue":250,"carattere":69,"counter":195,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,42],"red":21}
+{"Sid":2,"blue":250,"carattere":100,"counter":196,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,43],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":197,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,44],"red":21}
+{"Sid":2,"blue":250,"carattere":105,"counter":198,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,45],"red":21}
+{"Sid":2,"blue":250,"carattere":110,"counter":199,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,46],"red":21}
+{"Sid":2,"blue":250,"carattere":102,"counter":200,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,47],"red":21}
+{"Sid":2,"blue":250,"carattere":105,"counter":201,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,48],"red":21}
+{"Sid":2,"blue":250,"carattere":110,"counter":202,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,49],"red":21}
+{"Sid":2,"blue":250,"carattere":101,"counter":203,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,50],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":204,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,51],"red":21}
+{"Sid":2,"blue":250,"carattere":113,"counter":205,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,52],"red":21}
+{"Sid":2,"blue":250,"carattere":117,"counter":206,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,53],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":207,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,54],"red":21}
+{"Sid":2,"blue":250,"carattere":108,"counter":208,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,55],"red":21}
+{"Sid":2,"blue":250,"carattere":99,"counter":209,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,56],"red":21}
+{"Sid":2,"blue":250,"carattere":111,"counter":210,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,57],"red":21}
+{"Sid":2,"blue":250,"carattere":115,"counter":211,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,58],"red":21}
+{"Sid":2,"blue":250,"carattere":97,"counter":212,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,59],"red":21}
+{"Sid":2,"blue":250,"carattere":32,"counter":213,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,60],"red":21}
+{"Sid":2,"blue":250,"carattere":113,"counter":214,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,61],"red":21}
+{"Sid":2,"blue":250,"carattere":117,"counter":215,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,62],"red":21}
+{"Sid":2,"blue":250,"carattere":105,"counter":216,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,63],"red":21}
+{"Sid":2,"blue":250,"carattere":46,"counter":217,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,64],"red":21}
+{"Sid":2,"blue":250,"carattere":0,"counter":218,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":36,"parte_frazionaria":[37,4,65],"red":21}
+{"Sid":1,"blue":15,"carattere":83,"counter":123,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5],"red":250}
+{"Sid":2,"blue":15,"carattere":69,"counter":267,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,5],"red":250}
+{"Sid":2,"blue":15,"carattere":100,"counter":268,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,6],"red":250}
+{"Sid":2,"blue":15,"carattere":32,"counter":269,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,7],"red":250}
+{"Sid":2,"blue":15,"carattere":105,"counter":270,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,8],"red":250}
+{"Sid":2,"blue":15,"carattere":110,"counter":271,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,9],"red":250}
+{"Sid":2,"blue":15,"carattere":102,"counter":272,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,10],"red":250}
+{"Sid":2,"blue":15,"carattere":105,"counter":273,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,11],"red":250}
+{"Sid":2,"blue":15,"carattere":110,"counter":274,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,12],"red":250}
+{"Sid":2,"blue":15,"carattere":101,"counter":275,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,13],"red":250}
+{"Sid":2,"blue":15,"carattere":32,"counter":276,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,14],"red":250}
+{"Sid":2,"blue":15,"carattere":113,"counter":277,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,15],"red":250}
+{"Sid":2,"blue":15,"carattere":117,"counter":278,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,16],"red":250}
+{"Sid":2,"blue":15,"carattere":97,"counter":279,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,17],"red":250}
+{"Sid":2,"blue":15,"carattere":108,"counter":280,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,18],"red":250}
+{"Sid":2,"blue":15,"carattere":99,"counter":281,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,19],"red":250}
+{"Sid":2,"blue":15,"carattere":111,"counter":282,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,20],"red":250}
+{"Sid":2,"blue":15,"carattere":115,"counter":283,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,21],"red":250}
+{"Sid":2,"blue":15,"carattere":97,"counter":284,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,22],"red":250}
+{"Sid":2,"blue":15,"carattere":32,"counter":285,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,23],"red":250}
+{"Sid":2,"blue":15,"carattere":113,"counter":286,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,24],"red":250}
+{"Sid":2,"blue":15,"carattere":117,"counter":287,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,25],"red":250}
+{"Sid":2,"blue":15,"carattere":105,"counter":288,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,26],"red":250}
+{"Sid":2,"blue":15,"carattere":46,"counter":289,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,27],"red":250}
+{"Sid":2,"blue":15,"carattere":0,"counter":290,"font":"Sitka Heading,20,-1,4,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,5,28],"red":250}
+{"Sid":1,"blue":15,"carattere":117,"counter":148,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,30],"red":250}
+{"Sid":1,"blue":15,"carattere":101,"counter":149,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,31],"red":250}
+{"Sid":1,"blue":15,"carattere":115,"counter":150,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,32],"red":250}
+{"Sid":1,"blue":15,"carattere":116,"counter":151,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,33],"red":250}
+{"Sid":1,"blue":15,"carattere":97,"counter":152,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,34],"red":250}
+{"Sid":1,"blue":15,"carattere":32,"counter":153,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,35],"red":250}
+{"Sid":1,"blue":15,"carattere":112,"counter":154,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,36],"red":250}
+{"Sid":1,"blue":15,"carattere":97,"counter":155,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,37],"red":250}
+{"Sid":1,"blue":15,"carattere":114,"counter":156,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,38],"red":250}
+{"Sid":1,"blue":15,"carattere":116,"counter":157,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,39],"red":250}
+{"Sid":1,"blue":15,"carattere":101,"counter":158,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,40],"red":250}
+{"Sid":1,"blue":15,"carattere":46,"counter":159,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,41],"red":250}
+{"Sid":1,"blue":15,"carattere":10,"counter":160,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[37,42],"red":250}
+{"Sid":1,"blue":15,"carattere":69,"counter":100,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[76],"red":250}
+{"Sid":1,"blue":15,"carattere":100,"counter":101,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[77],"red":250}
+{"Sid":1,"blue":15,"carattere":32,"counter":102,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[78],"red":250}
+{"Sid":1,"blue":15,"carattere":105,"counter":103,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[79],"red":250}
+{"Sid":1,"blue":15,"carattere":110,"counter":104,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[80],"red":250}
+{"Sid":1,"blue":15,"carattere":102,"counter":105,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[81],"red":250}
+{"Sid":1,"blue":15,"carattere":105,"counter":106,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[82],"red":250}
+{"Sid":1,"blue":15,"carattere":110,"counter":107,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[83],"red":250}
+{"Sid":1,"blue":15,"carattere":101,"counter":108,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[84],"red":250}
+{"Sid":1,"blue":15,"carattere":32,"counter":109,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[85],"red":250}
+{"Sid":1,"blue":15,"carattere":113,"counter":110,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[86],"red":250}
+{"Sid":1,"blue":15,"carattere":117,"counter":111,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[87],"red":250}
+{"Sid":1,"blue":15,"carattere":97,"counter":112,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[88],"red":250}
+{"Sid":1,"blue":15,"carattere":108,"counter":113,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[89],"red":250}
+{"Sid":1,"blue":15,"carattere":99,"counter":114,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[90],"red":250}
+{"Sid":1,"blue":15,"carattere":111,"counter":115,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[91],"red":250}
+{"Sid":1,"blue":15,"carattere":115,"counter":116,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[92],"red":250}
+{"Sid":1,"blue":15,"carattere":97,"counter":117,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[93],"red":250}
+{"Sid":1,"blue":15,"carattere":32,"counter":118,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[94],"red":250}
+{"Sid":1,"blue":15,"carattere":113,"counter":119,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[95],"red":250}
+{"Sid":1,"blue":15,"carattere":117,"counter":120,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[96],"red":250}
+{"Sid":1,"blue":15,"carattere":105,"counter":121,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[97],"red":250}
+{"Sid":1,"blue":15,"carattere":46,"counter":122,"font":"Sitka Heading,20,-1,2,50,0,0,0,0,0","green":50,"parte_frazionaria":[98],"red":250}
