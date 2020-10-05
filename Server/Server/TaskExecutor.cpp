@@ -222,12 +222,13 @@ Service& TaskExecutor::start()
 	} 
 	else if ( messageType == openFile) {
 		// chiamata in fase di apertura di un file
-		
+
 		CRDT crdt; File f;
 		QString filename = serialize.filenameUnserialize(readFromSocket);
 		codeth = service.fileOpened(u, filename.toStdString());
 		File aperto = service.searchFile(filename.toStdString(), aperti);
 		File apribile = service.searchFile(filename.toStdString(), apribili);
+		service.AddFiletoList(u, filename.toStdString());
 
 		if (aperto.getFilename() == "") { //FILE NON APERTO
 																		 //cerco il file a partire dal nome tra i file aperti o apribili

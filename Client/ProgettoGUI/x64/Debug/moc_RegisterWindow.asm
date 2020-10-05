@@ -6,19 +6,37 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG139523 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG139524 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG141904 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG141905 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG139525 DB	'qRegisterNormalizedMetaType', 00H
+$SG141906 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG140373 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG140374 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG145018 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG145019 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG140375 DB	'qRegisterNormalizedMetaType', 00H
+$SG145020 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG145365 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG145366 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG145367 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG145726 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG145727 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG145728 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_RegisterWindow@@3Uqt_meta_stringdata_RegisterWindow_t@@B DD 0ffffffffH ; qt_meta_stringdata_RegisterWindow
 	DD	0eH
@@ -130,34 +148,24 @@ $SG140375 DB	'qRegisterNormalizedMetaType', 00H
 	DD	02bH
 	DD	00H
 	ORG $+4
-$SG135756 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG135757 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG146854 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG146855 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG135758 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG138801 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG138802 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG138803 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG139162 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG139163 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG139164 DB	'qRegisterNormalizedMetaType', 00H
+$SG146856 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
+PUBLIC	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z		; QMetaObject::SuperData::SuperData
 PUBLIC	??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 PUBLIC	?metaObject@RegisterWindow@@UEBAPEBUQMetaObject@@XZ ; RegisterWindow::metaObject
 PUBLIC	?qt_metacast@RegisterWindow@@UEAAPEAXPEBD@Z	; RegisterWindow::qt_metacast
 PUBLIC	?qt_metacall@RegisterWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ; RegisterWindow::qt_metacall
 PUBLIC	?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; RegisterWindow::qt_static_metacall
+PUBLIC	??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QWidget::staticMetaObject>
+PUBLIC	??$staticMetaObject@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QWidget::staticMetaObject>
 PUBLIC	?staticMetaObject@RegisterWindow@@2UQMetaObject@@B ; RegisterWindow::staticMetaObject
 EXTRN	strcmp:PROC
 EXTRN	__imp_?dynamicMetaObject@QObjectData@@QEBAPEAUQMetaObject@@XZ:PROC
@@ -183,9 +191,31 @@ $pdata$?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@H
 	DD	imagerel $LN9+91
 	DD	imagerel $unwind$?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z
 pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
+	DD	imagerel $unwind$??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ DD imagerel ??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ
+	DD	imagerel ??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ+85
+	DD	imagerel $unwind$??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ
+pdata	ENDS
 CRT$XCU	SEGMENT
 ??staticMetaObject$initializer$@RegisterWindow@@2P6AXXZEA@@3P6AXXZEA DQ FLAT:??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ ; ??staticMetaObject$initializer$@RegisterWindow@@2P6AXXZEA@@3P6AXXZEA
 CRT$XCU	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD 010901H
+	DD	04209H
+xdata	ENDS
 xdata	SEGMENT
 $unwind$?metaObject@RegisterWindow@@UEBAPEBUQMetaObject@@XZ DD 010901H
 	DD	06209H
@@ -201,25 +231,58 @@ xdata	ENDS
 text$di	SEGMENT
 ??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'RegisterWindow::staticMetaObject'', COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 84
-	mov	rax, QWORD PTR __imp_?staticMetaObject@QWidget@@2UQMetaObject@@B
-	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B, rax
+; Line 91
+	sub	rsp, 40					; 00000028H
 ; Line 85
+	lea	rcx, OFFSET FLAT:?staticMetaObject@RegisterWindow@@2UQMetaObject@@B ; RegisterWindow::staticMetaObject
+	call	??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QWidget::staticMetaObject>
+; Line 86
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_RegisterWindow@@3Uqt_meta_stringdata_RegisterWindow_t@@B
 	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B+8, rax
-; Line 86
+; Line 87
 	lea	rax, OFFSET FLAT:?qt_meta_data_RegisterWindow@@3QBIB
 	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B+16, rax
-; Line 87
+; Line 88
 	lea	rax, OFFSET FLAT:?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; RegisterWindow::qt_static_metacall
 	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B+24, rax
-; Line 88
-	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B+32, 0
 ; Line 89
+	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B+32, 0
+; Line 90
 	mov	QWORD PTR ?staticMetaObject@RegisterWindow@@2UQMetaObject@@B+40, 0
+	add	rsp, 40					; 00000028H
 	ret	0
 ??__E?staticMetaObject@RegisterWindow@@2UQMetaObject@@B@@YAXXZ ENDP ; `dynamic initializer for 'RegisterWindow::staticMetaObject''
 text$di	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$staticMetaObject@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ
+_TEXT	SEGMENT
+??$staticMetaObject@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ PROC ; QMetaObject::staticMetaObject<&QWidget::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 577
+	mov	rax, QWORD PTR __imp_?staticMetaObject@QWidget@@2UQMetaObject@@B
+; Line 578
+	ret	0
+??$staticMetaObject@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ENDP ; QMetaObject::staticMetaObject<&QWidget::staticMetaObject>
+_TEXT	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+_TEXT	SEGMENT
+__$ReturnUdt$ = 48
+??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ PROC ; QMetaObject::SuperData::link<&QWidget::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 600
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	sub	rsp, 40					; 00000028H
+	call	??$staticMetaObject@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QWidget::staticMetaObject>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR __$ReturnUdt$[rsp]
+	call	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z	; QMetaObject::SuperData::SuperData
+	mov	rax, QWORD PTR __$ReturnUdt$[rsp]
+	add	rsp, 40					; 00000028H
+	ret	0
+??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ENDP ; QMetaObject::SuperData::link<&QWidget::staticMetaObject>
+_TEXT	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
 tv69 = 32
@@ -230,20 +293,20 @@ _id$ = 80
 _a$ = 88
 ?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; RegisterWindow::qt_static_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 70
+; Line 71
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 71
+; Line 72
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN4@qt_static_
-; Line 72
+; Line 73
 	mov	rax, QWORD PTR _o$[rsp]
 	mov	QWORD PTR _t$1[rsp], rax
-; Line 74
+; Line 75
 	mov	eax, DWORD PTR _id$[rsp]
 	mov	DWORD PTR tv69[rsp], eax
 	cmp	DWORD PTR tv69[rsp], 0
@@ -252,18 +315,18 @@ $LN9:
 	je	SHORT $LN6@qt_static_
 	jmp	SHORT $LN7@qt_static_
 $LN5@qt_static_:
-; Line 75
+; Line 76
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?on_pushButton_clicked@RegisterWindow@@QEAAXXZ ; RegisterWindow::on_pushButton_clicked
 	jmp	SHORT $LN2@qt_static_
 $LN6@qt_static_:
-; Line 76
+; Line 77
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?on_loginButton_clicked@RegisterWindow@@QEAAXXZ ; RegisterWindow::on_loginButton_clicked
 $LN7@qt_static_:
 $LN2@qt_static_:
 $LN4@qt_static_:
-; Line 81
+; Line 82
 	add	rsp, 56					; 00000038H
 	ret	0
 ?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ENDP ; RegisterWindow::qt_static_metacall
@@ -276,69 +339,69 @@ _id$ = 64
 _a$ = 72
 ?qt_metacall@RegisterWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; RegisterWindow::qt_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 107
+; Line 108
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 108
+; Line 109
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
-; Line 109
+; Line 110
 	cmp	DWORD PTR _id$[rsp], 0
 	jge	SHORT $LN2@qt_metacal
-; Line 110
+; Line 111
 	mov	eax, DWORD PTR _id$[rsp]
 	jmp	SHORT $LN1@qt_metacal
 $LN2@qt_metacal:
-; Line 111
+; Line 112
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN3@qt_metacal
-; Line 112
+; Line 113
 	cmp	DWORD PTR _id$[rsp], 2
 	jge	SHORT $LN5@qt_metacal
-; Line 113
+; Line 114
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	?qt_static_metacall@RegisterWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; RegisterWindow::qt_static_metacall
 $LN5@qt_metacal:
-; Line 114
+; Line 115
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 2
 	mov	DWORD PTR _id$[rsp], eax
 	jmp	SHORT $LN4@qt_metacal
 $LN3@qt_metacal:
-; Line 115
+; Line 116
 	cmp	DWORD PTR _c$[rsp], 12
 	jne	SHORT $LN6@qt_metacal
-; Line 116
+; Line 117
 	cmp	DWORD PTR _id$[rsp], 2
 	jge	SHORT $LN7@qt_metacal
-; Line 117
+; Line 118
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
 	mov	rax, QWORD PTR [rcx+rax]
 	mov	DWORD PTR [rax], -1
 $LN7@qt_metacal:
-; Line 118
+; Line 119
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 2
 	mov	DWORD PTR _id$[rsp], eax
 $LN6@qt_metacal:
 $LN4@qt_metacal:
-; Line 120
+; Line 121
 	mov	eax, DWORD PTR _id$[rsp]
 $LN1@qt_metacal:
-; Line 121
+; Line 122
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacall@RegisterWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ENDP ; RegisterWindow::qt_metacall
@@ -349,33 +412,33 @@ this$ = 48
 _clname$ = 56
 ?qt_metacast@RegisterWindow@@UEAAPEAXPEBD@Z PROC	; RegisterWindow::qt_metacast
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 99
+; Line 100
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 100
+; Line 101
 	cmp	QWORD PTR _clname$[rsp], 0
 	jne	SHORT $LN2@qt_metacas
 	xor	eax, eax
 	jmp	SHORT $LN1@qt_metacas
 $LN2@qt_metacas:
-; Line 101
+; Line 102
 	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_RegisterWindow@@3Uqt_meta_stringdata_RegisterWindow_t@@B+96
 	mov	rcx, QWORD PTR _clname$[rsp]
 	call	strcmp
 	test	eax, eax
 	jne	SHORT $LN3@qt_metacas
-; Line 102
+; Line 103
 	mov	rax, QWORD PTR this$[rsp]
 	jmp	SHORT $LN1@qt_metacas
 $LN3@qt_metacas:
-; Line 103
+; Line 104
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacast@QWidget@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
-; Line 104
+; Line 105
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacast@RegisterWindow@@UEAAPEAXPEBD@Z ENDP	; RegisterWindow::qt_metacast
@@ -386,11 +449,11 @@ tv82 = 32
 this$ = 64
 ?metaObject@RegisterWindow@@UEBAPEBUQMetaObject@@XZ PROC ; RegisterWindow::metaObject
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 94
+; Line 95
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 95
+; Line 96
 	mov	rax, QWORD PTR this$[rsp]
 	add	rax, 8
 	mov	rcx, rax
@@ -410,7 +473,7 @@ $LN3@metaObject:
 	mov	QWORD PTR tv82[rsp], rax
 $LN4@metaObject:
 	mov	rax, QWORD PTR tv82[rsp]
-; Line 96
+; Line 97
 	add	rsp, 56					; 00000038H
 	ret	0
 ?metaObject@RegisterWindow@@UEBAPEBUQMetaObject@@XZ ENDP ; RegisterWindow::metaObject
@@ -420,7 +483,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ PROC ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->, COMDAT
-; File D:\QT\5.12.3\msvc2017_64\include\QtCore\qscopedpointer.h
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qscopedpointer.h
 ; Line 117
 	mov	QWORD PTR [rsp+8], rcx
 ; Line 118
@@ -431,13 +494,30 @@ this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ENDP ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 _TEXT	ENDS
 ; Function compile flags: /Odtp
+;	COMDAT ??0SuperData@QMetaObject@@QEAA@PEBU1@@Z
+_TEXT	SEGMENT
+this$ = 8
+mo$ = 16
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z PROC		; QMetaObject::SuperData::SuperData, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 584
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	mov	rcx, QWORD PTR mo$[rsp]
+	mov	QWORD PTR [rax], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	ret	0
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z ENDP		; QMetaObject::SuperData::SuperData
+_TEXT	ENDS
+; Function compile flags: /Odtp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 124
+; Line 125
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
@@ -449,7 +529,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_RegisterWindow.cpp
-; Line 124
+; Line 125
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete

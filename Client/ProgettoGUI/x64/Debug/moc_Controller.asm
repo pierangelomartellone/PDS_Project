@@ -6,33 +6,61 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG148070 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG148071 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG163881 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG163882 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG148072 DB	'qRegisterNormalizedMetaType', 00H
+$SG163883 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG148431 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG148432 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG164324 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG164325 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG148433 DB	'qRegisterNormalizedMetaType', 00H
+$SG164326 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG148792 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG148793 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG164767 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG164768 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG148794 DB	'qRegisterNormalizedMetaType', 00H
+$SG164769 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG149641 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG149642 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG165211 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG165212 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG149643 DB	'qRegisterNormalizedMetaType', 00H
+$SG165213 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG158822 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG158823 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG158824 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG162041 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG162042 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG162043 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG162388 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG162389 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG162390 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_Controller@@3Uqt_meta_stringdata_Controller_t@@B DD 0ffffffffH ; qt_meta_stringdata_Controller
 	DD	0aH
@@ -243,26 +271,13 @@ $SG149643 DB	'qRegisterNormalizedMetaType', 00H
 	DD	09H
 	DD	00H
 	ORG $+4
-$SG150040 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG150041 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG162749 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG162750 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG150042 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG150440 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG150441 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG150442 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG144915 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG144916 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG144917 DB	'qRegisterNormalizedMetaType', 00H
+$SG162751 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
@@ -295,6 +310,7 @@ PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Sim
 PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QEBAAEBV?$allocator@D@2@XZ ; std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::_Get_first
 PUBLIC	??1?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QEAA@XZ ; std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::~_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>
 PUBLIC	??$_Min_value@_K@std@@YAAEB_KAEB_K0@Z		; std::_Min_value<unsigned __int64>
+PUBLIC	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z		; QMetaObject::SuperData::SuperData
 PUBLIC	??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 PUBLIC	?metaObject@Controller@@UEBAPEBUQMetaObject@@XZ	; Controller::metaObject
 PUBLIC	?qt_metacast@Controller@@UEAAPEAXPEBD@Z		; Controller::qt_metacast
@@ -304,6 +320,9 @@ PUBLIC	?textupdatefromserver@Controller@@QEAAXXZ	; Controller::textupdatefromser
 PUBLIC	?newuserconnected@Controller@@QEAAXH@Z		; Controller::newuserconnected
 PUBLIC	?userwriting@Controller@@QEAAXH@Z		; Controller::userwriting
 PUBLIC	??$move@AEAH@std@@YA$$QEAHAEAH@Z		; std::move<int &>
+PUBLIC	??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QObject::staticMetaObject>
+PUBLIC	??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>
+PUBLIC	??$addressof@H@std@@YAPEAHAEAH@Z		; std::addressof<int>
 PUBLIC	?allocate@?$allocator@U_Container_proxy@std@@@std@@QEAAPEAU_Container_proxy@2@_K@Z ; std::allocator<std::_Container_proxy>::allocate
 PUBLIC	??$_Delete_plain@V?$allocator@U_Container_proxy@std@@@std@@@std@@YAXAEAV?$allocator@U_Container_proxy@std@@@0@QEAU_Container_proxy@0@@Z ; std::_Delete_plain<std::allocator<std::_Container_proxy> >
 PUBLIC	??0?$_Container_proxy_ptr12@V?$allocator@U_Container_proxy@std@@@std@@@std@@QEAA@AEAV?$allocator@U_Container_proxy@std@@@1@AEAU_Container_base12@1@@Z ; std::_Container_proxy_ptr12<std::allocator<std::_Container_proxy> >::_Container_proxy_ptr12<std::allocator<std::_Container_proxy> >
@@ -471,11 +490,23 @@ $pdata$?textupdatefromserver@Controller@@QEAAXXZ DD imagerel $LN3
 	DD	imagerel $LN3+38
 	DD	imagerel $unwind$?textupdatefromserver@Controller@@QEAAXXZ
 $pdata$?newuserconnected@Controller@@QEAAXH@Z DD imagerel $LN3
-	DD	imagerel $LN3+66
+	DD	imagerel $LN3+71
 	DD	imagerel $unwind$?newuserconnected@Controller@@QEAAXH@Z
 $pdata$?userwriting@Controller@@QEAAXH@Z DD imagerel $LN3
-	DD	imagerel $LN3+66
+	DD	imagerel $LN3+71
 	DD	imagerel $unwind$?userwriting@Controller@@QEAAXH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
+	DD	imagerel $unwind$??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ DD imagerel ??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ
+	DD	imagerel ??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ+85
+	DD	imagerel $unwind$??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -755,6 +786,16 @@ xdata	ENDS
 xdata	SEGMENT
 $unwind$?allocate@?$allocator@U_Container_proxy@std@@@std@@QEAAPEAU_Container_proxy@2@_K@Z DD 010e01H
 	DD	0420eH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD 010901H
+	DD	04209H
 xdata	ENDS
 xdata	SEGMENT
 $unwind$?metaObject@Controller@@UEBAPEBUQMetaObject@@XZ DD 010901H
@@ -1501,29 +1542,76 @@ $LN3:
 ?allocate@?$allocator@U_Container_proxy@std@@@std@@QEAAPEAU_Container_proxy@2@_K@Z ENDP ; std::allocator<std::_Container_proxy>::allocate
 _TEXT	ENDS
 ; Function compile flags: /Odtp
+;	COMDAT ??$addressof@H@std@@YAPEAHAEAH@Z
+_TEXT	SEGMENT
+_Val$ = 8
+??$addressof@H@std@@YAPEAHAEAH@Z PROC			; std::addressof<int>, COMDAT
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702\include\xstddef
+; Line 280
+	mov	QWORD PTR [rsp+8], rcx
+; Line 281
+	mov	rax, QWORD PTR _Val$[rsp]
+; Line 282
+	ret	0
+??$addressof@H@std@@YAPEAHAEAH@Z ENDP			; std::addressof<int>
+_TEXT	ENDS
+; Function compile flags: /Odtp
 ;	COMDAT ??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ
 text$di	SEGMENT
 ??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'Controller::staticMetaObject'', COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 129
-	mov	rax, QWORD PTR __imp_?staticMetaObject@QObject@@2UQMetaObject@@B
-	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B, rax
+; Line 136
+	sub	rsp, 40					; 00000028H
 ; Line 130
+	lea	rcx, OFFSET FLAT:?staticMetaObject@Controller@@2UQMetaObject@@B ; Controller::staticMetaObject
+	call	??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QObject::staticMetaObject>
+; Line 131
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_Controller@@3Uqt_meta_stringdata_Controller_t@@B
 	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B+8, rax
-; Line 131
+; Line 132
 	lea	rax, OFFSET FLAT:?qt_meta_data_Controller@@3QBIB
 	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B+16, rax
-; Line 132
+; Line 133
 	lea	rax, OFFSET FLAT:?qt_static_metacall@Controller@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Controller::qt_static_metacall
 	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B+24, rax
-; Line 133
-	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B+32, 0
 ; Line 134
+	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B+32, 0
+; Line 135
 	mov	QWORD PTR ?staticMetaObject@Controller@@2UQMetaObject@@B+40, 0
+	add	rsp, 40					; 00000028H
 	ret	0
 ??__E?staticMetaObject@Controller@@2UQMetaObject@@B@@YAXXZ ENDP ; `dynamic initializer for 'Controller::staticMetaObject''
 text$di	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ
+_TEXT	SEGMENT
+??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ PROC ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 577
+	mov	rax, QWORD PTR __imp_?staticMetaObject@QObject@@2UQMetaObject@@B
+; Line 578
+	ret	0
+??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ENDP ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>
+_TEXT	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+_TEXT	SEGMENT
+__$ReturnUdt$ = 48
+??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ PROC ; QMetaObject::SuperData::link<&QObject::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 600
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	sub	rsp, 40					; 00000028H
+	call	??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR __$ReturnUdt$[rsp]
+	call	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z	; QMetaObject::SuperData::SuperData
+	mov	rax, QWORD PTR __$ReturnUdt$[rsp]
+	add	rsp, 40					; 00000028H
+	ret	0
+??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ENDP ; QMetaObject::SuperData::link<&QObject::staticMetaObject>
+_TEXT	ENDS
 ; Function compile flags: /Odtp
 ;	COMDAT ??$move@AEAH@std@@YA$$QEAHAEAH@Z
 _TEXT	SEGMENT
@@ -1545,22 +1633,23 @@ this$ = 64
 _t1$ = 72
 ?userwriting@Controller@@QEAAXH@Z PROC			; Controller::userwriting
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 183
+; Line 184
 $LN3:
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 184
-	mov	QWORD PTR _a$[rsp], 0
-	lea	rax, QWORD PTR _t1$[rsp]
-	mov	QWORD PTR _a$[rsp+8], rax
 ; Line 185
+	mov	QWORD PTR _a$[rsp], 0
+	lea	rcx, QWORD PTR _t1$[rsp]
+	call	??$addressof@H@std@@YAPEAHAEAH@Z	; std::addressof<int>
+	mov	QWORD PTR _a$[rsp+8], rax
+; Line 186
 	lea	r9, QWORD PTR _a$[rsp]
 	mov	r8d, 2
 	lea	rdx, OFFSET FLAT:?staticMetaObject@Controller@@2UQMetaObject@@B ; Controller::staticMetaObject
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z
-; Line 186
+; Line 187
 	add	rsp, 56					; 00000038H
 	ret	0
 ?userwriting@Controller@@QEAAXH@Z ENDP			; Controller::userwriting
@@ -1572,22 +1661,23 @@ this$ = 64
 _t1$ = 72
 ?newuserconnected@Controller@@QEAAXH@Z PROC		; Controller::newuserconnected
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 176
+; Line 177
 $LN3:
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 177
-	mov	QWORD PTR _a$[rsp], 0
-	lea	rax, QWORD PTR _t1$[rsp]
-	mov	QWORD PTR _a$[rsp+8], rax
 ; Line 178
+	mov	QWORD PTR _a$[rsp], 0
+	lea	rcx, QWORD PTR _t1$[rsp]
+	call	??$addressof@H@std@@YAPEAHAEAH@Z	; std::addressof<int>
+	mov	QWORD PTR _a$[rsp+8], rax
+; Line 179
 	lea	r9, QWORD PTR _a$[rsp]
 	mov	r8d, 1
 	lea	rdx, OFFSET FLAT:?staticMetaObject@Controller@@2UQMetaObject@@B ; Controller::staticMetaObject
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z
-; Line 179
+; Line 180
 	add	rsp, 56					; 00000038H
 	ret	0
 ?newuserconnected@Controller@@QEAAXH@Z ENDP		; Controller::newuserconnected
@@ -1597,17 +1687,17 @@ _TEXT	SEGMENT
 this$ = 48
 ?textupdatefromserver@Controller@@QEAAXXZ PROC		; Controller::textupdatefromserver
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 170
+; Line 171
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 171
+; Line 172
 	xor	r9d, r9d
 	xor	r8d, r8d
 	lea	rdx, OFFSET FLAT:?staticMetaObject@Controller@@2UQMetaObject@@B ; Controller::staticMetaObject
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z
-; Line 172
+; Line 173
 	add	rsp, 40					; 00000028H
 	ret	0
 ?textupdatefromserver@Controller@@QEAAXXZ ENDP		; Controller::textupdatefromserver
@@ -1628,20 +1718,20 @@ _id$ = 160
 _a$ = 168
 ?qt_static_metacall@Controller@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; Controller::qt_static_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 88
+; Line 89
 $LN20:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 136				; 00000088H
-; Line 89
+; Line 90
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	$LN4@qt_static_
-; Line 90
+; Line 91
 	mov	rax, QWORD PTR _o$[rsp]
 	mov	QWORD PTR _t$1[rsp], rax
-; Line 92
+; Line 93
 	mov	eax, DWORD PTR _id$[rsp]
 	mov	DWORD PTR tv69[rsp], eax
 	cmp	DWORD PTR tv69[rsp], 0
@@ -1656,12 +1746,12 @@ $LN20:
 	je	$LN11@qt_static_
 	jmp	$LN2@qt_static_
 $LN6@qt_static_:
-; Line 93
+; Line 94
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?textupdatefromserver@Controller@@QEAAXXZ ; Controller::textupdatefromserver
 	jmp	$LN2@qt_static_
 $LN7@qt_static_:
-; Line 94
+; Line 95
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1671,7 +1761,7 @@ $LN7@qt_static_:
 	call	?newuserconnected@Controller@@QEAAXH@Z	; Controller::newuserconnected
 	jmp	$LN2@qt_static_
 $LN8@qt_static_:
-; Line 95
+; Line 96
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1681,11 +1771,11 @@ $LN8@qt_static_:
 	call	?userwriting@Controller@@QEAAXH@Z	; Controller::userwriting
 	jmp	$LN2@qt_static_
 $LN9@qt_static_:
-; Line 96
+; Line 97
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?receiveMessage@Controller@@QEAAHXZ	; Controller::receiveMessage
 	mov	DWORD PTR _r$2[rsp], eax
-; Line 97
+; Line 98
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1702,7 +1792,7 @@ $LN9@qt_static_:
 $LN10@qt_static_:
 	jmp	SHORT $LN2@qt_static_
 $LN11@qt_static_:
-; Line 98
+; Line 99
 	lea	rax, QWORD PTR $T6[rsp]
 	mov	QWORD PTR $T5[rsp], rax
 	mov	eax, 8
@@ -1716,7 +1806,7 @@ $LN11@qt_static_:
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?saveFile@Controller@@QEAAHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; Controller::saveFile
 	mov	DWORD PTR _r$3[rsp], eax
-; Line 99
+; Line 100
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1731,18 +1821,18 @@ $LN11@qt_static_:
 	mov	eax, DWORD PTR [rax]
 	mov	DWORD PTR [rcx], eax
 $LN2@qt_static_:
-; Line 102
+; Line 103
 	jmp	$LN1@qt_static_
 $LN4@qt_static_:
 	cmp	DWORD PTR _c$[rsp], 10
 	jne	$LN1@qt_static_
-; Line 103
+; Line 104
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
 	mov	rax, QWORD PTR [rcx+rax]
 	mov	QWORD PTR result$4[rsp], rax
-; Line 106
+; Line 107
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1750,13 +1840,13 @@ $LN4@qt_static_:
 	lea	rcx, OFFSET FLAT:?textupdatefromserver@Controller@@QEAAXXZ ; Controller::textupdatefromserver
 	cmp	QWORD PTR [rax], rcx
 	jne	SHORT $LN15@qt_static_
-; Line 107
+; Line 108
 	mov	rax, QWORD PTR result$4[rsp]
 	mov	DWORD PTR [rax], 0
-; Line 108
+; Line 109
 	jmp	SHORT $LN1@qt_static_
 $LN15@qt_static_:
-; Line 113
+; Line 114
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1764,13 +1854,13 @@ $LN15@qt_static_:
 	lea	rcx, OFFSET FLAT:?newuserconnected@Controller@@QEAAXH@Z ; Controller::newuserconnected
 	cmp	QWORD PTR [rax], rcx
 	jne	SHORT $LN16@qt_static_
-; Line 114
+; Line 115
 	mov	rax, QWORD PTR result$4[rsp]
 	mov	DWORD PTR [rax], 1
-; Line 115
+; Line 116
 	jmp	SHORT $LN1@qt_static_
 $LN16@qt_static_:
-; Line 120
+; Line 121
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1778,11 +1868,11 @@ $LN16@qt_static_:
 	lea	rcx, OFFSET FLAT:?userwriting@Controller@@QEAAXH@Z ; Controller::userwriting
 	cmp	QWORD PTR [rax], rcx
 	jne	SHORT $LN1@qt_static_
-; Line 121
+; Line 122
 	mov	rax, QWORD PTR result$4[rsp]
 	mov	DWORD PTR [rax], 2
 $LN1@qt_static_:
-; Line 126
+; Line 127
 	add	rsp, 136				; 00000088H
 	ret	0
 ?qt_static_metacall@Controller@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ENDP ; Controller::qt_static_metacall
@@ -1795,69 +1885,69 @@ _id$ = 64
 _a$ = 72
 ?qt_metacall@Controller@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; Controller::qt_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 152
+; Line 153
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 153
+; Line 154
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacall@QObject@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
-; Line 154
+; Line 155
 	cmp	DWORD PTR _id$[rsp], 0
 	jge	SHORT $LN2@qt_metacal
-; Line 155
+; Line 156
 	mov	eax, DWORD PTR _id$[rsp]
 	jmp	SHORT $LN1@qt_metacal
 $LN2@qt_metacal:
-; Line 156
+; Line 157
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN3@qt_metacal
-; Line 157
+; Line 158
 	cmp	DWORD PTR _id$[rsp], 5
 	jge	SHORT $LN5@qt_metacal
-; Line 158
+; Line 159
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	?qt_static_metacall@Controller@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Controller::qt_static_metacall
 $LN5@qt_metacal:
-; Line 159
+; Line 160
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 5
 	mov	DWORD PTR _id$[rsp], eax
 	jmp	SHORT $LN4@qt_metacal
 $LN3@qt_metacal:
-; Line 160
+; Line 161
 	cmp	DWORD PTR _c$[rsp], 12
 	jne	SHORT $LN6@qt_metacal
-; Line 161
+; Line 162
 	cmp	DWORD PTR _id$[rsp], 5
 	jge	SHORT $LN7@qt_metacal
-; Line 162
+; Line 163
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
 	mov	rax, QWORD PTR [rcx+rax]
 	mov	DWORD PTR [rax], -1
 $LN7@qt_metacal:
-; Line 163
+; Line 164
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 5
 	mov	DWORD PTR _id$[rsp], eax
 $LN6@qt_metacal:
 $LN4@qt_metacal:
-; Line 165
+; Line 166
 	mov	eax, DWORD PTR _id$[rsp]
 $LN1@qt_metacal:
-; Line 166
+; Line 167
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacall@Controller@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ENDP ; Controller::qt_metacall
@@ -1868,33 +1958,33 @@ this$ = 48
 _clname$ = 56
 ?qt_metacast@Controller@@UEAAPEAXPEBD@Z PROC		; Controller::qt_metacast
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 144
+; Line 145
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 145
+; Line 146
 	cmp	QWORD PTR _clname$[rsp], 0
 	jne	SHORT $LN2@qt_metacas
 	xor	eax, eax
 	jmp	SHORT $LN1@qt_metacas
 $LN2@qt_metacas:
-; Line 146
+; Line 147
 	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_Controller@@3Uqt_meta_stringdata_Controller_t@@B+240
 	mov	rcx, QWORD PTR _clname$[rsp]
 	call	strcmp
 	test	eax, eax
 	jne	SHORT $LN3@qt_metacas
-; Line 147
+; Line 148
 	mov	rax, QWORD PTR this$[rsp]
 	jmp	SHORT $LN1@qt_metacas
 $LN3@qt_metacas:
-; Line 148
+; Line 149
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacast@QObject@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
-; Line 149
+; Line 150
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacast@Controller@@UEAAPEAXPEBD@Z ENDP		; Controller::qt_metacast
@@ -1905,11 +1995,11 @@ tv82 = 32
 this$ = 64
 ?metaObject@Controller@@UEBAPEBUQMetaObject@@XZ PROC	; Controller::metaObject
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 139
+; Line 140
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 140
+; Line 141
 	mov	rax, QWORD PTR this$[rsp]
 	add	rax, 8
 	mov	rcx, rax
@@ -1929,7 +2019,7 @@ $LN3@metaObject:
 	mov	QWORD PTR tv82[rsp], rax
 $LN4@metaObject:
 	mov	rax, QWORD PTR tv82[rsp]
-; Line 141
+; Line 142
 	add	rsp, 56					; 00000038H
 	ret	0
 ?metaObject@Controller@@UEBAPEBUQMetaObject@@XZ ENDP	; Controller::metaObject
@@ -1939,7 +2029,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ PROC ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->, COMDAT
-; File D:\QT\5.12.3\msvc2017_64\include\QtCore\qscopedpointer.h
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qscopedpointer.h
 ; Line 117
 	mov	QWORD PTR [rsp+8], rcx
 ; Line 118
@@ -1948,6 +2038,23 @@ this$ = 8
 ; Line 119
 	ret	0
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ENDP ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
+_TEXT	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??0SuperData@QMetaObject@@QEAA@PEBU1@@Z
+_TEXT	SEGMENT
+this$ = 8
+mo$ = 16
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z PROC		; QMetaObject::SuperData::SuperData, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 584
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	mov	rcx, QWORD PTR mo$[rsp]
+	mov	QWORD PTR [rax], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	ret	0
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z ENDP		; QMetaObject::SuperData::SuperData
 _TEXT	ENDS
 ; Function compile flags: /Odtp
 ;	COMDAT ??$_Min_value@_K@std@@YAAEB_KAEB_K0@Z
@@ -2841,7 +2948,7 @@ __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 189
+; Line 190
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
@@ -2853,7 +2960,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_Controller.cpp
-; Line 189
+; Line 190
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete

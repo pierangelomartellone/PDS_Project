@@ -405,7 +405,7 @@ QStringList Service::lookForUserFiles(Utente u) { /* Restituisce la lista dei fi
 		MYSQL_RES* res;
 		MYSQL_ROW row;
 
-		std::string str = "SELECT * FROM files WHERE File = '" + filename + "'";
+		std::string str = "SELECT * FROM files WHERE File = '" + filename + "' AND ID = '" + std::to_string(u.getID()) + "'";
 		conn = mysql_init(NULL);
 		if (conn == NULL) {
 			qDebug() << "Can't initialize MYSQL ";
@@ -422,7 +422,7 @@ QStringList Service::lookForUserFiles(Utente u) { /* Restituisce la lista dei fi
 					else {
 						qDebug() << "File already exist";
 						mysql_free_result(res);
-						return -1;
+						return 0;
 					}
 				}
 				else {

@@ -6,40 +6,29 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG131678 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG131679 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG140724 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG140725 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG131680 DB	'qRegisterNormalizedMetaType', 00H
+$SG140726 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG134700 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG134701 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG141071 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG141072 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG134702 DB	'qRegisterNormalizedMetaType', 00H
+$SG141073 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG135061 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG135062 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG141432 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG141433 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG135063 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG135422 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG135423 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG135424 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG136272 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG136273 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG136274 DB	'qRegisterNormalizedMetaType', 00H
+$SG141434 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_TextEdit@@3Uqt_meta_stringdata_TextEdit_t@@B DD 0ffffffffH ; qt_meta_stringdata_TextEdit
 	DD	08H
@@ -869,9 +858,26 @@ $SG136274 DB	'qRegisterNormalizedMetaType', 00H
 	DD	02H
 	DD	025H
 	DD	00H
+	ORG $+4
+$SG142560 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+15
+$SG142561 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG142562 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG137613 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG137614 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG137615 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
+PUBLIC	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z		; QMetaObject::SuperData::SuperData
 PUBLIC	??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 PUBLIC	?metaObject@TextEdit@@UEBAPEBUQMetaObject@@XZ	; TextEdit::metaObject
 PUBLIC	?qt_metacast@TextEdit@@UEAAPEAXPEBD@Z		; TextEdit::qt_metacast
@@ -879,6 +885,8 @@ PUBLIC	?qt_metacall@TextEdit@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ; TextEdit::qt
 PUBLIC	?qt_static_metacall@TextEdit@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; TextEdit::qt_static_metacall
 PUBLIC	??$move@AEA_N@std@@YA$$QEA_NAEA_N@Z		; std::move<bool &>
 PUBLIC	??$move@AEAH@std@@YA$$QEAHAEAH@Z		; std::move<int &>
+PUBLIC	??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QMainWindow::staticMetaObject>
+PUBLIC	??$staticMetaObject@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QMainWindow::staticMetaObject>
 PUBLIC	?staticMetaObject@TextEdit@@2UQMetaObject@@B	; TextEdit::staticMetaObject
 EXTRN	strcmp:PROC
 EXTRN	__imp_?dynamicMetaObject@QObjectData@@QEBAPEAUQMetaObject@@XZ:PROC
@@ -929,9 +937,31 @@ $pdata$?qt_static_metacall@TextEdit@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEA
 	DD	imagerel $LN37+916
 	DD	imagerel $unwind$?qt_static_metacall@TextEdit@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z
 pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
+	DD	imagerel $unwind$??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ DD imagerel ??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ
+	DD	imagerel ??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ+85
+	DD	imagerel $unwind$??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ
+pdata	ENDS
 CRT$XCU	SEGMENT
 ??staticMetaObject$initializer$@TextEdit@@2P6AXXZEA@@3P6AXXZEA DQ FLAT:??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ ; ??staticMetaObject$initializer$@TextEdit@@2P6AXXZEA@@3P6AXXZEA
 CRT$XCU	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD 010901H
+	DD	04209H
+xdata	ENDS
 xdata	SEGMENT
 $unwind$?metaObject@TextEdit@@UEBAPEBUQMetaObject@@XZ DD 010901H
 	DD	06209H
@@ -947,25 +977,58 @@ xdata	ENDS
 text$di	SEGMENT
 ??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'TextEdit::staticMetaObject'', COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 203
-	mov	rax, QWORD PTR __imp_?staticMetaObject@QMainWindow@@2UQMetaObject@@B
-	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B, rax
+; Line 210
+	sub	rsp, 40					; 00000028H
 ; Line 204
+	lea	rcx, OFFSET FLAT:?staticMetaObject@TextEdit@@2UQMetaObject@@B ; TextEdit::staticMetaObject
+	call	??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QMainWindow::staticMetaObject>
+; Line 205
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_TextEdit@@3Uqt_meta_stringdata_TextEdit_t@@B
 	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B+8, rax
-; Line 205
+; Line 206
 	lea	rax, OFFSET FLAT:?qt_meta_data_TextEdit@@3QBIB
 	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B+16, rax
-; Line 206
+; Line 207
 	lea	rax, OFFSET FLAT:?qt_static_metacall@TextEdit@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; TextEdit::qt_static_metacall
 	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B+24, rax
-; Line 207
-	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B+32, 0
 ; Line 208
+	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B+32, 0
+; Line 209
 	mov	QWORD PTR ?staticMetaObject@TextEdit@@2UQMetaObject@@B+40, 0
+	add	rsp, 40					; 00000028H
 	ret	0
 ??__E?staticMetaObject@TextEdit@@2UQMetaObject@@B@@YAXXZ ENDP ; `dynamic initializer for 'TextEdit::staticMetaObject''
 text$di	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$staticMetaObject@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ
+_TEXT	SEGMENT
+??$staticMetaObject@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ PROC ; QMetaObject::staticMetaObject<&QMainWindow::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 577
+	mov	rax, QWORD PTR __imp_?staticMetaObject@QMainWindow@@2UQMetaObject@@B
+; Line 578
+	ret	0
+??$staticMetaObject@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ENDP ; QMetaObject::staticMetaObject<&QMainWindow::staticMetaObject>
+_TEXT	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+_TEXT	SEGMENT
+__$ReturnUdt$ = 48
+??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ PROC ; QMetaObject::SuperData::link<&QMainWindow::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 600
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	sub	rsp, 40					; 00000028H
+	call	??$staticMetaObject@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QMainWindow::staticMetaObject>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR __$ReturnUdt$[rsp]
+	call	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z	; QMetaObject::SuperData::SuperData
+	mov	rax, QWORD PTR __$ReturnUdt$[rsp]
+	add	rsp, 40					; 00000028H
+	ret	0
+??$link@$1?staticMetaObject@QMainWindow@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ENDP ; QMetaObject::SuperData::link<&QMainWindow::staticMetaObject>
+_TEXT	ENDS
 ; Function compile flags: /Odtp
 ;	COMDAT ??$move@AEAH@std@@YA$$QEAHAEAH@Z
 _TEXT	SEGMENT
@@ -1007,20 +1070,20 @@ _id$ = 96
 _a$ = 104
 ?qt_static_metacall@TextEdit@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; TextEdit::qt_static_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 163
+; Line 164
 $LN37:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 72					; 00000048H
-; Line 164
+; Line 165
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	$LN4@qt_static_
-; Line 165
+; Line 166
 	mov	rax, QWORD PTR _o$[rsp]
 	mov	QWORD PTR _t$4[rsp], rax
-; Line 167
+; Line 168
 	mov	eax, DWORD PTR _id$[rsp]
 	mov	DWORD PTR tv69[rsp], eax
 	cmp	DWORD PTR tv69[rsp], 25
@@ -1031,26 +1094,26 @@ $LN37:
 	add	rax, rcx
 	jmp	rax
 $LN5@qt_static_:
-; Line 168
+; Line 169
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?fileNew@TextEdit@@QEAAXXZ		; TextEdit::fileNew
 	jmp	$LN2@qt_static_
 $LN6@qt_static_:
-; Line 169
+; Line 170
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?setSavingTimer@TextEdit@@QEAAXXZ	; TextEdit::setSavingTimer
 	jmp	$LN2@qt_static_
 $LN7@qt_static_:
-; Line 170
+; Line 171
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?fileOpen@TextEdit@@AEAAXXZ		; TextEdit::fileOpen
 	jmp	$LN2@qt_static_
 $LN8@qt_static_:
-; Line 171
+; Line 172
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?fileSave@TextEdit@@AEAA_NXZ		; TextEdit::fileSave
 	mov	BYTE PTR _r$1[rsp], al
-; Line 172
+; Line 173
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1067,11 +1130,11 @@ $LN8@qt_static_:
 $LN9@qt_static_:
 	jmp	$LN2@qt_static_
 $LN10@qt_static_:
-; Line 173
+; Line 174
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?fileSaveAs@TextEdit@@AEAA_NXZ		; TextEdit::fileSaveAs
 	mov	BYTE PTR _r$2[rsp], al
-; Line 174
+; Line 175
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1088,37 +1151,37 @@ $LN10@qt_static_:
 $LN11@qt_static_:
 	jmp	$LN2@qt_static_
 $LN12@qt_static_:
-; Line 175
+; Line 176
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?filePrint@TextEdit@@AEAAXXZ		; TextEdit::filePrint
 	jmp	$LN2@qt_static_
 $LN13@qt_static_:
-; Line 176
+; Line 177
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?filePrintPreview@TextEdit@@AEAAXXZ	; TextEdit::filePrintPreview
 	jmp	$LN2@qt_static_
 $LN14@qt_static_:
-; Line 177
+; Line 178
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?filePrintPdf@TextEdit@@AEAAXXZ		; TextEdit::filePrintPdf
 	jmp	$LN2@qt_static_
 $LN15@qt_static_:
-; Line 178
+; Line 179
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?textBold@TextEdit@@AEAAXXZ		; TextEdit::textBold
 	jmp	$LN2@qt_static_
 $LN16@qt_static_:
-; Line 179
+; Line 180
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?textUnderline@TextEdit@@AEAAXXZ	; TextEdit::textUnderline
 	jmp	$LN2@qt_static_
 $LN17@qt_static_:
-; Line 180
+; Line 181
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?textItalic@TextEdit@@AEAAXXZ		; TextEdit::textItalic
 	jmp	$LN2@qt_static_
 $LN18@qt_static_:
-; Line 181
+; Line 182
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1127,7 +1190,7 @@ $LN18@qt_static_:
 	call	?textFamily@TextEdit@@AEAAXAEBVQString@@@Z ; TextEdit::textFamily
 	jmp	$LN2@qt_static_
 $LN19@qt_static_:
-; Line 182
+; Line 183
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1136,7 +1199,7 @@ $LN19@qt_static_:
 	call	?textSize@TextEdit@@AEAAXAEBVQString@@@Z ; TextEdit::textSize
 	jmp	$LN2@qt_static_
 $LN20@qt_static_:
-; Line 183
+; Line 184
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1146,12 +1209,12 @@ $LN20@qt_static_:
 	call	?textStyle@TextEdit@@AEAAXH@Z		; TextEdit::textStyle
 	jmp	$LN2@qt_static_
 $LN21@qt_static_:
-; Line 184
+; Line 185
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?textColor@TextEdit@@AEAAXXZ		; TextEdit::textColor
 	jmp	$LN2@qt_static_
 $LN22@qt_static_:
-; Line 185
+; Line 186
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1160,7 +1223,7 @@ $LN22@qt_static_:
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?getAlignmentCode@TextEdit@@AEAAHV?$QFlags@W4AlignmentFlag@Qt@@@@@Z ; TextEdit::getAlignmentCode
 	mov	DWORD PTR _r$3[rsp], eax
-; Line 186
+; Line 187
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1177,17 +1240,17 @@ $LN22@qt_static_:
 $LN23@qt_static_:
 	jmp	$LN2@qt_static_
 $LN24@qt_static_:
-; Line 187
+; Line 188
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?showColorsfromUsers@TextEdit@@AEAAXXZ	; TextEdit::showColorsfromUsers
 	jmp	$LN2@qt_static_
 $LN25@qt_static_:
-; Line 188
+; Line 189
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?showLink@TextEdit@@AEAAXXZ		; TextEdit::showLink
 	jmp	$LN2@qt_static_
 $LN26@qt_static_:
-; Line 189
+; Line 190
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1197,7 +1260,7 @@ $LN26@qt_static_:
 	call	?textAlign@TextEdit@@AEAAXPEAVQAction@@@Z ; TextEdit::textAlign
 	jmp	$LN2@qt_static_
 $LN27@qt_static_:
-; Line 190
+; Line 191
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1206,22 +1269,22 @@ $LN27@qt_static_:
 	call	?currentCharFormatChanged@TextEdit@@AEAAXAEBVQTextCharFormat@@@Z ; TextEdit::currentCharFormatChanged
 	jmp	$LN2@qt_static_
 $LN28@qt_static_:
-; Line 191
+; Line 192
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?cursorPositionChanged@TextEdit@@AEAAXXZ ; TextEdit::cursorPositionChanged
 	jmp	SHORT $LN2@qt_static_
 $LN29@qt_static_:
-; Line 192
+; Line 193
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?clipboardDataChanged@TextEdit@@AEAAXXZ	; TextEdit::clipboardDataChanged
 	jmp	SHORT $LN2@qt_static_
 $LN30@qt_static_:
-; Line 193
+; Line 194
 	mov	rcx, QWORD PTR _t$4[rsp]
 	call	?about@TextEdit@@AEAAXXZ		; TextEdit::about
 	jmp	SHORT $LN2@qt_static_
 $LN31@qt_static_:
-; Line 194
+; Line 195
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1231,7 +1294,7 @@ $LN31@qt_static_:
 	call	?printPreview@TextEdit@@AEAAXPEAVQPrinter@@@Z ; TextEdit::printPreview
 	jmp	SHORT $LN2@qt_static_
 $LN32@qt_static_:
-; Line 195
+; Line 196
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1241,7 +1304,7 @@ $LN32@qt_static_:
 	call	?addUserToToolbar@TextEdit@@AEAAXH@Z	; TextEdit::addUserToToolbar
 	jmp	SHORT $LN2@qt_static_
 $LN33@qt_static_:
-; Line 196
+; Line 197
 	mov	eax, 8
 	imul	rax, rax, 1
 	mov	rcx, QWORD PTR _a$[rsp]
@@ -1252,7 +1315,7 @@ $LN33@qt_static_:
 $LN34@qt_static_:
 $LN2@qt_static_:
 $LN4@qt_static_:
-; Line 200
+; Line 201
 	add	rsp, 72					; 00000048H
 	ret	0
 	npad	1
@@ -1293,69 +1356,69 @@ _id$ = 64
 _a$ = 72
 ?qt_metacall@TextEdit@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; TextEdit::qt_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 226
+; Line 227
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 227
+; Line 228
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacall@QMainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
-; Line 228
+; Line 229
 	cmp	DWORD PTR _id$[rsp], 0
 	jge	SHORT $LN2@qt_metacal
-; Line 229
+; Line 230
 	mov	eax, DWORD PTR _id$[rsp]
 	jmp	SHORT $LN1@qt_metacal
 $LN2@qt_metacal:
-; Line 230
+; Line 231
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN3@qt_metacal
-; Line 231
+; Line 232
 	cmp	DWORD PTR _id$[rsp], 26
 	jge	SHORT $LN5@qt_metacal
-; Line 232
+; Line 233
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	?qt_static_metacall@TextEdit@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; TextEdit::qt_static_metacall
 $LN5@qt_metacal:
-; Line 233
+; Line 234
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 26
 	mov	DWORD PTR _id$[rsp], eax
 	jmp	SHORT $LN4@qt_metacal
 $LN3@qt_metacal:
-; Line 234
+; Line 235
 	cmp	DWORD PTR _c$[rsp], 12
 	jne	SHORT $LN6@qt_metacal
-; Line 235
+; Line 236
 	cmp	DWORD PTR _id$[rsp], 26
 	jge	SHORT $LN7@qt_metacal
-; Line 236
+; Line 237
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
 	mov	rax, QWORD PTR [rcx+rax]
 	mov	DWORD PTR [rax], -1
 $LN7@qt_metacal:
-; Line 237
+; Line 238
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 26
 	mov	DWORD PTR _id$[rsp], eax
 $LN6@qt_metacal:
 $LN4@qt_metacal:
-; Line 239
+; Line 240
 	mov	eax, DWORD PTR _id$[rsp]
 $LN1@qt_metacal:
-; Line 240
+; Line 241
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacall@TextEdit@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ENDP ; TextEdit::qt_metacall
@@ -1366,33 +1429,33 @@ this$ = 48
 _clname$ = 56
 ?qt_metacast@TextEdit@@UEAAPEAXPEBD@Z PROC		; TextEdit::qt_metacast
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 218
+; Line 219
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 219
+; Line 220
 	cmp	QWORD PTR _clname$[rsp], 0
 	jne	SHORT $LN2@qt_metacas
 	xor	eax, eax
 	jmp	SHORT $LN1@qt_metacas
 $LN2@qt_metacas:
-; Line 220
+; Line 221
 	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_TextEdit@@3Uqt_meta_stringdata_TextEdit_t@@B+936
 	mov	rcx, QWORD PTR _clname$[rsp]
 	call	strcmp
 	test	eax, eax
 	jne	SHORT $LN3@qt_metacas
-; Line 221
+; Line 222
 	mov	rax, QWORD PTR this$[rsp]
 	jmp	SHORT $LN1@qt_metacas
 $LN3@qt_metacas:
-; Line 222
+; Line 223
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacast@QMainWindow@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
-; Line 223
+; Line 224
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacast@TextEdit@@UEAAPEAXPEBD@Z ENDP		; TextEdit::qt_metacast
@@ -1403,11 +1466,11 @@ tv82 = 32
 this$ = 64
 ?metaObject@TextEdit@@UEBAPEBUQMetaObject@@XZ PROC	; TextEdit::metaObject
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 213
+; Line 214
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 214
+; Line 215
 	mov	rax, QWORD PTR this$[rsp]
 	add	rax, 8
 	mov	rcx, rax
@@ -1427,7 +1490,7 @@ $LN3@metaObject:
 	mov	QWORD PTR tv82[rsp], rax
 $LN4@metaObject:
 	mov	rax, QWORD PTR tv82[rsp]
-; Line 215
+; Line 216
 	add	rsp, 56					; 00000038H
 	ret	0
 ?metaObject@TextEdit@@UEBAPEBUQMetaObject@@XZ ENDP	; TextEdit::metaObject
@@ -1437,7 +1500,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ PROC ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->, COMDAT
-; File D:\QT\5.12.3\msvc2017_64\include\QtCore\qscopedpointer.h
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qscopedpointer.h
 ; Line 117
 	mov	QWORD PTR [rsp+8], rcx
 ; Line 118
@@ -1448,13 +1511,30 @@ this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ENDP ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 _TEXT	ENDS
 ; Function compile flags: /Odtp
+;	COMDAT ??0SuperData@QMetaObject@@QEAA@PEBU1@@Z
+_TEXT	SEGMENT
+this$ = 8
+mo$ = 16
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z PROC		; QMetaObject::SuperData::SuperData, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 584
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	mov	rcx, QWORD PTR mo$[rsp]
+	mov	QWORD PTR [rax], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	ret	0
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z ENDP		; QMetaObject::SuperData::SuperData
+_TEXT	ENDS
+; Function compile flags: /Odtp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 243
+; Line 244
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
@@ -1466,7 +1546,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_textedit.cpp
-; Line 243
+; Line 244
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete

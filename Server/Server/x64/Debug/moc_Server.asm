@@ -6,115 +6,160 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG229652 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-$SG221683 DB	'x == d', 00H
-	ORG $+5
-$SG229653 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG245857 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG245858 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG229654 DB	'qRegisterNormalizedMetaType', 00H
+$SG245859 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG221653 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
+$SG237844 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+3
+$SG231483 DB	'd != x', 00H
+	ORG $+5
+$SG237846 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+12
+$SG237845 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG246301 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG246302 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG246303 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG238205 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG238206 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG238207 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG246745 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG246746 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG246747 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG247152 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG247153 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG247154 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG247513 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG247514 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG247515 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG239546 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG239547 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG239548 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG231467 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231468 DB	'aalloc >= d->size', 00H
 	ORG $+6
-$SG221654 DB	'asize >= 0 && asize <= aalloc', 00H
-	ORG $+2
-$SG221662 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221663 DB	'x->ref.isSharable() || options.testFlag(QArrayData::Unsh'
+$SG231471 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+9
+$SG231472 DB	'x->ref.isSharable() || options.testFlag(QArrayData::Unsh'
 	DB	'arable)', 00H
-$SG221664 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221665 DB	'!x->ref.isStatic()', 00H
+$SG231473 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231474 DB	'!x->ref.isStatic()', 00H
 	ORG $+5
-$SG221678 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
+$SG231482 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231488 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231489 DB	'd->data()', 00H
 	ORG $+6
-$SG221679 DB	'int(d->alloc) == aalloc', 00H
-$SG221680 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221681 DB	'isDetached()', 00H
-	ORG $+3
-$SG221682 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221691 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221692 DB	'd->data()', 00H
-	ORG $+6
-$SG221693 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221694 DB	'uint(d->size) <= d->alloc', 00H
-	ORG $+6
-$SG221695 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221696 DB	'd != Data::unsharableEmpty()', 00H
-	ORG $+3
-$SG221697 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221698 DB	'aalloc ? d != Data::sharedNull() : d == Data::sharedNull'
-	DB	'()', 00H
-	ORG $+5
-$SG221699 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
-	ORG $+6
-$SG221700 DB	'd->alloc >= uint(aalloc)', 00H
+$SG247874 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
 	ORG $+7
-$SG221701 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qvector.h', 00H
+$SG231490 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+9
+$SG247875 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG231491 DB	'uint(d->size) <= d->alloc', 00H
 	ORG $+6
-$SG221702 DB	'd->size == asize', 00H
+$SG247876 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG231492 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231493 DB	'd != Data::unsharableEmpty()', 00H
+	ORG $+3
+$SG231494 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231495 DB	'd != Data::sharedNull()', 00H
+$SG231496 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qvector.h', 00H
+	ORG $+1
+$SG231497 DB	'd->alloc >= uint(aalloc)', 00H
 	ORG $+7
-$SG230013 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+4
-$SG230014 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG239990 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG239991 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG230015 DB	'qRegisterNormalizedMetaType', 00H
+$SG239992 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG230521 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG230522 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG256668 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG256669 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG230523 DB	'qRegisterNormalizedMetaType', 00H
+$SG256670 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG222576 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG222577 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG240433 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG240434 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG222578 DB	'qRegisterNormalizedMetaType', 00H
+$SG240435 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG230882 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG230883 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG232510 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG232511 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG230884 DB	'qRegisterNormalizedMetaType', 00H
+$SG232512 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG222937 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG222938 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG240876 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG240877 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG222939 DB	'qRegisterNormalizedMetaType', 00H
+$SG240878 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG231243 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG231244 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG232857 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG232858 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG231245 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG223298 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG223299 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG223300 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG231604 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG231605 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG231606 DB	'qRegisterNormalizedMetaType', 00H
+$SG232859 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_Server@@3Uqt_meta_stringdata_Server_t@@B DD 0ffffffffH ; qt_meta_stringdata_Server
 	DD	06H
@@ -222,188 +267,200 @@ $SG231606 DB	'qRegisterNormalizedMetaType', 00H
 	DD	02bH
 	DD	00H
 	ORG $+4
-$SG231996 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+4
-$SG231997 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG231998 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG224147 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
+$SG241237 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG241239 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+12
-$SG224148 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG241238 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG224149 DB	'qRegisterNormalizedMetaType', 00H
+$SG233218 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG233219 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG233220 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG232357 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG232358 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG241765 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG241766 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG232359 DB	'qRegisterNormalizedMetaType', 00H
+$SG241767 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG232718 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG232719 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG242128 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG242129 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG232720 DB	'qRegisterNormalizedMetaType', 00H
+$SG242130 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG224547 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG224548 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG242489 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG242490 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG224549 DB	'qRegisterNormalizedMetaType', 00H
+$SG242491 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG233079 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG233080 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG234301 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG234302 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG233081 DB	'qRegisterNormalizedMetaType', 00H
+$SG234303 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG224908 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG224909 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG242850 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG242851 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG224910 DB	'qRegisterNormalizedMetaType', 00H
+$SG242852 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG233440 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG233441 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG234749 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG234750 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG233442 DB	'qRegisterNormalizedMetaType', 00H
+$SG234751 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG225269 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG225270 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG243242 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG243243 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG225271 DB	'qRegisterNormalizedMetaType', 00H
+$SG243244 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG233807 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG233808 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG235110 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG235111 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG233809 DB	'qRegisterNormalizedMetaType', 00H
+$SG235112 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG225630 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG225631 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG243603 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG243604 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG225632 DB	'qRegisterNormalizedMetaType', 00H
+$SG243605 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG234168 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG234169 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG235471 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG235472 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG234170 DB	'qRegisterNormalizedMetaType', 00H
+$SG235473 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG217815 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG217816 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG243964 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG243965 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG217817 DB	'qRegisterNormalizedMetaType', 00H
+$SG243966 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG226016 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG226017 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG235832 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG235833 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG226018 DB	'qRegisterNormalizedMetaType', 00H
+$SG235834 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG234567 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG234568 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG244325 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG244326 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG234569 DB	'qRegisterNormalizedMetaType', 00H
+$SG244327 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG226377 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG226378 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG236232 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG236233 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG226379 DB	'qRegisterNormalizedMetaType', 00H
+$SG236234 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG226738 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG226739 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG228200 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG228201 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG226740 DB	'qRegisterNormalizedMetaType', 00H
+$SG228202 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG234967 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG234968 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG244686 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG244687 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG234969 DB	'qRegisterNormalizedMetaType', 00H
+$SG244688 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG227099 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG227100 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG236593 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG236594 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG227101 DB	'qRegisterNormalizedMetaType', 00H
+$SG236595 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG235367 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG235368 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG245053 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG245054 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG235369 DB	'qRegisterNormalizedMetaType', 00H
+$SG245055 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG235768 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG235769 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG236954 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG236955 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG235770 DB	'qRegisterNormalizedMetaType', 00H
+$SG236956 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG236129 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG236130 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG245414 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG245415 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG236131 DB	'qRegisterNormalizedMetaType', 00H
+$SG245416 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG228454 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG228455 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG237400 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG237401 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG228456 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG228854 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG228855 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG228856 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG229253 DB	'D:\QT\5.12.3\msvc2017_64\include\QtCore\qmetatype.h', 00H
-	ORG $+12
-$SG229254 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG229255 DB	'qRegisterNormalizedMetaType', 00H
+$SG237402 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
+PUBLIC	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z		; QMetaObject::SuperData::SuperData
 PUBLIC	??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 PUBLIC	?metaObject@Server@@UEBAPEBUQMetaObject@@XZ	; Server::metaObject
 PUBLIC	?qt_metacast@Server@@UEAAPEAXPEBD@Z		; Server::qt_metacast
 PUBLIC	?qt_metacall@Server@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ; Server::qt_metacall
 PUBLIC	?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Server::qt_static_metacall
+PUBLIC	??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QObject::staticMetaObject>
+PUBLIC	??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>
 PUBLIC	?staticMetaObject@Server@@2UQMetaObject@@B	; Server::staticMetaObject
 EXTRN	strcmp:PROC
 EXTRN	__imp_?dynamicMetaObject@QObjectData@@QEBAPEAUQMetaObject@@XZ:PROC
@@ -430,9 +487,31 @@ $pdata$?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@
 	DD	imagerel $LN10+110
 	DD	imagerel $unwind$?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z
 pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
+	DD	imagerel $unwind$??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ DD imagerel ??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ
+	DD	imagerel ??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ+85
+	DD	imagerel $unwind$??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ
+pdata	ENDS
 CRT$XCU	SEGMENT
 ??staticMetaObject$initializer$@Server@@2P6AXXZEA@@3P6AXXZEA DQ FLAT:??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ ; ??staticMetaObject$initializer$@Server@@2P6AXXZEA@@3P6AXXZEA
 CRT$XCU	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ DD 010901H
+	DD	04209H
+xdata	ENDS
 xdata	SEGMENT
 $unwind$?metaObject@Server@@UEBAPEBUQMetaObject@@XZ DD 010901H
 	DD	06209H
@@ -448,25 +527,58 @@ xdata	ENDS
 text$di	SEGMENT
 ??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'Server::staticMetaObject'', COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 88
-	mov	rax, QWORD PTR __imp_?staticMetaObject@QObject@@2UQMetaObject@@B
-	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B, rax
+; Line 95
+	sub	rsp, 40					; 00000028H
 ; Line 89
+	lea	rcx, OFFSET FLAT:?staticMetaObject@Server@@2UQMetaObject@@B ; Server::staticMetaObject
+	call	??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QObject::staticMetaObject>
+; Line 90
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_Server@@3Uqt_meta_stringdata_Server_t@@B
 	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B+8, rax
-; Line 90
+; Line 91
 	lea	rax, OFFSET FLAT:?qt_meta_data_Server@@3QBIB
 	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B+16, rax
-; Line 91
+; Line 92
 	lea	rax, OFFSET FLAT:?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Server::qt_static_metacall
 	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B+24, rax
-; Line 92
-	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B+32, 0
 ; Line 93
+	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B+32, 0
+; Line 94
 	mov	QWORD PTR ?staticMetaObject@Server@@2UQMetaObject@@B+40, 0
+	add	rsp, 40					; 00000028H
 	ret	0
 ??__E?staticMetaObject@Server@@2UQMetaObject@@B@@YAXXZ ENDP ; `dynamic initializer for 'Server::staticMetaObject''
 text$di	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ
+_TEXT	SEGMENT
+??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ PROC ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 577
+	mov	rax, QWORD PTR __imp_?staticMetaObject@QObject@@2UQMetaObject@@B
+; Line 578
+	ret	0
+??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ENDP ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>
+_TEXT	ENDS
+; Function compile flags: /Odtp
+;	COMDAT ??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ
+_TEXT	SEGMENT
+__$ReturnUdt$ = 48
+??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ PROC ; QMetaObject::SuperData::link<&QObject::staticMetaObject>, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 600
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	sub	rsp, 40					; 00000028H
+	call	??$staticMetaObject@$1?staticMetaObject@QObject@@2UQMetaObject@@B@QMetaObject@@SAPEBU0@XZ ; QMetaObject::staticMetaObject<&QObject::staticMetaObject>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR __$ReturnUdt$[rsp]
+	call	??0SuperData@QMetaObject@@QEAA@PEBU1@@Z	; QMetaObject::SuperData::SuperData
+	mov	rax, QWORD PTR __$ReturnUdt$[rsp]
+	add	rsp, 40					; 00000028H
+	ret	0
+??$link@$1?staticMetaObject@QObject@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ENDP ; QMetaObject::SuperData::link<&QObject::staticMetaObject>
+_TEXT	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
 tv69 = 32
@@ -477,20 +589,20 @@ _id$ = 80
 _a$ = 88
 ?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; Server::qt_static_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 73
+; Line 74
 $LN10:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 74
+; Line 75
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN4@qt_static_
-; Line 75
+; Line 76
 	mov	rax, QWORD PTR _o$[rsp]
 	mov	QWORD PTR _t$1[rsp], rax
-; Line 77
+; Line 78
 	mov	eax, DWORD PTR _id$[rsp]
 	mov	DWORD PTR tv69[rsp], eax
 	cmp	DWORD PTR tv69[rsp], 0
@@ -501,23 +613,23 @@ $LN10:
 	je	SHORT $LN7@qt_static_
 	jmp	SHORT $LN8@qt_static_
 $LN5@qt_static_:
-; Line 78
+; Line 79
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?newConnection@Server@@QEAAXXZ		; Server::newConnection
 	jmp	SHORT $LN2@qt_static_
 $LN6@qt_static_:
-; Line 79
+; Line 80
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?disconnected@Server@@QEAAXXZ		; Server::disconnected
 	jmp	SHORT $LN2@qt_static_
 $LN7@qt_static_:
-; Line 80
+; Line 81
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?readyRead@Server@@QEAAXXZ		; Server::readyRead
 $LN8@qt_static_:
 $LN2@qt_static_:
 $LN4@qt_static_:
-; Line 85
+; Line 86
 	add	rsp, 56					; 00000038H
 	ret	0
 ?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ENDP ; Server::qt_static_metacall
@@ -530,69 +642,69 @@ _id$ = 64
 _a$ = 72
 ?qt_metacall@Server@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; Server::qt_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 111
+; Line 112
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 112
+; Line 113
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacall@QObject@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
-; Line 113
+; Line 114
 	cmp	DWORD PTR _id$[rsp], 0
 	jge	SHORT $LN2@qt_metacal
-; Line 114
+; Line 115
 	mov	eax, DWORD PTR _id$[rsp]
 	jmp	SHORT $LN1@qt_metacal
 $LN2@qt_metacal:
-; Line 115
+; Line 116
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN3@qt_metacal
-; Line 116
+; Line 117
 	cmp	DWORD PTR _id$[rsp], 3
 	jge	SHORT $LN5@qt_metacal
-; Line 117
+; Line 118
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	?qt_static_metacall@Server@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Server::qt_static_metacall
 $LN5@qt_metacal:
-; Line 118
+; Line 119
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 3
 	mov	DWORD PTR _id$[rsp], eax
 	jmp	SHORT $LN4@qt_metacal
 $LN3@qt_metacal:
-; Line 119
+; Line 120
 	cmp	DWORD PTR _c$[rsp], 12
 	jne	SHORT $LN6@qt_metacal
-; Line 120
+; Line 121
 	cmp	DWORD PTR _id$[rsp], 3
 	jge	SHORT $LN7@qt_metacal
-; Line 121
+; Line 122
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
 	mov	rax, QWORD PTR [rcx+rax]
 	mov	DWORD PTR [rax], -1
 $LN7@qt_metacal:
-; Line 122
+; Line 123
 	mov	eax, DWORD PTR _id$[rsp]
 	sub	eax, 3
 	mov	DWORD PTR _id$[rsp], eax
 $LN6@qt_metacal:
 $LN4@qt_metacal:
-; Line 124
+; Line 125
 	mov	eax, DWORD PTR _id$[rsp]
 $LN1@qt_metacal:
-; Line 125
+; Line 126
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacall@Server@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ENDP ; Server::qt_metacall
@@ -603,33 +715,33 @@ this$ = 48
 _clname$ = 56
 ?qt_metacast@Server@@UEAAPEAXPEBD@Z PROC		; Server::qt_metacast
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 103
+; Line 104
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 104
+; Line 105
 	cmp	QWORD PTR _clname$[rsp], 0
 	jne	SHORT $LN2@qt_metacas
 	xor	eax, eax
 	jmp	SHORT $LN1@qt_metacas
 $LN2@qt_metacas:
-; Line 105
+; Line 106
 	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_Server@@3Uqt_meta_stringdata_Server_t@@B+120
 	mov	rcx, QWORD PTR _clname$[rsp]
 	call	strcmp
 	test	eax, eax
 	jne	SHORT $LN3@qt_metacas
-; Line 106
+; Line 107
 	mov	rax, QWORD PTR this$[rsp]
 	jmp	SHORT $LN1@qt_metacas
 $LN3@qt_metacas:
-; Line 107
+; Line 108
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacast@QObject@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
-; Line 108
+; Line 109
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacast@Server@@UEAAPEAXPEBD@Z ENDP		; Server::qt_metacast
@@ -640,11 +752,11 @@ tv82 = 32
 this$ = 64
 ?metaObject@Server@@UEBAPEBUQMetaObject@@XZ PROC	; Server::metaObject
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 98
+; Line 99
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 99
+; Line 100
 	mov	rax, QWORD PTR this$[rsp]
 	add	rax, 8
 	mov	rcx, rax
@@ -664,7 +776,7 @@ $LN3@metaObject:
 	mov	QWORD PTR tv82[rsp], rax
 $LN4@metaObject:
 	mov	rax, QWORD PTR tv82[rsp]
-; Line 100
+; Line 101
 	add	rsp, 56					; 00000038H
 	ret	0
 ?metaObject@Server@@UEBAPEBUQMetaObject@@XZ ENDP	; Server::metaObject
@@ -674,7 +786,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ PROC ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->, COMDAT
-; File D:\QT\5.12.3\msvc2017_64\include\QtCore\qscopedpointer.h
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qscopedpointer.h
 ; Line 117
 	mov	QWORD PTR [rsp+8], rcx
 ; Line 118
@@ -685,13 +797,30 @@ this$ = 8
 ??C?$QScopedPointer@VQObjectData@@U?$QScopedPointerDeleter@VQObjectData@@@@@@QEBAPEAVQObjectData@@XZ ENDP ; QScopedPointer<QObjectData,QScopedPointerDeleter<QObjectData> >::operator->
 _TEXT	ENDS
 ; Function compile flags: /Odtp
+;	COMDAT ??0SuperData@QMetaObject@@QEAA@PEBU1@@Z
+_TEXT	SEGMENT
+this$ = 8
+mo$ = 16
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z PROC		; QMetaObject::SuperData::SuperData, COMDAT
+; File D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qobjectdefs.h
+; Line 584
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	mov	rcx, QWORD PTR mo$[rsp]
+	mov	QWORD PTR [rax], rcx
+	mov	rax, QWORD PTR this$[rsp]
+	ret	0
+??0SuperData@QMetaObject@@QEAA@PEBU1@@Z ENDP		; QMetaObject::SuperData::SuperData
+_TEXT	ENDS
+; Function compile flags: /Odtp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 128
+; Line 129
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
@@ -703,7 +832,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Server\Server\GeneratedFiles\Debug\moc_Server.cpp
-; Line 128
+; Line 129
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete

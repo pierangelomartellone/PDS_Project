@@ -93,9 +93,9 @@ void FileExplorerWindow::on_newFileButton_clicked()
 
 	if (ok && !filename.isEmpty()) {
 		for (QString existingfile: temp) {
-			if (filename == existingfile)
+			if (filename == existingfile) {
 				QFont myfont("Segoe UI Bold", 25);
-				QLabel* qPopup = new QLabel(QString::fromLatin1("A file with the same name already exists"), 
+				QLabel* qPopup = new QLabel(QString::fromLatin1("A file with the same name already exists"),
 					this, Qt::SplashScreen | Qt::WindowStaysOnTopHint);
 				QPalette qPalette = qPopup->palette();
 				qPalette.setBrush(QPalette::Background, QColor(255, 0, 0));
@@ -110,6 +110,7 @@ void FileExplorerWindow::on_newFileButton_clicked()
 				// setup timer
 				QTimer::singleShot(3000, qPopup, &QLabel::hide);
 				return;
+			}
 		}
 		filename += ".txt";
 		TextEdit *editor = new TextEdit();
@@ -139,12 +140,12 @@ void FileExplorerWindow::on_loadFileURIButton_clicked()
 	uri filename(uritexted.toStdString(), true);
 	qDebug() << uritexted;
 	/* Fare check sulla validità della URI*/
+	/*-------------------------*/
+	//ui.errorDescription->setText("Sorry, you typed a wrong URI");
 	TextEdit* editor = new TextEdit();
 	editor->load(QString::fromStdString(filename.resolveURI()));
 	hide();
 	editor->show();
-	/*-------------------------*/
-	//ui.errorDescription->setText("Sorry, you typed a wrong URI");
 }
 
 
