@@ -50,7 +50,10 @@ void RegisterWindow::on_pushButton_clicked()
 		ui.errorDescription->setText("Sorry, I can't reach my server");
 		return;
 	}
-	int signup = Controller::getInstance().registerUser(usernameString, passwordString);
+
+	int signup = 0;
+	if( usernameString != "" && passwordString != "")
+		signup = Controller::getInstance().registerUser(usernameString, passwordString);
 
 	if (signup == 1) {
 		//Salvo immagine in locale
