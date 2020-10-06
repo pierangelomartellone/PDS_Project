@@ -93,7 +93,7 @@ void FileExplorerWindow::on_newFileButton_clicked()
 
 	if (ok && !filename.isEmpty()) {
 		for (QString existingfile: temp) {
-			if (filename == existingfile) {
+			if (filename == existingfile || (filename + ".txt") == existingfile) {
 				QFont myfont("Segoe UI Bold", 25);
 				QLabel* qPopup = new QLabel(QString::fromLatin1("A file with the same name already exists"),
 					this, Qt::SplashScreen | Qt::WindowStaysOnTopHint);
