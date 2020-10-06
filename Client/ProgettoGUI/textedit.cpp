@@ -181,10 +181,12 @@ void TextEdit::setupFileActions()
 	a->setPriority(QAction::LowPriority);
 	a->setShortcut(QKeySequence::New);
 
+	/*
 	const QIcon openIcon = QIcon::fromTheme("document-open", QIcon(rsrcPath + "/open.png"));
 	a = menu->addAction(openIcon, tr("&Open..."), this, &TextEdit::fileOpen);
 	a->setShortcut(QKeySequence::Open);
 	tb->addAction(a);
+	*/
 
 	menu->addSeparator();
 
@@ -893,9 +895,8 @@ void TextEdit::showColorsfromUsers() {
 		int charIndex = 0;
 		QTextCharFormat fmt2;
 
-		// per ottimizzazione sarebbe interessante iterare solo sui nuovi caratteri
 		currentCursor.setPosition(QTextCursor::Start - 1, QTextCursor::MoveAnchor);
-		currentCursor.setPosition(nuovotesto.length() - 1, QTextCursor::KeepAnchor);
+		currentCursor.setPosition(nuovotesto.length(), QTextCursor::KeepAnchor);
 
 		fmt2.setBackground(Qt::NoBrush);
 
