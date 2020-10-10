@@ -127,4 +127,5 @@ private:
 	QTextEdit* textEdit;
 
 	QLabel* userCursorLabel;
+	QToolBar* legend;
 };

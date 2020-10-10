@@ -1,0 +1,7 @@
+{"Sid":3,"blue":0,"carattere":69,"counter":1,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[0],"red":0}
+{"Sid":3,"blue":0,"carattere":104,"counter":2,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[1],"red":0}
+{"Sid":3,"blue":0,"carattere":105,"counter":3,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[2],"red":0}
+{"Sid":3,"blue":0,"carattere":32,"counter":4,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[3],"red":0}
+{"Sid":3,"blue":0,"carattere":121,"counter":5,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[4],"red":0}
+{"Sid":3,"blue":0,"carattere":111,"counter":6,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[5],"red":0}
+{"Sid":3,"blue":0,"carattere":117,"counter":7,"font":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","green":0,"parte_frazionaria":[6],"red":0}

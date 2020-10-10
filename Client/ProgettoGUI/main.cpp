@@ -56,11 +56,15 @@
 #include "mainwindow.h"
 #include "MyFirstWindow.h"
 
-int main(int argc, char *argv[])
+int main(/*int argc, char *argv[]*/)
 {
+    qputenv("QT_AUTO_SCREEN_SCALE_FACTOR", "1");
+    int argc = 3;
+    char* argv[] = { (char*)"ProgettoGUI", (char*)"--platform", (char*)"windows:dpiawareness=0" };
     Q_INIT_RESOURCE(ProgettoGUI); //nome del progetto
 
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_EnableHighDpiScaling);
 	app.setWindowIcon(QIcon(":/images/mainicon.png"));
     QCoreApplication::setOrganizationName("QtProject");
     QCoreApplication::setApplicationName("Shared Editor");
