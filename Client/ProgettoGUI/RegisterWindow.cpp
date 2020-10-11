@@ -13,6 +13,7 @@
 #include <qresource.h>
 #include <qfileinfo.h>
 
+
 #define IMAGE_DIM 1000
 
 
@@ -20,9 +21,11 @@ RegisterWindow::RegisterWindow(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-
 	//QPixmap pix(":/images/register.png");
 	//ui.picture->setPixmap(pix);
+	QPalette pal = palette();
+	pal.setBrush(QPalette::Window, QPixmap(":/images/Immagine.png"));
+	this->setPalette(pal);
 	ui.errorDescription->setVisible(true);
 	ui.errorDescription->setText("");
 	setAcceptDrops(true);

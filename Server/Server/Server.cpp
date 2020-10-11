@@ -6,6 +6,7 @@
 #define registerUser 2
 #define comandAck 10
 #define fileRequest 12
+#define updateUser 3
 
 Server::Server()
 {
@@ -74,17 +75,28 @@ int Server::acceptUser(QTcpSocket* socket)
 	int type = s.getTypeSerialization(str);
 
 	QString user = list.at(0);
-	QString psw = list.at(1);
+	
+		
+	
 	QHostAddress ha = socket->peerAddress();
 	QString addr = ha.toString();
 	qint16 uport = socket->peerPort();
 	QString port = QString::number(uport);
 	
 	int result; int usercode = -1;
-	if (type == checkLogin)
+	if (type == checkLogin) {
+		QString psw = list.at(1);
 		result = service.checkUserLogin(user.toStdString(), psw.toStdString(), addr.toStdString(), port.toStdString(), socket);
-	else if (type == registerUser)
+	}
+	else if (type == registerUser) {
+		QString psw = list.at(1);
 		result = service.registerNewUser(user.toStdString(), psw.toStdString(), addr.toStdString(), port.toStdString(), socket);
+	}
+		
+	else if (type == updateUser) {
+		QString newUsername = list.at(1);
+		result = service.updateUsername(user.toStdString(),newUsername.toStdString(), addr.toStdString(), port.toStdString(), socket);
+	}
 	
 	if (result > 0) {
 		usercode = service.getUserFromPort(addr.toStdString(), port.toStdString()).getID();

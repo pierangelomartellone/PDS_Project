@@ -100,6 +100,37 @@ int Controller::registerUser(std::string username, std::string password)
 	}
 }
 
+
+int Controller::updateUsername(std::string username)
+{
+	QString ack("LOGINOK");
+	if (connected == false) return 0;
+
+	Serialize s;
+	QString dati = s.userSerialize(Controller::getInstance().getUserName(),QString(username.c_str()), 3);
+
+	socket->write(dati.toStdString().c_str());
+	socket->waitForBytesWritten(WAITING_TIME);
+
+	// response from server
+	socket->waitForReadyRead(WAITING_TIME);
+	QByteArray data = socket->readAll();
+	if (data.isEmpty())
+		QByteArray data = socket->readAll();
+
+	QString read(data);
+	QString resp = s.responseUnserialize(read);
+	QStringList field = resp.split(" ");
+	QString respack = field.at(0);
+
+	if (respack == ack) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+
 int Controller::openFile(std::string name) {
 	int openFile = 3; int CRDTmessage = 8;
 	if (connected == false) return 0;

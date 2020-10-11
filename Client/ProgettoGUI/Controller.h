@@ -41,7 +41,7 @@ public:
 	static Controller& getInstance();
 
 	int connectSocket();
-	
+	int updateUsername(std::string username);
 	int checkLogin(std::string username, std::string password);
 	int registerUser(std::string username, std::string password);
 	int openFile(std::string name);

@@ -58,9 +58,11 @@
 
 int main(int argc, char *argv[])
 {
+    qputenv("QT_AUTO_SCREEN_SCALE_FACTOR", "1");
     Q_INIT_RESOURCE(ProgettoGUI); //nome del progetto
-
+  
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_EnableHighDpiScaling);
 	app.setWindowIcon(QIcon(":/images/mainicon.png"));
     QCoreApplication::setOrganizationName("QtProject");
     QCoreApplication::setApplicationName("Shared Editor");
