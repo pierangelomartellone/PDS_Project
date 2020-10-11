@@ -10,7 +10,7 @@
 #include "qtimer.h"
 #include <QtCore\qpropertyanimation.h>
 #include <QGraphicsOpacityEffect>
-#include <Settings.h>
+#include "Settings.h"
 
 void setColours(QPalette& palette) {
 	// modify palette to dark

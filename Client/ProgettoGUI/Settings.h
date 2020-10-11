@@ -2,9 +2,10 @@
 
 #include "ui_Settings.h"
 #include <qwidget.h>
+#include "FileExplorerWindow.h"
+#include <ui_Settings.h>
 
-class Settings :
-    public QWidget
+class Settings : public QWidget
 {
 	Q_OBJECT
 		

@@ -1,2 +1,17 @@
-﻿  TaskExecutor.cpp
+﻿  Moc'ing Server.h...
+  Moc'ing Serialize.h...
+  CRDT.cpp
+  File.cpp
+  main.cpp
+  Message.cpp
+  Serialize.cpp
+  Server.cpp
+  Service.cpp
+  Symbol.cpp
+  TaskExecutor.cpp
+  Utente.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+  qrc_Server.cpp
+  moc_Server.cpp
+  moc_Serialize.cpp
   Server.vcxproj -> D:\Lavoro\PDS_Project\Server\x64\Debug\Server.exe
