@@ -20,6 +20,7 @@ private:
 public:
 	Service();
 	void insert_crdt(File file, CRDT crdt); 
+	QList<Utente> getlistaUtenti();
 	QHash<File, CRDT> getListafileCRDT();  
 	QList<File> getListaFileAperti();   
 	QList<File> getListaFileApribili();  

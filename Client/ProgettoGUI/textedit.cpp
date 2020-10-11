@@ -84,7 +84,7 @@ TextEdit::TextEdit(QWidget* parent)
 
 	//Nuovo
 	userCursorLabel = new QLabel(textEdit);
-
+	
 
 	// ORDER is important here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	connect(textEdit, &QTextEdit::currentCharFormatChanged, this, &TextEdit::currentCharFormatChanged);
@@ -854,7 +854,8 @@ int TextEdit::getAlignmentCode(Qt::Alignment align) {
 }
 
 void TextEdit::showColorsfromUsers() {
-	qDebug() << "userTyped";
+	//qDebug() << "userTyped";
+	Controller::getInstance().getCompleteUserList();
 
 	CRDT crdt = Controller::getInstance().getCRDT();
 	QString nuovotesto = Controller::getInstance().toText(crdt.getSymbols());
@@ -863,6 +864,7 @@ void TextEdit::showColorsfromUsers() {
 	QTextCursor currentCursor = textEdit->textCursor();
 	lastCursor = currentCursor.position();
 	QTextCharFormat fmt;
+	QList<int> ids;
 
 	if (whoTypedEnabled == false) {
 		whoTypedEnabled = true;
@@ -871,11 +873,20 @@ void TextEdit::showColorsfromUsers() {
 
 		// per ottimizzazione sarebbe interessante iterare solo sui nuovi caratteri
 		currentCursor.movePosition(QTextCursor::StartOfBlock, QTextCursor::MoveAnchor);
+		
+		legend = addToolBar("legend");
+		
 		for (Symbol s : crdt.getSymbols()) {
+			
 			// logic to choose the color
 			QColor userColor = usersColor[s.getSID()];
 			QBrush colore(userColor);
 			fmt.setBackground(colore);
+
+				if (!ids.contains(s.getSID())) {
+					ids.append(s.getSID());
+				}
+				
 
 			// move a single char to update font and color
 			currentCursor.setPosition(charIndex, QTextCursor::MoveAnchor);
@@ -886,10 +897,28 @@ void TextEdit::showColorsfromUsers() {
 
 			charIndex++;
 		}
+		for each (int i in ids)
+		{
+			QLabel* color=new QLabel(textEdit);
+			QLabel* name = new QLabel(textEdit);
+			QString str = " " + Controller::getInstance().getNameFromID(i);
+			QPixmap pix(20, 20);
+			pix.fill(usersColor[i]);
+			color->setPixmap(pix);
+			name->setText(str);
+			legend->addWidget(color);
+			legend->addWidget(name);
+			legend->addSeparator();
+		}
+		legend->show();
+
 		//  reset original position
 		currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
+		
 	}
 	else {
+		legend->close();
+		legend->clear();
 		textEdit->setDisabled(false);
 		actionColorsfromUsers->setChecked(false);
 		int charIndex = 0;

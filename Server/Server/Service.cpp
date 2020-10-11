@@ -33,6 +33,11 @@ void Service::insert_crdt(File file, CRDT crdt) {  /****************************
 	this->listaFileCRDT.insert(file, crdt);
 }
 
+QList<Utente> Service::getlistaUtenti()
+{
+	return listaUtenti;
+}
+
 QHash<File, CRDT> Service::getListafileCRDT()/************************************NUOVO***************************************/
 {
 	return this->listaFileCRDT;

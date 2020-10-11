@@ -25,9 +25,9 @@
 #define fileRequest 12
 #define longContent 13
 #define newFile 14
-#define userInfoMessage
+#define userInfoMessage 18
+#define userNotConnectedInfoMessage 22
 #define closeFile 99
-
 
 TaskExecutor::TaskExecutor() 
 {
@@ -320,7 +320,13 @@ Service& TaskExecutor::start()
 	}
 	else if (messageType == comandReq) {
 		QString request = serialize.responseUnserialize(readFromSocket);
-		// funzione che gestisce le richieste
+		for (Utente u : service.getlistaUtenti()) {
+			QString data = serialize.responseSerialize(QString::fromStdString(std::to_string(u.getID())) 
+				+ " " + QString::fromStdString(u.getUsername()), userNotConnectedInfoMessage);
+
+			actualSocket->write(data.toStdString().c_str());
+			actualSocket->waitForBytesWritten(1000);
+		}
 	}
 	else if( messageType != noTypeInMessage) {
 		File alreadyOpened = service.getFilefromUser(u);
