@@ -20,6 +20,9 @@ public:
 	QString userSerialize(QString user, QString psw, int type);
 	QStringList userUnserialize(QString utente);
 
+	QStringList updateUserUnserialize(QString utente);
+	QStringList updatePswUnserialize(QString utente);
+
 	QString filenameSerialize(QString filename, int type);
 	QString filenameUnserialize(QString file);
 

@@ -28,6 +28,29 @@ QStringList Serialize::userUnserialize(QString utente)
 	return list;
 }
 
+QString Serialize::updateUserSerialize(QString user, QString newUser, int type)
+{
+	QJsonObject utente;
+	utente.insert("type", QJsonValue(type));
+	utente.insert("user", QJsonValue(user));
+	utente.insert("newUser", QJsonValue(newUser));
+	QJsonDocument doc(utente);
+	QString strJson(doc.toJson(QJsonDocument::Compact));
+	return strJson;
+}
+
+QString Serialize::updatePswSerialize(QString psw, QString username, int type)
+{
+	QJsonObject utente;
+	utente.insert("type", QJsonValue(type));
+	utente.insert("user", QJsonValue(username));
+	utente.insert("psw", QJsonValue(psw));
+	QJsonDocument doc(utente);
+	QString strJson(doc.toJson(QJsonDocument::Compact));
+	return strJson;
+}
+
+
 QString Serialize::filenameSerialize(QString filename, int type)
 {
 	QJsonObject file;

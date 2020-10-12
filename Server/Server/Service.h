@@ -31,7 +31,8 @@ public:
 
 	int lookForUser();
 	int registerNewUser(std::string u, std::string p, std::string addr, std::string port, QTcpSocket *s);
-	int updateUsername(std::string u,std::string nu, std::string addr, std::string port, QTcpSocket* s);
+	int updateUsername(std::string u,std::string nu);
+	int updatePassword(std::string psw, std::string u);
 	int checkUserLogin(std::string user, std::string psw, std::string addr, std::string port, QTcpSocket *s);
 	Utente getUserFromPort(std::string addr, std::string port);
 	Utente getUserFromID(const int uid);

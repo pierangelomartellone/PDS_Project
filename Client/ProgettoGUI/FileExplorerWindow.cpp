@@ -157,6 +157,8 @@ void FileExplorerWindow::on_loadFileURIButton_clicked()
 void FileExplorerWindow::on_toolButton_clicked() {
 	Settings* settings = new Settings();
 	settings->show();
+	hide();
 }
+
 
 

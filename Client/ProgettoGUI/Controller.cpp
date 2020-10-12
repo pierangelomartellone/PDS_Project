@@ -103,11 +103,11 @@ int Controller::registerUser(std::string username, std::string password)
 
 int Controller::updateUsername(std::string username)
 {
-	QString ack("LOGINOK");
+	QString ack("USEROK");
 	if (connected == false) return 0;
 
 	Serialize s;
-	QString dati = s.userSerialize(Controller::getInstance().getUserName(),QString(username.c_str()), 3);
+	QString dati = s.updateUserSerialize(Controller::getInstance().getUserName(),QString(username.c_str()), 15);
 
 	socket->write(dati.toStdString().c_str());
 	socket->waitForBytesWritten(WAITING_TIME);
@@ -129,6 +129,37 @@ int Controller::updateUsername(std::string username)
 	else {
 		return 0;
 	}
+}
+
+int Controller::updatePassword(std::string psw) {
+	QString ack("PSWOK");
+	if (connected == false) return 0;
+
+	Serialize s;
+	QString dati = s.updatePswSerialize(QString(psw.c_str()), Controller::getInstance().getUserName(),16);
+
+	socket->write(dati.toStdString().c_str());
+	socket->waitForBytesWritten(WAITING_TIME);
+
+	// response from server
+	socket->waitForReadyRead(WAITING_TIME);
+	QByteArray data = socket->readAll();
+	if (data.isEmpty())
+		QByteArray data = socket->readAll();
+
+	QString read(data);
+	QString resp = s.responseUnserialize(read);
+	QStringList field = resp.split(" ");
+	QString respack = field.at(0);
+
+	if (respack == ack) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+
+
 }
 
 int Controller::openFile(std::string name) {
