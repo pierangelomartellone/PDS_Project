@@ -50,7 +50,7 @@ public:
     {
         if (RegisterWindow->objectName().isEmpty())
             RegisterWindow->setObjectName(QString::fromUtf8("RegisterWindow"));
-        RegisterWindow->resize(1201, 851);
+        RegisterWindow->resize(1201, 568);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(3);
         sizePolicy.setVerticalStretch(3);

@@ -43,6 +43,7 @@ public:
 
 	int connectSocket();
 	int updateUsername(std::string username);
+	int updatePassword(std::string psw);
 	int checkLogin(std::string username, std::string password);
 	int registerUser(std::string username, std::string password);
 	int openFile(std::string name);

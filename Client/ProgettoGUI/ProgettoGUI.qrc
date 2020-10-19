@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/">
+    <file>images/back.png</file>
     <file>images/profileSettings.png</file>
     <file>images/user-settings.png</file>
     <file>images/burger.png</file>

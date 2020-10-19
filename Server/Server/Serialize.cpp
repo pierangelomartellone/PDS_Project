@@ -28,6 +28,33 @@ QStringList Serialize::userUnserialize(QString utente)
 	return list;
 }
 
+QStringList Serialize::updateUserUnserialize(QString utente)
+{
+	QJsonDocument doc = QJsonDocument::fromJson(utente.toLatin1());
+	QJsonObject obj = doc.object();
+	QString user = obj.value("user").toString();
+	QString newUser = obj.value("newUser").toString();
+	QString type = obj.value("type").toString();
+	QStringList list;
+	list.append(user);
+	list.append(newUser);
+	return list;
+}
+
+QStringList Serialize::updatePswUnserialize(QString utente)
+{
+	QJsonDocument doc = QJsonDocument::fromJson(utente.toLatin1());
+	QJsonObject obj = doc.object();
+	QString psw = obj.value("psw").toString();
+	QString type = obj.value("type").toString();
+	QString user = obj.value("user").toString();
+	QStringList list;
+	list.append(psw);
+	list.append(user);
+	return list;
+}
+
+
 QString Serialize::filenameSerialize(QString filename, int type)
 {
 	QJsonObject file;
