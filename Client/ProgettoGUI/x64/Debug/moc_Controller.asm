@@ -6,61 +6,61 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG163881 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG163895 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG163882 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG163896 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG163883 DB	'qRegisterNormalizedMetaType', 00H
+$SG163897 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG164324 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG164338 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG164325 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG164339 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG164326 DB	'qRegisterNormalizedMetaType', 00H
+$SG164340 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG164767 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG164781 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG164768 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG164782 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG164769 DB	'qRegisterNormalizedMetaType', 00H
+$SG164783 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG165211 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG165225 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG165212 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG165226 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG165213 DB	'qRegisterNormalizedMetaType', 00H
+$SG165227 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG158822 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG158836 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG158823 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG158837 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG158824 DB	'qRegisterNormalizedMetaType', 00H
+$SG158838 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG162041 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG162055 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG162042 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG162056 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG162043 DB	'qRegisterNormalizedMetaType', 00H
+$SG162057 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG162388 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG162402 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG162389 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG162403 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG162390 DB	'qRegisterNormalizedMetaType', 00H
+$SG162404 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_Controller@@3Uqt_meta_stringdata_Controller_t@@B DD 0ffffffffH ; qt_meta_stringdata_Controller
 	DD	0aH
@@ -271,13 +271,13 @@ $SG162390 DB	'qRegisterNormalizedMetaType', 00H
 	DD	09H
 	DD	00H
 	ORG $+4
-$SG162749 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG162763 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG162750 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG162764 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG162751 DB	'qRegisterNormalizedMetaType', 00H
+$SG162765 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete

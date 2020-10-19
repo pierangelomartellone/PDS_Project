@@ -556,15 +556,12 @@ QPixmap Service::sendImagetoUser(Utente u)
 {
 	QString imagepath;
 	QPixmap immagine;
-	int imgn = u.getID();
-	if (u.checkImage()) {
-		std::string imgn2("./userimages/" + std::to_string(imgn) + ".jpg");
-		imagepath = QString::fromStdString(imgn2);
-		QFileInfo checkFile(imagepath);
-		if (checkFile.exists() && checkFile.isFile()) {
-			u.setImage();
-			immagine.load(imagepath);
-		}
+	std::string imgn2("./userimages/" + std::to_string(u.getID()) + ".jpg");
+	imagepath = QString::fromStdString(imgn2);
+	QFileInfo checkFile(imagepath);
+	if (checkFile.exists() && checkFile.isFile()) {
+		u.setImage();
+		immagine.load(imagepath);
 	}
 	return immagine;
 }

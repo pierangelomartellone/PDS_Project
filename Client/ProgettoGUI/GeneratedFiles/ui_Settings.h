@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Settings.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -20,7 +20,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Settings
+class Ui_Form
 {
 public:
     QFrame *frame;
@@ -277,7 +277,7 @@ public:
 };
 
 namespace Ui {
-    class Settings: public Ui_Settings {};
+    class Settings: public Ui_Form {};
 } // namespace Ui
 
 QT_END_NAMESPACE
