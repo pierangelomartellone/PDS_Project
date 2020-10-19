@@ -6,55 +6,60 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG156704 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG156897 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG156705 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG156898 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG156706 DB	'qRegisterNormalizedMetaType', 00H
+$SG156899 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG157051 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG157244 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG157052 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG157245 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG157053 DB	'qRegisterNormalizedMetaType', 00H
+$SG157246 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG157412 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG157605 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG157413 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG157606 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG157414 DB	'qRegisterNormalizedMetaType', 00H
+$SG157607 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_FileExplorerWindow@@3Uqt_meta_stringdata_FileExplorerWindow_t@@B DD 0ffffffffH ; qt_meta_stringdata_FileExplorerWindow
 	DD	012H
 	DD	00H
 	ORG $+4
-	DQ	0000000000000078H
+	DQ	0000000000000090H
 	DD	0ffffffffH
 	DD	018H
 	DD	00H
 	ORG $+4
-	DQ	0000000000000073H
+	DQ	000000000000008bH
 	DD	0ffffffffH
 	DD	00H
 	DD	00H
 	ORG $+4
-	DQ	0000000000000074H
+	DQ	000000000000008cH
 	DD	0ffffffffH
 	DD	019H
 	DD	00H
 	ORG $+4
-	DQ	000000000000005dH
+	DQ	0000000000000075H
 	DD	0ffffffffH
 	DD	01cH
 	DD	00H
 	ORG $+4
-	DQ	000000000000005fH
+	DQ	0000000000000077H
+	DD	0ffffffffH
+	DD	015H
+	DD	00H
+	ORG $+4
+	DQ	000000000000007cH
 	DB	046H
 	DB	069H
 	DB	06cH
@@ -155,12 +160,34 @@ $SG157414 DB	'qRegisterNormalizedMetaType', 00H
 	DB	065H
 	DB	064H
 	DB	00H
-	ORG $+4
+	DB	06fH
+	DB	06eH
+	DB	05fH
+	DB	074H
+	DB	06fH
+	DB	06fH
+	DB	06cH
+	DB	042H
+	DB	075H
+	DB	074H
+	DB	074H
+	DB	06fH
+	DB	06eH
+	DB	05fH
+	DB	063H
+	DB	06cH
+	DB	069H
+	DB	063H
+	DB	06bH
+	DB	065H
+	DB	064H
+	DB	00H
+	ORG $+6
 ?qt_meta_data_FileExplorerWindow@@3QBIB DD 08H		; qt_meta_data_FileExplorerWindow
 	DD	00H
 	DD	00H
 	DD	00H
-	DD	03H
+	DD	04H
 	DD	0eH
 	DD	00H
 	DD	00H
@@ -172,63 +199,69 @@ $SG157414 DB	'qRegisterNormalizedMetaType', 00H
 	DD	00H
 	DD	01H
 	DD	00H
-	DD	01dH
+	DD	022H
 	DD	02H
 	DD	08H
 	DD	03H
 	DD	00H
-	DD	01eH
+	DD	023H
 	DD	02H
 	DD	08H
 	DD	04H
 	DD	00H
-	DD	01fH
+	DD	024H
+	DD	02H
+	DD	08H
+	DD	05H
+	DD	00H
+	DD	025H
 	DD	02H
 	DD	08H
 	DD	02bH
 	DD	02bH
 	DD	02bH
+	DD	02bH
 	DD	00H
 	ORG $+4
-$SG158495 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
-	DB	00H
-	ORG $+15
-$SG158496 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG158497 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG158856 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG158688 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG158857 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG158689 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG158858 DB	'qRegisterNormalizedMetaType', 00H
+$SG158690 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG159217 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG159049 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG159218 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG159050 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG159219 DB	'qRegisterNormalizedMetaType', 00H
+$SG159051 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG159661 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG159410 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG159662 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG159411 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG159663 DB	'qRegisterNormalizedMetaType', 00H
+$SG159412 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG153551 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+$SG159854 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG153552 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG159855 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG153553 DB	'qRegisterNormalizedMetaType', 00H
+$SG159856 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG153744 DB	'D:\QT\5.15\5.15.1\msvc2019_64\include\QtCore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG153745 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG153746 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
@@ -248,6 +281,7 @@ EXTRN	__imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z:PROC
 EXTRN	?on_newFileButton_clicked@FileExplorerWindow@@AEAAXXZ:PROC ; FileExplorerWindow::on_newFileButton_clicked
 EXTRN	?on_loadFileButton_clicked@FileExplorerWindow@@AEAAXXZ:PROC ; FileExplorerWindow::on_loadFileButton_clicked
 EXTRN	?on_loadFileURIButton_clicked@FileExplorerWindow@@AEAAXXZ:PROC ; FileExplorerWindow::on_loadFileURIButton_clicked
+EXTRN	?on_toolButton_clicked@FileExplorerWindow@@AEAAXXZ:PROC ; FileExplorerWindow::on_toolButton_clicked
 EXTRN	__imp_?staticMetaObject@QWidget@@2UQMetaObject@@B:BYTE
 _BSS	SEGMENT
 ?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B DB 030H DUP (?) ; FileExplorerWindow::staticMetaObject
@@ -262,8 +296,8 @@ $pdata$?qt_metacast@FileExplorerWindow@@UEAAPEAXPEBD@Z DD imagerel $LN5
 $pdata$?qt_metacall@FileExplorerWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z DD imagerel $LN9
 	DD	imagerel $LN9+174
 	DD	imagerel $unwind$?qt_metacall@FileExplorerWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
-$pdata$?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z DD imagerel $LN10
-	DD	imagerel $LN10+110
+$pdata$?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z DD imagerel $LN11
+	DD	imagerel $LN11+129
 	DD	imagerel $unwind$?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -306,23 +340,23 @@ xdata	ENDS
 text$di	SEGMENT
 ??__E?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'FileExplorerWindow::staticMetaObject'', COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 96
+; Line 101
 	sub	rsp, 40					; 00000028H
-; Line 90
+; Line 95
 	lea	rcx, OFFSET FLAT:?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B ; FileExplorerWindow::staticMetaObject
 	call	??$link@$1?staticMetaObject@QWidget@@2UQMetaObject@@B@SuperData@QMetaObject@@SA?AU01@XZ ; QMetaObject::SuperData::link<&QWidget::staticMetaObject>
-; Line 91
+; Line 96
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_FileExplorerWindow@@3Uqt_meta_stringdata_FileExplorerWindow_t@@B
 	mov	QWORD PTR ?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B+8, rax
-; Line 92
+; Line 97
 	lea	rax, OFFSET FLAT:?qt_meta_data_FileExplorerWindow@@3QBIB
 	mov	QWORD PTR ?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B+16, rax
-; Line 93
+; Line 98
 	lea	rax, OFFSET FLAT:?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; FileExplorerWindow::qt_static_metacall
 	mov	QWORD PTR ?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B+24, rax
-; Line 94
+; Line 99
 	mov	QWORD PTR ?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B+32, 0
-; Line 95
+; Line 100
 	mov	QWORD PTR ?staticMetaObject@FileExplorerWindow@@2UQMetaObject@@B+40, 0
 	add	rsp, 40					; 00000028H
 	ret	0
@@ -368,20 +402,20 @@ _id$ = 80
 _a$ = 88
 ?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; FileExplorerWindow::qt_static_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 75
-$LN10:
+; Line 79
+$LN11:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 76
+; Line 80
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN4@qt_static_
-; Line 77
+; Line 81
 	mov	rax, QWORD PTR _o$[rsp]
 	mov	QWORD PTR _t$1[rsp], rax
-; Line 79
+; Line 83
 	mov	eax, DWORD PTR _id$[rsp]
 	mov	DWORD PTR tv69[rsp], eax
 	cmp	DWORD PTR tv69[rsp], 0
@@ -390,25 +424,32 @@ $LN10:
 	je	SHORT $LN6@qt_static_
 	cmp	DWORD PTR tv69[rsp], 2
 	je	SHORT $LN7@qt_static_
-	jmp	SHORT $LN8@qt_static_
+	cmp	DWORD PTR tv69[rsp], 3
+	je	SHORT $LN8@qt_static_
+	jmp	SHORT $LN9@qt_static_
 $LN5@qt_static_:
-; Line 80
+; Line 84
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?on_newFileButton_clicked@FileExplorerWindow@@AEAAXXZ ; FileExplorerWindow::on_newFileButton_clicked
 	jmp	SHORT $LN2@qt_static_
 $LN6@qt_static_:
-; Line 81
+; Line 85
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?on_loadFileButton_clicked@FileExplorerWindow@@AEAAXXZ ; FileExplorerWindow::on_loadFileButton_clicked
 	jmp	SHORT $LN2@qt_static_
 $LN7@qt_static_:
-; Line 82
+; Line 86
 	mov	rcx, QWORD PTR _t$1[rsp]
 	call	?on_loadFileURIButton_clicked@FileExplorerWindow@@AEAAXXZ ; FileExplorerWindow::on_loadFileURIButton_clicked
+	jmp	SHORT $LN2@qt_static_
 $LN8@qt_static_:
+; Line 87
+	mov	rcx, QWORD PTR _t$1[rsp]
+	call	?on_toolButton_clicked@FileExplorerWindow@@AEAAXXZ ; FileExplorerWindow::on_toolButton_clicked
+$LN9@qt_static_:
 $LN2@qt_static_:
 $LN4@qt_static_:
-; Line 87
+; Line 92
 	add	rsp, 56					; 00000038H
 	ret	0
 ?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ENDP ; FileExplorerWindow::qt_static_metacall
@@ -421,69 +462,69 @@ _id$ = 64
 _a$ = 72
 ?qt_metacall@FileExplorerWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; FileExplorerWindow::qt_metacall
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 113
+; Line 118
 $LN9:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 114
+; Line 119
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
-; Line 115
+; Line 120
 	cmp	DWORD PTR _id$[rsp], 0
 	jge	SHORT $LN2@qt_metacal
-; Line 116
+; Line 121
 	mov	eax, DWORD PTR _id$[rsp]
 	jmp	SHORT $LN1@qt_metacal
 $LN2@qt_metacal:
-; Line 117
+; Line 122
 	cmp	DWORD PTR _c$[rsp], 0
 	jne	SHORT $LN3@qt_metacal
-; Line 118
-	cmp	DWORD PTR _id$[rsp], 3
+; Line 123
+	cmp	DWORD PTR _id$[rsp], 4
 	jge	SHORT $LN5@qt_metacal
-; Line 119
+; Line 124
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	?qt_static_metacall@FileExplorerWindow@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; FileExplorerWindow::qt_static_metacall
 $LN5@qt_metacal:
-; Line 120
+; Line 125
 	mov	eax, DWORD PTR _id$[rsp]
-	sub	eax, 3
+	sub	eax, 4
 	mov	DWORD PTR _id$[rsp], eax
 	jmp	SHORT $LN4@qt_metacal
 $LN3@qt_metacal:
-; Line 121
+; Line 126
 	cmp	DWORD PTR _c$[rsp], 12
 	jne	SHORT $LN6@qt_metacal
-; Line 122
-	cmp	DWORD PTR _id$[rsp], 3
+; Line 127
+	cmp	DWORD PTR _id$[rsp], 4
 	jge	SHORT $LN7@qt_metacal
-; Line 123
+; Line 128
 	mov	eax, 8
 	imul	rax, rax, 0
 	mov	rcx, QWORD PTR _a$[rsp]
 	mov	rax, QWORD PTR [rcx+rax]
 	mov	DWORD PTR [rax], -1
 $LN7@qt_metacal:
-; Line 124
+; Line 129
 	mov	eax, DWORD PTR _id$[rsp]
-	sub	eax, 3
+	sub	eax, 4
 	mov	DWORD PTR _id$[rsp], eax
 $LN6@qt_metacal:
 $LN4@qt_metacal:
-; Line 126
+; Line 131
 	mov	eax, DWORD PTR _id$[rsp]
 $LN1@qt_metacal:
-; Line 127
+; Line 132
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacall@FileExplorerWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ENDP ; FileExplorerWindow::qt_metacall
@@ -494,33 +535,33 @@ this$ = 48
 _clname$ = 56
 ?qt_metacast@FileExplorerWindow@@UEAAPEAXPEBD@Z PROC	; FileExplorerWindow::qt_metacast
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 105
+; Line 110
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 106
+; Line 111
 	cmp	QWORD PTR _clname$[rsp], 0
 	jne	SHORT $LN2@qt_metacas
 	xor	eax, eax
 	jmp	SHORT $LN1@qt_metacas
 $LN2@qt_metacas:
-; Line 107
-	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_FileExplorerWindow@@3Uqt_meta_stringdata_FileExplorerWindow_t@@B+120
+; Line 112
+	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_FileExplorerWindow@@3Uqt_meta_stringdata_FileExplorerWindow_t@@B+144
 	mov	rcx, QWORD PTR _clname$[rsp]
 	call	strcmp
 	test	eax, eax
 	jne	SHORT $LN3@qt_metacas
-; Line 108
+; Line 113
 	mov	rax, QWORD PTR this$[rsp]
 	jmp	SHORT $LN1@qt_metacas
 $LN3@qt_metacas:
-; Line 109
+; Line 114
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacast@QWidget@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
-; Line 110
+; Line 115
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacast@FileExplorerWindow@@UEAAPEAXPEBD@Z ENDP	; FileExplorerWindow::qt_metacast
@@ -531,11 +572,11 @@ tv82 = 32
 this$ = 64
 ?metaObject@FileExplorerWindow@@UEBAPEBUQMetaObject@@XZ PROC ; FileExplorerWindow::metaObject
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 100
+; Line 105
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 101
+; Line 106
 	mov	rax, QWORD PTR this$[rsp]
 	add	rax, 8
 	mov	rcx, rax
@@ -555,7 +596,7 @@ $LN3@metaObject:
 	mov	QWORD PTR tv82[rsp], rax
 $LN4@metaObject:
 	mov	rax, QWORD PTR tv82[rsp]
-; Line 102
+; Line 107
 	add	rsp, 56					; 00000038H
 	ret	0
 ?metaObject@FileExplorerWindow@@UEBAPEBUQMetaObject@@XZ ENDP ; FileExplorerWindow::metaObject
@@ -599,7 +640,7 @@ __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 130
+; Line 135
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
@@ -611,7 +652,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File C:\Users\cgarg\source\repos\pmartellone13\PDS_Project\Client\ProgettoGUI\GeneratedFiles\Debug\moc_FileExplorerWindow.cpp
-; Line 130
+; Line 135
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete

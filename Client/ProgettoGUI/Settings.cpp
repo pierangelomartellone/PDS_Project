@@ -131,7 +131,6 @@ void Settings::dropEvent(QDropEvent* e) {
 				*rect = QRect(*start, *start, IMAGE_DIM, IMAGE_DIM);
 				clipped = clipped.copy(*rect);
 			}
-
 			ui.userImage->setPixmap(clipped);
 			myimage = clipped;
 		}
@@ -143,4 +142,8 @@ void Settings::on_pushButton_clicked() {
 	FileExplorerWindow* reg = new FileExplorerWindow();
 	reg->show();
 	hide();
+	std::string path = "./images/_" + Controller::getInstance().getUserName().toStdString() + ".jpg";
+	QString pathstr = QString(path.c_str());
+	QPixmap userimage(pathstr);
+	int saveonserver = Controller::getInstance().setImage(userimage);
 }
