@@ -20,6 +20,7 @@ private:
 public:
 	Service();
 	void insert_crdt(File file, CRDT crdt); 
+	QList<Utente> getlistaUtenti();
 	QHash<File, CRDT> getListafileCRDT();  
 	QList<File> getListaFileAperti();   
 	QList<File> getListaFileApribili();  
@@ -30,6 +31,7 @@ public:
 
 	int lookForUser();
 	int registerNewUser(std::string u, std::string p, std::string addr, std::string port, QTcpSocket *s);
+	int updateUsername(std::string u,std::string nu, std::string addr, std::string port, QTcpSocket* s);
 	int checkUserLogin(std::string user, std::string psw, std::string addr, std::string port, QTcpSocket *s);
 	Utente getUserFromPort(std::string addr, std::string port);
 	Utente getUserFromID(const int uid);

@@ -100,6 +100,37 @@ int Controller::registerUser(std::string username, std::string password)
 	}
 }
 
+
+int Controller::updateUsername(std::string username)
+{
+	QString ack("LOGINOK");
+	if (connected == false) return 0;
+
+	Serialize s;
+	QString dati = s.userSerialize(Controller::getInstance().getUserName(),QString(username.c_str()), 3);
+
+	socket->write(dati.toStdString().c_str());
+	socket->waitForBytesWritten(WAITING_TIME);
+
+	// response from server
+	socket->waitForReadyRead(WAITING_TIME);
+	QByteArray data = socket->readAll();
+	if (data.isEmpty())
+		QByteArray data = socket->readAll();
+
+	QString read(data);
+	QString resp = s.responseUnserialize(read);
+	QStringList field = resp.split(" ");
+	QString respack = field.at(0);
+
+	if (respack == ack) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+
 int Controller::openFile(std::string name) {
 	int openFile = 3; int CRDTmessage = 8;
 	if (connected == false) return 0;
@@ -259,6 +290,7 @@ int Controller::notifyChange(Message m) {
 int Controller::receiveMessage() {
 	int CRDTMessage = 8;
 	int userInfoMessage = 18;
+	int userNotConnectedInfoMessage = 22;
 	if (connected == false) return 0;
 	if (readyForCRDT == false) return 0;
 	Serialize s;
@@ -292,8 +324,29 @@ int Controller::receiveMessage() {
 			listaIDUtenteNome.insert(id, name);
 			
 			emit newuserconnected(id);
+		} 
+		else if (type == userNotConnectedInfoMessage) {
+			QString res = s.responseUnserialize(json);
+			QStringList fields = res.split(" ");
+			int id = fields.at(0).toInt();
+			QString name = fields.at(1);
+			listaIDUtenteNome.insert(id, name);
 		}
+
 	}
+	return 1;
+}
+
+int Controller::getCompleteUserList() {
+	if (userListPresent == true) return -1;
+	int comandReq = 11;
+	Serialize s;
+	QString dati = s.responseSerialize("askforuserlist", comandReq);
+
+	socket->write(dati.toStdString().c_str());
+	socket->waitForBytesWritten(1000);
+
+	userListPresent = true;
 	return 1;
 }
 
@@ -401,7 +454,7 @@ QString Controller::getNameFromID(int id) {
 		return listaIDUtenteNome.value(id);
 	}
 	else
-	return "Papera Anonima";
+	return "Reload :)";
 }
 
 QString Controller::getUserName()

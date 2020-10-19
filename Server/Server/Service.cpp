@@ -33,6 +33,11 @@ void Service::insert_crdt(File file, CRDT crdt) {  /****************************
 	this->listaFileCRDT.insert(file, crdt);
 }
 
+QList<Utente> Service::getlistaUtenti()
+{
+	return listaUtenti;
+}
+
 QHash<File, CRDT> Service::getListafileCRDT()/************************************NUOVO***************************************/
 {
 	return this->listaFileCRDT;
@@ -176,7 +181,7 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 				listaUtenti.push_back(ut);
 				str.clear();
 				str = "INSERT INTO user (ID, Username, Password, Salt) VALUES ('" + std::to_string(ut.getID()) +"','" +  u + "','"+ base64_pwd+"','"+ base64_salt+"')";
-			
+				
 				if (mysql_query(conn, str.c_str())!=0)
 					return -1; //error in the query
 
@@ -192,6 +197,46 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 
 	return listaUtenti.size();
 }
+
+int Service::updateUsername(std::string u, std::string nu, std::string addr, std::string port, QTcpSocket* s) {
+	std::string id;
+	std::string user;
+	std::string psw;
+	std::string salt;
+	std::string str = "SELECT * FROM user WHERE Username = '" + u + "'";
+
+	MYSQL* conn;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+	conn = mysql_init(0);
+	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+	if (conn) {
+		if (!mysql_query(conn, str.c_str())) {
+			res = mysql_store_result(conn);
+			while (row = mysql_fetch_row(res)) {
+				id = row[0];
+				/*user = row[1];
+				psw = row[2];
+				salt = row[3];*/
+				str.clear();
+				str = "INSERT INTO user (ID, Username, Password, Salt) SET Username '" + nu + "' WHERE ID = '" + id+"')";
+				if (mysql_query(conn, str.c_str()) != 0)
+					return -1; //error in the query
+			}
+			mysql_free_result(res);
+		}
+		mysql_close(conn);
+	}
+	else {
+		qDebug() << "Unable to connect to Database";
+		return -1;
+	}
+
+	return listaUtenti.size();
+
+
+}
+
 
 int Service::checkUserLogin(std::string user, std::string psw, std::string addr, std::string port, QTcpSocket* s)
 {

@@ -29,6 +29,7 @@ private:
 	bool connected = false;
 	bool fromOutside = false;
 	bool readyForCRDT = false;
+	bool userListPresent = false;
 
 	QHash<int, QString> listaIDUtenteNome;
 	QString loggedUser;
@@ -41,11 +42,12 @@ public:
 	static Controller& getInstance();
 
 	int connectSocket();
-	
+	int updateUsername(std::string username);
 	int checkLogin(std::string username, std::string password);
 	int registerUser(std::string username, std::string password);
 	int openFile(std::string name);
 	int newFile(std::string name);
+	int getCompleteUserList();
 	QStringList askForFileList();
 	int saveFileAs(std::string name);
 	int setImage(QPixmap q);

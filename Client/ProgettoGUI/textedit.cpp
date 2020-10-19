@@ -854,7 +854,8 @@ int TextEdit::getAlignmentCode(Qt::Alignment align) {
 }
 
 void TextEdit::showColorsfromUsers() {
-	qDebug() << "userTyped";
+	//qDebug() << "userTyped";
+	Controller::getInstance().getCompleteUserList();
 
 	CRDT crdt = Controller::getInstance().getCRDT();
 	QString nuovotesto = Controller::getInstance().toText(crdt.getSymbols());
@@ -863,8 +864,6 @@ void TextEdit::showColorsfromUsers() {
 	QTextCursor currentCursor = textEdit->textCursor();
 	lastCursor = currentCursor.position();
 	QTextCharFormat fmt;
-
-	
 	QList<int> ids;
 
 	if (whoTypedEnabled == false) {
@@ -902,7 +901,7 @@ void TextEdit::showColorsfromUsers() {
 		{
 			QLabel* color=new QLabel(textEdit);
 			QLabel* name = new QLabel(textEdit);
-			QString str = Controller::getInstance().getNameFromID(i);
+			QString str = " " + Controller::getInstance().getNameFromID(i);
 			QPixmap pix(20, 20);
 			pix.fill(usersColor[i]);
 			color->setPixmap(pix);
