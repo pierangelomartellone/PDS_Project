@@ -434,7 +434,7 @@ int Controller::setImage(QPixmap q)
 	socket->waitForBytesWritten(WAITING_TIME);
 
 	// response from server
-	socket->waitForReadyRead(WAITING_TIME);
+	socket->waitForReadyRead(300);
 	QByteArray data = socket->readAll();
 	if (data.isEmpty())
 		QByteArray data = socket->readAll();
@@ -459,14 +459,14 @@ QPixmap Controller::getImage()
 	QString askforImage = s.responseSerialize("askForImage", getImage);
 
 	socket->write(askforImage.toStdString().c_str());
-	socket->waitForBytesWritten(300);
+	//socket->waitForBytesWritten(300);
 
 	// response from server
 	QByteArray datas;
-	socket->waitForReadyRead(WAITING_TIME);
+	socket->waitForReadyRead(300);
 	while (1)
 	{
-		socket->waitForReadyRead(300);
+		//socket->waitForReadyRead(300);
 		QByteArray pezzo = socket->readAll();
 		datas.append(pezzo);
 
