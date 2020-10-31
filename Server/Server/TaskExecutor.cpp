@@ -25,6 +25,8 @@
 #define fileRequest 12
 #define longContent 13
 #define newFile 14
+#define updateUser 15
+#define updatePsw 16
 #define userInfoMessage 18
 #define userNotConnectedInfoMessage 22
 #define closeFile 99
@@ -310,6 +312,40 @@ Service& TaskExecutor::start()
 		QString imagedata = serialize.imageSerialize(img, longContent);
 		actualSocket->write(imagedata.toStdString().c_str());
 	}
+	else if (messageType == updateUser) {
+	QStringList list;
+	list = serialize.updateUserUnserialize(readFromSocket);
+	QString user = list.at(0);
+	QString newUsername = list.at(1);
+	int result = service.updateUsername(user.toStdString(), newUsername.toStdString());
+	QString ack;
+	if (result == -1)
+		ack = serialize.responseSerialize("USERNO", comandAck);
+	else
+		ack = serialize.responseSerialize("USEROK", comandAck);
+
+	actualSocket->write(ack.toStdString().c_str());
+	actualSocket->waitForBytesWritten(1000);
+	
+	}
+
+	else if (messageType == updatePsw){
+	QStringList list;
+	list = serialize.updatePswUnserialize(readFromSocket);
+	QString psw = list.at(0);
+	QString user = list.at(1);
+	int result = service.updatePassword(psw.toStdString(), user.toStdString());
+	QString ack;
+	if (result == -1)
+		ack = serialize.responseSerialize("PSWNO", comandAck);
+	else
+		ack = serialize.responseSerialize("PSWOK", comandAck);
+
+	actualSocket->write(ack.toStdString().c_str());
+	actualSocket->waitForBytesWritten(1000);
+
+	}
+
 	else if (messageType == fileRequest) {
 		// lista dei file apribili da inviare al client
 		QStringList filelist = service.lookForUserFiles(u);

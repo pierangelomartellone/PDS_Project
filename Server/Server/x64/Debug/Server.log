@@ -1,5 +1,7 @@
-﻿  Moc'ing Server.h...
+﻿  Rcc'ing Server.qrc...
+  Moc'ing Server.h...
   Moc'ing Serialize.h...
+   RCC: Warning: No resources in 'C:\Users\simon\source\repos\PDS_Project\Server\Server\Server.qrc'.
   CRDT.cpp
   File.cpp
   main.cpp
@@ -14,4 +16,4 @@
   qrc_Server.cpp
   moc_Server.cpp
   moc_Serialize.cpp
-  Server.vcxproj -> D:\Lavoro\PDS_Project\Server\x64\Debug\Server.exe
+  Server.vcxproj -> C:\Users\simon\source\repos\PDS_Project\Server\x64\Debug\Server.exe

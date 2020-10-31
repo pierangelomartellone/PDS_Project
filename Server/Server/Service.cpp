@@ -198,11 +198,8 @@ int Service::registerNewUser(std::string u, std::string p, std::string addr, std
 	return listaUtenti.size();
 }
 
-int Service::updateUsername(std::string u, std::string nu, std::string addr, std::string port, QTcpSocket* s) {
+int Service::updateUsername(std::string u, std::string nu) {
 	std::string id;
-	std::string user;
-	std::string psw;
-	std::string salt;
 	std::string str = "SELECT * FROM user WHERE Username = '" + u + "'";
 
 	MYSQL* conn;
@@ -215,14 +212,66 @@ int Service::updateUsername(std::string u, std::string nu, std::string addr, std
 			res = mysql_store_result(conn);
 			while (row = mysql_fetch_row(res)) {
 				id = row[0];
-				/*user = row[1];
-				psw = row[2];
-				salt = row[3];*/
+				
 				str.clear();
-				str = "INSERT INTO user (ID, Username, Password, Salt) SET Username '" + nu + "' WHERE ID = '" + id+"')";
+				str = "UPDATE user SET Username = '" + nu + "' WHERE ID = '" + id+"'"; 
 				if (mysql_query(conn, str.c_str()) != 0)
 					return -1; //error in the query
 			}
+			mysql_free_result(res);
+		}
+		mysql_close(conn);
+	}
+	else {
+		qDebug() << "Unable to connect to Database";
+		return -1;
+	}
+
+	return listaUtenti.size();
+
+
+}
+
+int Service::updatePassword(std::string psw, std::string u) {
+	std::string id;
+	unsigned char salt[8] = "\0";
+	unsigned char pwd[40] = "\0";
+	unsigned char hashed_pwd[EVP_MAX_MD_SIZE];
+	SHA256_CTX ctx;
+
+	std::string str = "SELECT * FROM user WHERE Username = '" + u + "'";
+
+	MYSQL* conn;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+	conn = mysql_init(0);
+	conn = mysql_real_connect(conn, "localhost", "root", "toor", "Usersdb", 3306, NULL, 0);
+	if (conn) {
+		if (!mysql_query(conn, str.c_str())) {
+			res = mysql_store_result(conn);
+			row = mysql_fetch_row(res);
+				id = row[0];
+				RAND_bytes(salt, 8);
+
+				memcpy(pwd, psw.c_str(), strlen(psw.c_str()));
+				memcpy(pwd + (strlen(psw.c_str())), salt, 8);
+
+				if (SHA256_Init(&ctx) == 0)
+					return -1;
+				if (SHA256_Update(&ctx, pwd, strlen((const char*)pwd)) == 0)
+					return -1;
+				if (SHA256_Final(hashed_pwd, &ctx) == 0)
+					return -1;
+
+
+				std::string base64_pwd = base64_encode(hashed_pwd, sizeof(hashed_pwd));
+				std::string base64_salt = base64_encode(salt, sizeof(salt));
+			
+				str.clear();
+				str = "UPDATE user SET Password = '" + base64_pwd + "' ,Salt = '" +base64_salt+"' WHERE ID = '" + id + "'"; 
+				if (mysql_query(conn, str.c_str()) != 0)
+					return -1; //error in the query
+			
 			mysql_free_result(res);
 		}
 		mysql_close(conn);
@@ -507,15 +556,12 @@ QPixmap Service::sendImagetoUser(Utente u)
 {
 	QString imagepath;
 	QPixmap immagine;
-	int imgn = u.getID();
-	if (u.checkImage()) {
-		std::string imgn2("./userimages/" + std::to_string(imgn) + ".jpg");
-		imagepath = QString::fromStdString(imgn2);
-		QFileInfo checkFile(imagepath);
-		if (checkFile.exists() && checkFile.isFile()) {
-			u.setImage();
-			immagine.load(imagepath);
-		}
+	std::string imgn2("./userimages/" + std::to_string(u.getID()) + ".jpg");
+	imagepath = QString::fromStdString(imgn2);
+	QFileInfo checkFile(imagepath);
+	if (checkFile.exists() && checkFile.isFile()) {
+		u.setImage();
+		immagine.load(imagepath);
 	}
 	return immagine;
 }

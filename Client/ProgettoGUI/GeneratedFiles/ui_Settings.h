@@ -10,6 +10,7 @@
 #define UI_SETTINGS_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
@@ -19,7 +20,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Settings
+class Ui_Form
 {
 public:
     QFrame *frame;
@@ -33,10 +34,10 @@ public:
     QPushButton *editPasswordButton;
     QFrame *frame_3;
     QLabel *label_3;
-    QPushButton *editImage;
-    QLabel *label_4;
+    QLabel *userImage;
     QLabel *label_5;
     QLabel *errorDescription;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *Form)
     {
@@ -65,7 +66,7 @@ public:
         lineEdit->setGeometry(QRect(20, 66, 214, 40));
         lineEdit->setMinimumSize(QSize(214, 35));
         lineEdit->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
-"font: 10pt \"Segoe UI Emoji\";\n"
+"font: 9pt \"Segoe UI Emoji\";\n"
 "background: white;\n"
 "border:1px solid black;"));
         lineEdit_3 = new QLineEdit(frame_2);
@@ -73,17 +74,31 @@ public:
         lineEdit_3->setGeometry(QRect(20, 187, 214, 40));
         lineEdit_3->setMinimumSize(QSize(214, 35));
         lineEdit_3->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
-"font: 10pt \"Segoe UI Emoji\";\n"
+"font: 9pt \"Segoe UI Emoji\";\n"
 "background: white;\n"
 "border:1px solid black;"));
+        lineEdit_3->setEchoMode(QLineEdit::Password);
         lineEdit_4 = new QLineEdit(frame_2);
         lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
         lineEdit_4->setGeometry(QRect(20, 240, 214, 40));
         lineEdit_4->setMinimumSize(QSize(214, 35));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Segoe UI Emoji"));
+        font.setPointSize(9);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
+        font.setStrikeOut(false);
+        font.setKerning(false);
+        font.setStyleStrategy(QFont::PreferDefault);
+        lineEdit_4->setFont(font);
         lineEdit_4->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
-"font: 10pt \"Segoe UI Emoji\";\n"
+"font: 9pt \"Segoe UI Emoji\";\n"
 "background: white;\n"
 "border:1px solid black;"));
+        lineEdit_4->setEchoMode(QLineEdit::Password);
+        lineEdit_4->setDragEnabled(false);
+        lineEdit_4->setClearButtonEnabled(false);
         editUsernameButton = new QPushButton(frame_2);
         editUsernameButton->setObjectName(QString::fromUtf8("editUsernameButton"));
         editUsernameButton->setGeometry(QRect(260, 66, 75, 40));
@@ -116,17 +131,14 @@ public:
         frame_3->setFrameShadow(QFrame::Raised);
         label_3 = new QLabel(frame_3);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 30, 146, 27));
+        label_3->setGeometry(QRect(63, 30, 146, 27));
         label_3->setStyleSheet(QString::fromUtf8("border:none;"));
-        editImage = new QPushButton(frame_3);
-        editImage->setObjectName(QString::fromUtf8("editImage"));
-        editImage->setGeometry(QRect(260, 170, 75, 40));
-        editImage->setStyleSheet(QString::fromUtf8("border-radius: 20px;\n"
-"font: 12pt \"Segoe UI Emoji\";\n"
-"background:rgb(54,161,240);"));
-        label_4 = new QLabel(frame_3);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(20, 70, 230, 230));
+        userImage = new QLabel(frame_3);
+        userImage->setObjectName(QString::fromUtf8("userImage"));
+        userImage->setGeometry(QRect(60, 70, 230, 230));
+        userImage->setMaximumSize(QSize(250, 250));
+        userImage->setStyleSheet(QString::fromUtf8("border:none;"));
+        userImage->setScaledContents(true);
         label_5 = new QLabel(frame);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(330, 40, 120, 120));
@@ -221,16 +233,25 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush10);
 #endif
         errorDescription->setPalette(palette);
-        QFont font;
-        font.setFamily(QString::fromUtf8("Segoe UI Semibold"));
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setItalic(true);
-        font.setWeight(75);
-        errorDescription->setFont(font);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Segoe UI Semibold"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setItalic(true);
+        font1.setWeight(75);
+        errorDescription->setFont(font1);
         errorDescription->setStyleSheet(QString::fromUtf8("color:rgb(255,90,90);"));
         errorDescription->setFrameShape(QFrame::NoFrame);
         errorDescription->setAlignment(Qt::AlignCenter);
+        pushButton = new QPushButton(frame);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(30, 20, 31, 33));
+        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/images/back.png"), QSize(), QIcon::Normal, QIcon::On);
+        pushButton->setIcon(icon);
+        pushButton->setIconSize(QSize(28, 49));
+        pushButton->setAutoDefault(true);
 
         retranslateUi(Form);
 
@@ -247,16 +268,16 @@ public:
         label_2->setText(QCoreApplication::translate("Form", "Password", nullptr));
         editPasswordButton->setText(QCoreApplication::translate("Form", "Edit", nullptr));
         label_3->setText(QCoreApplication::translate("Form", "Your profile picture", nullptr));
-        editImage->setText(QCoreApplication::translate("Form", "Edit", nullptr));
-        label_4->setText(QCoreApplication::translate("Form", "TextLabel", nullptr));
+        userImage->setText(QCoreApplication::translate("Form", "TextLabel", nullptr));
         label_5->setText(QString());
-        errorDescription->setText(QCoreApplication::translate("Form", "Username already used or wrong typed password", nullptr));
+        errorDescription->setText(QString());
+        pushButton->setText(QString());
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Settings: public Ui_Settings {};
+    class Settings: public Ui_Form {};
 } // namespace Ui
 
 QT_END_NAMESPACE

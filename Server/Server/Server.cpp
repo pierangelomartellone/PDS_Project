@@ -6,7 +6,7 @@
 #define registerUser 2
 #define comandAck 10
 #define fileRequest 12
-#define updateUser 3
+#define updateUser 15
 
 Server::Server()
 {
@@ -20,7 +20,7 @@ Server::Server()
 	else {
 		qDebug() << "Server started";
 	}
-}
+} 
 
 void Server::newConnection()
 {
@@ -28,7 +28,7 @@ void Server::newConnection()
 
 	QTcpSocket *socket = server->nextPendingConnection();
 	acceptUser(socket);
-	int loginResult = acceptUser(socket);
+ 	int loginResult = acceptUser(socket);
 
 	if (loginResult > 0) {
 		std::string tosend = "LOGINOK " + std::to_string(loginResult);
@@ -67,17 +67,16 @@ void Server::newConnection()
 
 int Server::acceptUser(QTcpSocket* socket)
 {
+	QStringList list;
 	socket->waitForReadyRead(1000);
 	QByteArray datas = socket->readAll();
 	QString str = QString::fromLatin1(datas.data());
-	QStringList list = s.userUnserialize(str);
-
 	int type = s.getTypeSerialization(str);
+	list = s.userUnserialize(str);
 
 	QString user = list.at(0);
 	
 		
-	
 	QHostAddress ha = socket->peerAddress();
 	QString addr = ha.toString();
 	qint16 uport = socket->peerPort();
@@ -93,10 +92,6 @@ int Server::acceptUser(QTcpSocket* socket)
 		result = service.registerNewUser(user.toStdString(), psw.toStdString(), addr.toStdString(), port.toStdString(), socket);
 	}
 		
-	else if (type == updateUser) {
-		QString newUsername = list.at(1);
-		result = service.updateUsername(user.toStdString(),newUsername.toStdString(), addr.toStdString(), port.toStdString(), socket);
-	}
 	
 	if (result > 0) {
 		usercode = service.getUserFromPort(addr.toStdString(), port.toStdString()).getID();

@@ -28,6 +28,29 @@ QStringList Serialize::userUnserialize(QString utente)
 	return list;
 }
 
+QString Serialize::updateUserSerialize(QString user, QString newUser, int type)
+{
+	QJsonObject utente;
+	utente.insert("type", QJsonValue(type));
+	utente.insert("user", QJsonValue(user));
+	utente.insert("newUser", QJsonValue(newUser));
+	QJsonDocument doc(utente);
+	QString strJson(doc.toJson(QJsonDocument::Compact));
+	return strJson;
+}
+
+QString Serialize::updatePswSerialize(QString psw, QString username, int type)
+{
+	QJsonObject utente;
+	utente.insert("type", QJsonValue(type));
+	utente.insert("user", QJsonValue(username));
+	utente.insert("psw", QJsonValue(psw));
+	QJsonDocument doc(utente);
+	QString strJson(doc.toJson(QJsonDocument::Compact));
+	return strJson;
+}
+
+
 QString Serialize::filenameSerialize(QString filename, int type)
 {
 	QJsonObject file;
@@ -59,20 +82,20 @@ QString Serialize::messageSerialize(Message m, int type)
 	QChar c = s.getC();
 	int id = s.getSID(); int counter = s.getCounter(); QFont font = s.getFont(); QColor color = s.getColor();
 	QString f = font.toString(); int red = color.red(); int green = color.green(); int blue = color.blue();
-	obj.insert("carattere", QJsonValue(c.unicode()));
+	obj.insert("c", QJsonValue(c.unicode()));
 	obj.insert("Sid", QJsonValue(id));
-	obj.insert("counter", QJsonValue(counter));
-	obj.insert("font", QJsonValue(f));
-	obj.insert("red", QJsonValue(red));
-	obj.insert("green", QJsonValue(green));
-	obj.insert("blue", QJsonValue(blue));
+	obj.insert("ct", QJsonValue(counter));
+	obj.insert("f", QJsonValue(f));
+	obj.insert("r", QJsonValue(red));
+	obj.insert("g", QJsonValue(green));
+	obj.insert("b", QJsonValue(blue));
 	std::vector<int> pt_fraz = s.getFrz();
 	QJsonArray vec;
 	for (auto i = 0; i < pt_fraz.size(); i++) {
 		int n = pt_fraz.at(i);
 		vec.append(QJsonValue(n));
 	}
-	obj.insert("parte_frazionaria", QJsonValue(vec));
+	obj.insert("pt", QJsonValue(vec));
 	QJsonDocument doc(obj);
 	QString strJson(doc.toJson(QJsonDocument::Compact));
 	return strJson;
@@ -83,12 +106,12 @@ Message Serialize::messageUnserialize(QString mes)
 	QJsonDocument doc = QJsonDocument::fromJson(mes.toLatin1());
 	QJsonObject obj = doc.object();
 	int id = obj.value("Sid").toInt();
-	int counter = obj.value("counter").toInt();
-	QChar c = QChar(obj.value("carattere").toInt());
-	QFont font; font.fromString(obj.value("font").toString());
-	int red = obj.value("red").toInt(); int green = obj.value("green").toInt(); int blue = obj.value("blue").toInt();
+	int counter = obj.value("ct").toInt();
+	QChar c = QChar(obj.value("c").toInt());
+	QFont font; font.fromString(obj.value("f").toString());
+	int red = obj.value("r").toInt(); int green = obj.value("g").toInt(); int blue = obj.value("b").toInt();
 	QColor color(red, green, blue);
-	QJsonArray a = obj.value("parte_frazionaria").toArray();
+	QJsonArray a = obj.value("pt").toArray();
 	std::vector<int> vec;
 	for (auto i = 0; i < a.size(); i++) {
 		int n = a.at(i).toInt();
@@ -205,20 +228,20 @@ QStringList Serialize::symbolsSerialize(std::vector<Symbol> symbols)
 		QChar c = s.getC();
 		int id = s.getSID(); int counter = s.getCounter(); QFont font = s.getFont(); QColor color = s.getColor();
 		QString f = font.toString(); int red = color.red(); int green = color.green(); int blue = color.blue();
-		obj.insert("carattere", QJsonValue(c.unicode()));
+		obj.insert("c", QJsonValue(c.unicode()));
 		obj.insert("Sid", QJsonValue(id));
-		obj.insert("counter", QJsonValue(counter));
-		obj.insert("font", QJsonValue(f));
-		obj.insert("red", QJsonValue(red));
-		obj.insert("green", QJsonValue(green));
-		obj.insert("blue", QJsonValue(blue));
+		obj.insert("ct", QJsonValue(counter));
+		obj.insert("f", QJsonValue(f));
+		obj.insert("r", QJsonValue(red));
+		obj.insert("g", QJsonValue(green));
+		obj.insert("b", QJsonValue(blue));
 		std::vector<int> pt_fraz = s.getFrz();
 		QJsonArray vec;
 		for (auto i = 0; i < pt_fraz.size(); i++) {
 			int n = pt_fraz.at(i);
 			vec.append(QJsonValue(n));
 		}
-		obj.insert("parte_frazionaria", QJsonValue(vec));
+		obj.insert("pt", QJsonValue(vec));
 		QJsonDocument doc(obj);
 		QString strJson(doc.toJson(QJsonDocument::Compact));
 		list.append(strJson);
@@ -233,12 +256,12 @@ std::vector<Symbol> Serialize::symbolsUnserialize(QStringList symbols)
 		QJsonDocument doc = QJsonDocument::fromJson(str.toLatin1());
 		QJsonObject obj = doc.object();
 		int id = obj.value("Sid").toInt();
-		int counter = obj.value("counter").toInt();
-		QChar c = QChar(obj.value("carattere").toInt());
-		QFont font; font.fromString(obj.value("font").toString());
-		int red = obj.value("red").toInt(); int green = obj.value("green").toInt(); int blue = obj.value("blue").toInt();
+		int counter = obj.value("ct").toInt();
+		QChar c = QChar(obj.value("c").toInt());
+		QFont font; font.fromString(obj.value("f").toString());
+		int red = obj.value("r").toInt(); int green = obj.value("g").toInt(); int blue = obj.value("b").toInt();
 		QColor color(red, green, blue);
-		QJsonArray a = obj.value("parte_frazionaria").toArray();
+		QJsonArray a = obj.value("pt").toArray();
 		std::vector<int> vec;
 		for (auto i = 0; i < a.size(); i++) {
 			int n = a.at(i).toInt();
@@ -276,20 +299,20 @@ QString Serialize::fromSymbolToJson(Symbol s)
 	QChar c = s.getC();
 	int id = s.getSID(); int counter = s.getCounter(); QFont font = s.getFont(); QColor color = s.getColor();
 	QString f = font.toString(); int red = color.red(); int green = color.green(); int blue = color.blue();
-	obj.insert("carattere", QJsonValue(c.unicode()));
+	obj.insert("c", QJsonValue(c.unicode()));
 	obj.insert("Sid", QJsonValue(id));
-	obj.insert("counter", QJsonValue(counter));
-	obj.insert("font", QJsonValue(f));
-	obj.insert("red", QJsonValue(red));
-	obj.insert("green", QJsonValue(green));
-	obj.insert("blue", QJsonValue(blue));
+	obj.insert("ct", QJsonValue(counter));
+	obj.insert("f", QJsonValue(f));
+	obj.insert("r", QJsonValue(red));
+	obj.insert("g", QJsonValue(green));
+	obj.insert("b", QJsonValue(blue));
 	std::vector<int> pt_fraz = s.getFrz();
 	QJsonArray vec;
 	for (auto i = 0; i < pt_fraz.size(); i++) {
 		int n = pt_fraz.at(i);
 		vec.append(QJsonValue(n));
 	}
-	obj.insert("parte_frazionaria", QJsonValue(vec));
+	obj.insert("pt", QJsonValue(vec));
 	QJsonDocument doc(obj);
 	QString strJson(doc.toJson(QJsonDocument::Compact));
 	return strJson;
@@ -300,12 +323,12 @@ Symbol Serialize::fromJsonToSymbol(QString json)
 	QJsonDocument doc = QJsonDocument::fromJson(json.toLatin1());
 	QJsonObject obj = doc.object();
 	int id = obj.value("Sid").toInt();
-	int counter = obj.value("counter").toInt();
-	QChar c = QChar(obj.value("carattere").toInt());
-	QFont font; font.fromString(obj.value("font").toString());
-	int red = obj.value("red").toInt(); int green = obj.value("green").toInt(); int blue = obj.value("blue").toInt();
+	int counter = obj.value("ct").toInt();
+	QChar c = QChar(obj.value("c").toInt());
+	QFont font; font.fromString(obj.value("f").toString());
+	int red = obj.value("r").toInt(); int green = obj.value("g").toInt(); int blue = obj.value("b").toInt();
 	QColor color(red, green, blue);
-	QJsonArray a = obj.value("parte_frazionaria").toArray();
+	QJsonArray a = obj.value("pt").toArray();
 	std::vector<int> vec;
 	for (auto i = 0; i < a.size(); i++) {
 		int n = a.at(i).toInt();
