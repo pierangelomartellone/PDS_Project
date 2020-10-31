@@ -1197,6 +1197,8 @@ void TextEdit::textChanged() {
 			QString testo = this->lastText;
 			QChar qinserito = testo.at(cursore);
 			char inserito = qinserito.toLatin1();
+			if (inserito == '\0')
+				continue;
 			int usercode = 0;  // taken from server
 
 			//Symbol s(cursore, usercode, inserito, font, color);
@@ -1413,6 +1415,8 @@ void TextEdit::updateTextAll() {
 	// per ottimizzazione sarebbe interessante iterare solo sui nuovi caratteri
 	currentCursor.movePosition(QTextCursor::StartOfBlock, QTextCursor::MoveAnchor);
 	for (Symbol s : crdt.getSymbols()) {
+		if (s.getC() == '\0')
+			continue;
 		QFont font = s.getFont();
 		QColor color = s.getColor();
 		QString fontstring = font.toString();
