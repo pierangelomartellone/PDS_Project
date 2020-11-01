@@ -29,6 +29,7 @@ public:
 	bool cursorMovefromBlockFormat = false;
 
 	bool whoTypedEnabled = false;
+	int lastIndexFirstSearch = 0;
 
 public slots:
 	void fileNew();

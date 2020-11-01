@@ -1322,6 +1322,7 @@ void TextEdit::updateCursorSAFE() {
 	}
 }
 
+
 void TextEdit::updateText() {
 	CRDT crdt = Controller::getInstance().getCRDT();
 	QString nuovotesto = Controller::getInstance().toText(crdt.getSymbols());
@@ -1342,6 +1343,51 @@ void TextEdit::updateText() {
 
 	cursorMovefromUpdate = true; // va messo prima per le race conditions
 	currentCursor.movePosition(QTextCursor::StartOfBlock, QTextCursor::MoveAnchor);
+
+	auto symbolVector = crdt.getSymbols();
+	Symbol s = symbolVector[lastIndexFirstSearch];
+	if (s.getSID() == SID && s.getCounter() == counter) {
+		QFont font = s.getFont();
+		QColor color = s.getColor();
+		QString fontstring = font.toString();
+		QStringList fontfield = fontstring.split(",");
+		QString fontstr = fontfield.at(0);
+		int sizestr = fontfield.at(1).toInt();
+		int alignment = fontfield.at(3).toInt();
+		int boldvalue = fontfield.at(4).toInt();
+		int italvalue = fontfield.at(5).toInt();
+		int undervalue = fontfield.at(6).toInt();
+		fmt.setForeground(color);
+		fmt.setFontFamily(fontstr);
+		fmt.setFontPointSize(sizestr);
+		fmt.setFontWeight(boldvalue > 50 ? QFont::Bold : QFont::Normal);
+		fmt.setFontItalic(italvalue > 0);
+		fmt.setFontUnderline(undervalue > 0);
+		//textEdit->setAlignment(Qt::Alignment(alignment));
+		//if (s.getC() == '\0') break;
+
+		// move a single char to update font and color
+		currentCursor.setPosition(lastIndexFirstSearch, QTextCursor::MoveAnchor);
+		currentCursor.insertText(QString(s.getC()));
+		currentCursor.setPosition(lastIndexFirstSearch, QTextCursor::MoveAnchor);
+		currentCursor.setPosition(lastIndexFirstSearch + 1, QTextCursor::KeepAnchor);
+		//keep anchor mantiene il cursore, move lo sposta
+		currentCursor.mergeCharFormat(fmt);
+		currentCursor.clearSelection();
+
+		// formatta il blocco seguendo quanto detto dall'ultimo carattere.
+		cursorMovefromBlockFormat = true;
+		QTextBlockFormat textBlockFormat = currentCursor.blockFormat();
+		textBlockFormat.setAlignment(Qt::Alignment(alignment));
+		alignmentChanged(textBlockFormat.alignment());
+		currentCursor.mergeBlockFormat(textBlockFormat);
+
+		lastIndexFirstSearch++;
+		// fine funzione
+		return;
+	}
+
+	// normal iteration
 	for (Symbol s : crdt.getSymbols()) {
 		if (s.getSID() == SID && counter == s.getCounter()) {
 			flagInserito = true;
@@ -1379,6 +1425,7 @@ void TextEdit::updateText() {
 			textBlockFormat.setAlignment(Qt::Alignment(alignment));
 			alignmentChanged(textBlockFormat.alignment());
 			currentCursor.mergeBlockFormat(textBlockFormat);
+			lastIndexFirstSearch = charIndex;
 			break;
 		}
 		charIndex++;
