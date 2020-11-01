@@ -37,6 +37,7 @@ private:
 	std::vector<Symbol> symbolList;
 	CRDT crdt;
 	Message lastMessage;
+	std::vector<Symbol> lastBigMessage;
 public:
 
 	static Controller& getInstance();
@@ -78,6 +79,7 @@ signals:
 	void textupdatefromserver(void);
 	void newuserconnected(int id);
 	void userwriting(int id);
+	void bigtextfromserver(void);
 
 public slots:
 	int receiveMessage();

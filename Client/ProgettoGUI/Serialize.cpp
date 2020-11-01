@@ -274,6 +274,26 @@ std::vector<Symbol> Serialize::symbolsUnserialize(QStringList symbols)
 	return vett;
 }
 
+QString Serialize::WrapSerialize(QStringList list) {
+	QJsonObject obj;
+	QString str = "";
+	for (QString s : list) {
+		str.append(s).append("_");
+	}
+	obj.insert("l", QJsonValue(str));
+	QJsonDocument doc(obj);
+	QString strJson(doc.toJson(QJsonDocument::Compact));
+	return strJson;
+}
+
+QStringList Serialize::WrapUnSerialize(QString str) {
+	QJsonDocument doc = QJsonDocument::fromJson(str.toLatin1());
+	QJsonObject obj = doc.object();
+	QString l = obj.value("l").toString();
+	QStringList list = l.split("_");
+	return list;
+}
+
 
 QStringList Serialize::fromBlockToList(QString read) {
 	QStringList list; QString json;

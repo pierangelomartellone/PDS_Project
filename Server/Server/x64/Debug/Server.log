@@ -1,1 +1,16 @@
-﻿  Server.vcxproj -> D:\Lavoro\PDS_Project\Server\x64\Debug\Server.exe
+﻿  CRDT.cpp
+  File.cpp
+  main.cpp
+  Message.cpp
+  Serialize.cpp
+  Server.cpp
+  Service.cpp
+  Symbol.cpp
+  TaskExecutor.cpp
+  Utente.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+  qrc_Server.cpp
+  moc_Server.cpp
+  moc_Serialize.cpp
+  LINK : C:\Users\simon\source\repos\PDS_Project\Server\x64\Debug\\Server.exe non trovato o non compilato dall'ultimo collegamento incrementale; verrà eseguito il collegamento completo
+  Server.vcxproj -> C:\Users\simon\source\repos\PDS_Project\Server\x64\Debug\Server.exe

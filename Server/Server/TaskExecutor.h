@@ -44,6 +44,7 @@ public:
 	void newThreadCaller(int code);
 	void updateCaption(File f);  
 	void sendFiletoClient(QStringList list, QTcpSocket* actualSocket);
+	void sendBigToClients(std::vector<Symbol> symbols, File f,int code);
 	void setSavingTimer(int codeth);
 
 	~TaskExecutor();

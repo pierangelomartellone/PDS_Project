@@ -41,6 +41,21 @@ void CRDT::process(const Message& m)
 
 }
 
+void CRDT::processBig(std::vector<Symbol> v) {
+	int i = 0;
+	for (int j = 0; j < v.size(); j++) {
+		if (this->_symbols.size() != 0) {
+			while (i != this->_symbols.size() && v[j].getFrz() > this->_symbols[i].getFrz()) {
+				i++;
+			}
+			this->_symbols.insert(this->_symbols.begin() + i, v[j]);
+		}
+
+		else
+			this->_symbols.push_back(v[j]);
+	}
+}
+
 void CRDT::fromFiletoSymbols(std::string filename){
 
 	QColor c(0, 0, 0);

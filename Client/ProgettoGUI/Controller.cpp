@@ -322,6 +322,7 @@ int Controller::receiveMessage() {
 	int CRDTMessage = 8;
 	int userInfoMessage = 18;
 	int userNotConnectedInfoMessage = 22;
+	int CRDTBigMessage = 23;
 	if (connected == false) return 0;
 	if (readyForCRDT == false) return 0;
 	Serialize s;
@@ -346,6 +347,19 @@ int Controller::receiveMessage() {
 			emit userwriting(sym.getSID());
 			crdt.process(m);
 			emit textupdatefromserver();
+		}
+		else if (type == CRDTBigMessage) {
+			QStringList list = s.WrapUnSerialize(json);
+			std::vector<Symbol> m = s.symbolsUnserialize(list);
+			lastBigMessage = m;
+			Symbol sym = m.at(sizeof(m)-1);
+			fromOutside = true;
+			qDebug() << sym.getC();
+
+			emit userwriting(sym.getSID());
+			crdt.processBig(m);
+			emit bigtextfromserver();
+
 		}
 		else if (type == userInfoMessage) {
 			QString res = s.responseUnserialize(json);

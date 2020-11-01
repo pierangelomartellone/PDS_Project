@@ -29,6 +29,7 @@
 #define updatePsw 16
 #define userInfoMessage 18
 #define userNotConnectedInfoMessage 22
+#define CRDTBigMessage 23
 #define closeFile 99
 
 TaskExecutor::TaskExecutor() 
@@ -96,7 +97,22 @@ void TaskExecutor::work(int codep) {
 
 			std::thread t([&]() { this->sendToClients(m, f); });
 			t.join();
-		} 
+		}
+		else if (messageType == CRDTBigMessage) {
+			CRDT crdt;
+			File f = service.getFilefromUser(user);
+			QStringList list = serialize.WrapUnSerialize(local);
+			std::vector<Symbol> syms = serialize.symbolsUnserialize(list);
+			//qDebug() << QString(m.getSymbol().getC());
+
+			crdt = service.getListafileCRDT().value(f);       //otteniamo crdt associato al file
+			crdt.processBig(syms);                                  //aggiungo il messaggio al vettore di simboli salvato nell'istanza del crdt
+			service.insert_crdt(f, crdt);                     //inserisce nella QHash contenente FIle e istanza del crdt
+
+			std::thread t([&]() { this->sendBigToClients(syms, f,user.getID()); });
+			t.join();
+
+		}
 		else if (messageType == closeFile) {
 			// chiude il file 
 			QString filename = serialize.filenameUnserialize(local);
@@ -139,6 +155,20 @@ void TaskExecutor::sendToClients(Message m, File f) {
 			}
 		}
 
+	}
+	return;
+}
+
+void TaskExecutor::sendBigToClients(std::vector<Symbol> symbols, File f, int code) {
+	Serialize serialize;
+	for (Utente u : service.getListaUtenteFile().keys(f)) {
+		if (u.getID() != code) {
+			QTcpSocket* usersocket = u.getSocket();
+			if (u.getConnection() == true && usersocket->isWritable() == true) {
+				usersocket->write(serialize.WrapSerialize(serialize.symbolsSerialize(symbols, CRDTBigMessage)).toStdString().c_str());
+				usersocket->waitForBytesWritten(50000);
+			}
+		}
 	}
 	return;
 }

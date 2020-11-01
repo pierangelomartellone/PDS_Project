@@ -342,3 +342,23 @@ Symbol Serialize::fromJsonToSymbol(QString json)
 	s.Initialize(vec);
 	return s;
 }
+
+QString Serialize::WrapSerialize(QStringList list) {
+	QJsonObject obj;
+	QString str="";
+	for (QString s : list) {
+		str.append(s).append("_");
+	}
+	obj.insert("l", QJsonValue(str));
+	QJsonDocument doc(obj);
+	QString strJson(doc.toJson(QJsonDocument::Compact));
+	return strJson;
+}
+
+QStringList Serialize::WrapUnSerialize(QString str) {
+	QJsonDocument doc = QJsonDocument::fromJson(str.toLatin1());
+	QJsonObject obj = doc.object();
+	QString l = obj.value("l").toString();
+	QStringList list = l.split("_");
+	return list;
+}
