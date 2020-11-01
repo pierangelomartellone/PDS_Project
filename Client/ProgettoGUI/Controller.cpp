@@ -312,8 +312,8 @@ int Controller::notifyChange(Message m) {
 	socket->waitForBytesWritten(WAITING_TIME);
 
 	socket->waitForReadyRead(WAITING_TIME);
-	QByteArray data = socket->read(responseBytes);
-	QString read(data);
+	//QByteArray data = socket->read(responseBytes);
+	//QString read(data);
 
 	return 1;
 }
