@@ -1182,12 +1182,8 @@ void TextEdit::textChanged() {
 			int usercode = 0;  // taken from server
 			qDebug() << inserito;
 
-			Message m;
-			std::thread threadCRDT([&]() {
-				m = crdt.localInsert(cursore, qinserito, font, color);
-				});
+			Message m = crdt.localInsert(cursore, qinserito, font, color);
 
-			threadCRDT.join();
 			toSend.append(m);
 
 		}
