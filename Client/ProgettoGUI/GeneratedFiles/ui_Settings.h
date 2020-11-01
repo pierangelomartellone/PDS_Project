@@ -20,7 +20,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Settings
+class Ui_Form
 {
 public:
     QFrame *frame;
@@ -277,7 +277,7 @@ public:
 };
 
 namespace Ui {
-    class Settings: public Ui_Settings {};
+    class Settings: public Ui_Form {};
 } // namespace Ui
 
 QT_END_NAMESPACE
