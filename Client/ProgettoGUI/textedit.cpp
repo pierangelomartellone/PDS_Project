@@ -1197,8 +1197,8 @@ void TextEdit::textChanged() {
 			QString testo = this->lastText;
 			QChar qinserito = testo.at(cursore);
 			char inserito = qinserito.toLatin1();
-			if (inserito == '\0')
-				continue;
+			//if (inserito == '\0')
+				//continue;
 			int usercode = 0;  // taken from server
 
 			//Symbol s(cursore, usercode, inserito, font, color);
