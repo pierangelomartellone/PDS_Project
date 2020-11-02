@@ -1,9 +1,2 @@
-﻿  Moc'ing Controller.h...
-  Controller.cpp
-  FileExplorerWindow.cpp
-  MyFirstWindow.cpp
-  RegisterWindow.cpp
-  Settings.cpp
-  textedit.cpp
-  moc_Controller.cpp
-  ProgettoGUI.vcxproj -> C:\Users\marte\OneDrive\Documenti\PoliTo\PDS\Client\x64\Debug\ProgettoGUI.exe
+﻿  Controller.cpp
+  ProgettoGUI.vcxproj -> D:\Lavoro\PDS_Project\Client\x64\Debug\ProgettoGUI.exe

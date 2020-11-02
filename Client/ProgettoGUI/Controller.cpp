@@ -316,9 +316,9 @@ int Controller::notifyBigChange(QList<Message> m) {
 	socket->write(message.toStdString().c_str());
 	socket->waitForBytesWritten(WAITING_TIME);
 
-	//socket->waitForReadyRead(WAITING_TIME);
-	//QByteArray data = socket->read(responseBytes);
-	//QString read(data);
+	socket->waitForReadyRead(WAITING_TIME);
+	QByteArray data = socket->read(responseBytes);
+	QString read(data);
 
 	return 1;
 }
@@ -354,6 +354,22 @@ int Controller::receiveMessage() {
 
 	QByteArray datas = socket->readAll();
 	qDebug() << datas;
+	
+	QString bigjson(datas); int typebig;
+	if (bigjson.startsWith("{\"l\":") )
+		typebig = s.getTypeSerialization(datas);
+	if (typebig == CRDTBigMessage) {
+		QStringList list = s.WrapUnSerialize(bigjson);
+		std::vector<Symbol> m = s.symbolsUnserialize(list);
+		lastBigMessage = m;
+		Symbol sym = m.at(sizeof(m) - 1);
+		fromOutside = true;
+		qDebug() << sym.getC();
+		emit userwriting(sym.getSID());
+		crdt.processBig(m);
+		emit bigtextfromserver();
+		return 2;
+	}
 
 	QStringList listajson = s.fromBlockToList(datas);
 
@@ -361,6 +377,7 @@ int Controller::receiveMessage() {
 
 		CRDT& crdt = this->crdt;
 		int type = s.getTypeSerialization(json);
+
 		if (type == CRDTMessage) {
 			Message m = s.messageUnserialize(json);
 			lastMessage = m;
@@ -371,18 +388,6 @@ int Controller::receiveMessage() {
 			emit userwriting(sym.getSID());
 			crdt.process(m);
 			emit textupdatefromserver();
-		}
-		else if (type == CRDTBigMessage) {
-			QStringList list = s.WrapUnSerialize(json);
-			std::vector<Symbol> m = s.symbolsUnserialize(list);
-			lastBigMessage = m;
-			Symbol sym = m.at(sizeof(m)-1);
-			fromOutside = true;
-			qDebug() << sym.getC();
-			emit userwriting(sym.getSID());
-			crdt.processBig(m);
-			emit bigtextfromserver();
-
 		}
 		else if (type == userInfoMessage) {
 			QString res = s.responseUnserialize(json);
