@@ -41,7 +41,8 @@ public:
 	QStringList symbolsSerialize(std::vector<Symbol> symbols);
 	std::vector<Symbol> symbolsUnserialize(QStringList symbols);
 
-	QString WrapSerialize(QStringList list);
+	QString WrapSerialize(QStringList list, int type);
+
 	QStringList WrapUnSerialize(QString str);
 
 	QString fromSymbolToJson(Symbol s);

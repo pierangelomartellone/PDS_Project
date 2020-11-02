@@ -277,9 +277,10 @@ public:
 };
 
 namespace Ui {
-    class Settings: public Ui_Settings {};
+    class Settings : public Ui_Settings {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
 #endif // UI_SETTINGS_H
+

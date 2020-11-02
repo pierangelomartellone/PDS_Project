@@ -88,6 +88,8 @@ private:
 
 	void updateCursorSAFE();
 
+	void updateBigText();
+
 	void updateText();
 	void updateTextAll();
 

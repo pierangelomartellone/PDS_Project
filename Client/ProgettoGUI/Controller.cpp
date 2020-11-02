@@ -299,6 +299,30 @@ Message Controller::getMessage() {  //non si usa più
 	return m;
 }
 
+int Controller::notifyBigChange(QList<Message> m) {
+	int CRDTBigMessage = 23;
+	int responseBytes = 30; //DA CAMBIARE SE CAMBIA L'ACK
+	if (connected == false) return 0;
+
+
+	Serialize s;
+	std::vector<Symbol> syms;
+	for (Message msg : m) {
+		syms.push_back(msg.getSymbol());
+	}
+	QStringList list = s.symbolsSerialize(syms);
+	QString message = s.WrapSerialize(list, CRDTBigMessage);
+
+	socket->write(message.toStdString().c_str());
+	socket->waitForBytesWritten(WAITING_TIME);
+
+	//socket->waitForReadyRead(WAITING_TIME);
+	//QByteArray data = socket->read(responseBytes);
+	//QString read(data);
+
+	return 1;
+}
+
 int Controller::notifyChange(Message m) {
 	int notifyChange = 9; 
 	int responseBytes = 30;  //DA CAMBIARE SE CAMBIA L'ACK
@@ -355,7 +379,6 @@ int Controller::receiveMessage() {
 			Symbol sym = m.at(sizeof(m)-1);
 			fromOutside = true;
 			qDebug() << sym.getC();
-
 			emit userwriting(sym.getSID());
 			crdt.processBig(m);
 			emit bigtextfromserver();
@@ -548,6 +571,11 @@ void Controller::closeFile(QString name)
 
 	return;
 
+}
+
+std::vector<Symbol> Controller::getLastBigMessage()
+{
+	return this->lastBigMessage;
 }
 
 QString Controller::toText(std::vector<Symbol> list) {

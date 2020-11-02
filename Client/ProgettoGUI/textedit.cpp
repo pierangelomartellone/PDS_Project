@@ -91,6 +91,7 @@ TextEdit::TextEdit(QWidget* parent)
 	connect(textEdit, &QTextEdit::textChanged, this, &TextEdit::textChanged);
 	connect(textEdit, &QTextEdit::cursorPositionChanged, this, &TextEdit::cursorPositionChanged);
 	connect(&Controller::getInstance(), &Controller::textupdatefromserver, this, &TextEdit::updateText);
+	connect(&Controller::getInstance(), &Controller::bigtextfromserver, this, &TextEdit::updateBigText);
 	connect(&Controller::getInstance(), &Controller::newuserconnected, this, &TextEdit::addUserToToolbar);
 	connect(&Controller::getInstance(), &Controller::userwriting, this, &TextEdit::addUserToToolbarWriting);
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1264,8 +1265,12 @@ void TextEdit::textChanged() {
 	}
 
 	std::thread t([=]() {
-		for (Message m : toSend) {
-			Controller::getInstance().notifyChange(m);
+		if (toSend.size() > 50)
+			Controller::getInstance().notifyBigChange(toSend);
+		else {
+			for (Message m : toSend) {
+				Controller::getInstance().notifyChange(m);
+			}
 		}
 		});
 
@@ -1321,7 +1326,9 @@ void TextEdit::updateCursorSAFE() {
 
 	}
 }
+void TextEdit::updateBigText() {
 
+}
 
 void TextEdit::updateText() {
 	CRDT crdt = Controller::getInstance().getCRDT();

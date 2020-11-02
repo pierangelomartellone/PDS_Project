@@ -56,6 +56,7 @@ public:
 	QPixmap getImage();
 	QString getNameFromID(int id);
 	Message getMessage();
+	int notifyBigChange(QList<Message> m);
 	int notifyChange(Message m);
 	bool isChangeFromOutside();
 	QPixmap getUserImage(int h, int w);
@@ -67,7 +68,7 @@ public:
 	void setReadyForCRDT(bool value);
 	void setUserName(QString name);
 	void closeFile(QString name);
-
+	std::vector<Symbol> getLastBigMessage();
 	QString toText(std::vector<Symbol> list);
 	QTextEdit& toRichText(std::vector<Symbol> list);
 	QString symbolstoText();

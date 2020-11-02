@@ -274,13 +274,14 @@ std::vector<Symbol> Serialize::symbolsUnserialize(QStringList symbols)
 	return vett;
 }
 
-QString Serialize::WrapSerialize(QStringList list) {
+QString Serialize::WrapSerialize(QStringList list, int type) {
 	QJsonObject obj;
 	QString str = "";
 	for (QString s : list) {
 		str.append(s).append("_");
 	}
 	obj.insert("l", QJsonValue(str));
+	obj.insert("type", QJsonValue(type));
 	QJsonDocument doc(obj);
 	QString strJson(doc.toJson(QJsonDocument::Compact));
 	return strJson;

@@ -165,7 +165,7 @@ void TaskExecutor::sendBigToClients(std::vector<Symbol> symbols, File f, int cod
 		if (u.getID() != code) {
 			QTcpSocket* usersocket = u.getSocket();
 			if (u.getConnection() == true && usersocket->isWritable() == true) {
-				usersocket->write(serialize.WrapSerialize(serialize.symbolsSerialize(symbols, CRDTBigMessage)).toStdString().c_str());
+				usersocket->write(serialize.WrapSerialize(serialize.symbolsSerialize(symbols, CRDTBigMessage), CRDTBigMessage).toStdString().c_str());
 				usersocket->waitForBytesWritten(50000);
 			}
 		}

@@ -343,13 +343,14 @@ Symbol Serialize::fromJsonToSymbol(QString json)
 	return s;
 }
 
-QString Serialize::WrapSerialize(QStringList list) {
+QString Serialize::WrapSerialize(QStringList list, int type) {
 	QJsonObject obj;
-	QString str="";
+	QString str = "";
 	for (QString s : list) {
 		str.append(s).append("_");
 	}
 	obj.insert("l", QJsonValue(str));
+	obj.insert("type", QJsonValue(type));
 	QJsonDocument doc(obj);
 	QString strJson(doc.toJson(QJsonDocument::Compact));
 	return strJson;
