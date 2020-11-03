@@ -303,22 +303,49 @@ int Controller::notifyBigChange(QList<Message> m) {
 	int CRDTBigMessage = 23;
 	int responseBytes = 30; //DA CAMBIARE SE CAMBIA L'ACK
 	if (connected == false) return 0;
-
+	int n = 320;
 
 	Serialize s;
 	std::vector<Symbol> syms;
+	std::vector<Symbol> split;
 	for (Message msg : m) {
 		syms.push_back(msg.getSymbol());
 	}
-	QStringList list = s.symbolsSerialize(syms);
-	QString message = s.WrapSerialize(list, CRDTBigMessage);
+	int size = (syms.size() - 1) / n + 1;
+	for (int i = 0; i < size; i++) {
+		auto start_itr = std::next(syms.cbegin(), i * n);
+		auto end_itr = std::next(syms.cbegin(), i * n);
 
-	socket->write(message.toStdString().c_str());
-	socket->waitForBytesWritten(WAITING_TIME);
+		split.resize(n);
 
-	socket->waitForReadyRead(WAITING_TIME);
-	QByteArray data = socket->read(responseBytes);
-	QString read(data);
+		if (i * n + n > syms.size()) {
+			end_itr = syms.cend();
+			split.resize(syms.size() - i * n);
+		}
+		else
+			end_itr = std::next(syms.cbegin(), i * n + n);
+
+		std::copy(start_itr, end_itr, split.begin());
+		
+		QStringList list = s.symbolsSerialize(split);
+		QString message = s.WrapSerialize(list, CRDTBigMessage);
+
+		socket->write(message.toStdString().c_str());
+		socket->waitForBytesWritten(WAITING_TIME);
+
+		socket->waitForReadyRead(WAITING_TIME);
+		QByteArray data = socket->read(responseBytes);
+		QString read(data);
+	}
+	//QStringList list = s.symbolsSerialize(syms);
+	//QString message = s.WrapSerialize(list, CRDTBigMessage);
+
+	//socket->write(message.toStdString().c_str());
+	//socket->waitForBytesWritten(WAITING_TIME);
+
+	//socket->waitForReadyRead(WAITING_TIME);
+	//QByteArray data = socket->read(responseBytes);
+	//QString read(data);
 
 	return 1;
 }
@@ -362,7 +389,7 @@ int Controller::receiveMessage() {
 		QStringList list = s.WrapUnSerialize(bigjson);
 		std::vector<Symbol> m = s.symbolsUnserialize(list);
 		lastBigMessage = m;
-		Symbol sym = m.at(sizeof(m) - 1);
+		Symbol sym = m.at(sizeof(m) - 2);
 		fromOutside = true;
 		qDebug() << sym.getC();
 		emit userwriting(sym.getSID());

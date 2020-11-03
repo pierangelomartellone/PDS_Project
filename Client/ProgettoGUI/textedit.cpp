@@ -1349,7 +1349,8 @@ void TextEdit::updateBigText() {
 
 	QString bigText;
 	for (Symbol s : lastBigMessage) {
-		bigText.append(s.getC());
+		if(s.getC()!='\0')
+			bigText.append(s.getC());
 	}
 	QFont font = lastBigMessage.at(0).getFont();
 	QColor color = lastBigMessage.at(0).getColor();

@@ -292,6 +292,7 @@ QStringList Serialize::WrapUnSerialize(QString str) {
 	QJsonObject obj = doc.object();
 	QString l = obj.value("l").toString();
 	QStringList list = l.split("_");
+	list.pop_back();
 	return list;
 }
 
