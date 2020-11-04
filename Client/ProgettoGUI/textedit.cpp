@@ -1266,7 +1266,7 @@ void TextEdit::textChanged() {
 
 	std::thread t([=]() {
 		if (toSend.size() > 50)
-			Controller::getInstance().notifyBigChange(toSend);
+			Controller::getInstance().notifyBigChange(toSend, insertordelete);
 		else {
 			for (Message m : toSend) {
 				Controller::getInstance().notifyChange(m);
@@ -1396,13 +1396,6 @@ void TextEdit::updateBigText() {
 		alignmentChanged(textBlockFormat.alignment());
 		currentCursor.mergeBlockFormat(textBlockFormat);
 		lastIndexFirstSearch = charIndex;
-
-		//visualizza dove l'utente esterno sta facendo modifiche
-		showUserCursor(SID, currentCursor);
-
-		//  reset original position
-		currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
-		lastText = textEdit->toPlainText();
 	} 
 	else if (option == 0) { // cancellazione
 		
@@ -1412,7 +1405,13 @@ void TextEdit::updateBigText() {
 			currentCursor.deletePreviousChar();
 		}
 	}
-	
+
+	//visualizza dove l'utente esterno sta facendo modifiche
+	showUserCursor(SID, currentCursor);
+
+	//  reset original position
+	currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
+	lastText = textEdit->toPlainText();
 }
 
 void TextEdit::updateText() {

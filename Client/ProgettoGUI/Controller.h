@@ -57,7 +57,7 @@ public:
 	QPixmap getImage();
 	QString getNameFromID(int id);
 	Message getMessage();
-	int notifyBigChange(QList<Message> m);
+	int notifyBigChange(QList<Message> m, int option);
 	int notifyChange(Message m);
 	bool isChangeFromOutside();
 	QPixmap getUserImage(int h, int w);

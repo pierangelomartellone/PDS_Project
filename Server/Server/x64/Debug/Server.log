@@ -1,2 +1,1 @@
-﻿  Serialize.cpp
-  Server.vcxproj -> C:\Users\simon\source\repos\PDS_Project\Server\x64\Debug\Server.exe
+﻿LINK : fatal error LNK1104: impossibile aprire il file 'D:\Lavoro\PDS_Project\Server\x64\Debug\\Server.exe'

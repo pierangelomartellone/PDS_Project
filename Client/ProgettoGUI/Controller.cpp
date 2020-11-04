@@ -299,7 +299,7 @@ Message Controller::getMessage() {  //non si usa più
 	return m;
 }
 
-int Controller::notifyBigChange(QList<Message> m) {
+int Controller::notifyBigChange(QList<Message> m, int option) {
 	int CRDTBigMessage = 23;
 	int responseBytes = 30; //DA CAMBIARE SE CAMBIA L'ACK
 	if (connected == false) return 0;
@@ -328,7 +328,7 @@ int Controller::notifyBigChange(QList<Message> m) {
 		std::copy(start_itr, end_itr, split.begin());
 		
 		QStringList list = s.symbolsSerialize(split);
-		QString message = s.WrapSerialize(list, CRDTBigMessage, m.at(0).getType());
+		QString message = s.WrapSerialize(list, CRDTBigMessage, option);
 
 		socket->write(message.toStdString().c_str());
 		socket->waitForBytesWritten(WAITING_TIME);

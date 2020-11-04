@@ -40,13 +40,15 @@ public:
 
 	QStringList symbolsSerialize(std::vector<Symbol> symbols, int type);
 	std::vector<Symbol> symbolsUnserialize(QStringList symbols);
-	QString WrapSerialize(QStringList list, int type);
-	QStringList WrapUnSerialize(QString str);
 
 	QStringList fromBlockToList(QString read);
 
 	QString fromSymbolToJson(Symbol s);
 	Symbol fromJsonToSymbol(QString json);
+
+	QStringList WrapUnSerialize(QString str);
+	QString WrapSerialize(QStringList list, int type, int option);
+	int WrapUnSerializeGetOption(QString str);
 
 
 

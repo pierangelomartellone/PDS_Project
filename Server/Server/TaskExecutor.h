@@ -38,13 +38,14 @@ public:
 	void setService(Service & service);
 	void work(int code);
 	void sendToClients(Message m, File f);
+	void sendBigToClients(std::vector<Symbol> symbols, File f, int code, int option);
 	Service& start();
 	void addSocketToExecutor(QTcpSocket * s);
 	void removeSocketToExecutor(QTcpSocket * s);
 	void newThreadCaller(int code);
 	void updateCaption(File f);  
 	void sendFiletoClient(QStringList list, QTcpSocket* actualSocket);
-	void sendBigToClients(std::vector<Symbol> symbols, File f,int code);
+	//void sendBigToClients(std::vector<Symbol> symbols, File f,int code);
 	void setSavingTimer(int codeth);
 
 	~TaskExecutor();
