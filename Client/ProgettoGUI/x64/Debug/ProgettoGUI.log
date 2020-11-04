@@ -1,2 +1,14 @@
-﻿  Controller.cpp
-  ProgettoGUI.vcxproj -> C:\Users\simon\Source\Repos\PDS_Project\Client\x64\Debug\ProgettoGUI.exe
+﻿  FileExplorerWindow.cpp
+  Settings.cpp
+  qrc_ProgettoGUI.cpp
+  moc_ProgettoGUI.cpp
+  moc_Settings.cpp
+  moc_Controller.cpp
+  moc_RegisterWindow.cpp
+  moc_Serialize.cpp
+  moc_textedit.cpp
+  moc_MyFirstWindow.cpp
+  moc_mainwindow.cpp
+  moc_FileExplorerWindow.cpp
+  LINK : D:\Lavoro\PDS_Project\Client\x64\Debug\\ProgettoGUI.exe non trovato o non compilato dall'ultimo collegamento incrementale; verrà eseguito il collegamento completo
+  ProgettoGUI.vcxproj -> D:\Lavoro\PDS_Project\Client\x64\Debug\ProgettoGUI.exe

@@ -1341,66 +1341,78 @@ void TextEdit::updateBigText() {
 	std::vector<Symbol> lastBigMessage = Controller::getInstance().getLastBigMessage();
 	int SID = lastBigMessage.at(0).getSID();
 	int firstCounter = lastBigMessage.at(0).getCounter();
-	//int newchar = lastMessageChar.getSymbol().getC();
+	int lastCounter = lastBigMessage.at(lastBigMessage.size() - 1).getCounter();
+	int option = Controller::getInstance().getBigMessageOption();
 	bool flagInserito = false;
 
 	cursorMovefromUpdate = true; // va messo prima per le race conditions
 	currentCursor.movePosition(QTextCursor::StartOfBlock, QTextCursor::MoveAnchor);
 
-	QString bigText;
-	for (Symbol s : lastBigMessage) {
-		if(s.getC()!='\0')
-			bigText.append(s.getC());
-	}
-	QFont font = lastBigMessage.at(0).getFont();
-	QColor color = lastBigMessage.at(0).getColor();
-	QString fontstring = font.toString();
-	QStringList fontfield = fontstring.split(",");
-	QString fontstr = fontfield.at(0);
-	int sizestr = fontfield.at(1).toInt();
-	int alignment = fontfield.at(3).toInt();
-	int boldvalue = fontfield.at(4).toInt();
-	int italvalue = fontfield.at(5).toInt();
-	int undervalue = fontfield.at(6).toInt();
-	fmt.setForeground(color);
-	fmt.setFontFamily(fontstr);
-	fmt.setFontPointSize(sizestr);
-	fmt.setFontWeight(boldvalue > 50 ? QFont::Bold : QFont::Normal);
-	fmt.setFontItalic(italvalue > 0);
-	fmt.setFontUnderline(undervalue > 0);
-
-	int tempIndex = 0;
-	for (Symbol s : crdt.getSymbols()) {
-		if (s.getSID() == SID && firstCounter == s.getCounter()) {
-			charIndex = tempIndex;
-			break;
+	if (option == 1) { //inserimento
+		QString bigText;
+		for (Symbol s : lastBigMessage) {
+			if (s.getC() != '\0')
+				bigText.append(s.getC());
 		}
-		tempIndex++;
+		QFont font = lastBigMessage.at(0).getFont();
+		QColor color = lastBigMessage.at(0).getColor();
+		QString fontstring = font.toString();
+		QStringList fontfield = fontstring.split(",");
+		QString fontstr = fontfield.at(0);
+		int sizestr = fontfield.at(1).toInt();
+		int alignment = fontfield.at(3).toInt();
+		int boldvalue = fontfield.at(4).toInt();
+		int italvalue = fontfield.at(5).toInt();
+		int undervalue = fontfield.at(6).toInt();
+		fmt.setForeground(color);
+		fmt.setFontFamily(fontstr);
+		fmt.setFontPointSize(sizestr);
+		fmt.setFontWeight(boldvalue > 50 ? QFont::Bold : QFont::Normal);
+		fmt.setFontItalic(italvalue > 0);
+		fmt.setFontUnderline(undervalue > 0);
+
+		int tempIndex = 0;
+		for (Symbol s : crdt.getSymbols()) {
+			if (s.getSID() == SID && firstCounter == s.getCounter()) {
+				charIndex = tempIndex;
+				break;
+			}
+			tempIndex++;
+		}
+
+		// move a single char to update font and color
+		currentCursor.setPosition(charIndex, QTextCursor::MoveAnchor);
+		currentCursor.insertText(bigText);
+		currentCursor.setPosition(charIndex, QTextCursor::MoveAnchor);
+		currentCursor.setPosition(charIndex + bigText.length(), QTextCursor::KeepAnchor);
+		//keep anchor mantiene il cursore, move lo sposta
+		currentCursor.mergeCharFormat(fmt);
+		currentCursor.clearSelection();
+
+		// formatta il blocco seguendo quanto detto dall'ultimo carattere.
+		cursorMovefromBlockFormat = true;
+		QTextBlockFormat textBlockFormat = currentCursor.blockFormat();
+		textBlockFormat.setAlignment(Qt::Alignment(alignment));
+		alignmentChanged(textBlockFormat.alignment());
+		currentCursor.mergeBlockFormat(textBlockFormat);
+		lastIndexFirstSearch = charIndex;
+
+		//visualizza dove l'utente esterno sta facendo modifiche
+		showUserCursor(SID, currentCursor);
+
+		//  reset original position
+		currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
+		lastText = textEdit->toPlainText();
+	} 
+	else if (option == 0) { // cancellazione
+		
+		int charIndextoDelete = Controller::getInstance().getDeleteIndex();
+		currentCursor.setPosition(lastCounter + 1, QTextCursor::MoveAnchor);
+		for (int i = 0; i < lastBigMessage.size(); i++) {
+			currentCursor.deletePreviousChar();
+		}
 	}
-
-	// move a single char to update font and color
-	currentCursor.setPosition(charIndex, QTextCursor::MoveAnchor);
-	currentCursor.insertText(bigText);
-	currentCursor.setPosition(charIndex, QTextCursor::MoveAnchor);
-	currentCursor.setPosition(charIndex + bigText.length(), QTextCursor::KeepAnchor);
-	//keep anchor mantiene il cursore, move lo sposta
-	currentCursor.mergeCharFormat(fmt);
-	currentCursor.clearSelection();
-
-	// formatta il blocco seguendo quanto detto dall'ultimo carattere.
-	cursorMovefromBlockFormat = true;
-	QTextBlockFormat textBlockFormat = currentCursor.blockFormat();
-	textBlockFormat.setAlignment(Qt::Alignment(alignment));
-	alignmentChanged(textBlockFormat.alignment());
-	currentCursor.mergeBlockFormat(textBlockFormat);
-	lastIndexFirstSearch = charIndex;
-
-	//visualizza dove l'utente esterno sta facendo modifiche
-	showUserCursor(SID, currentCursor);
-
-	//  reset original position
-	currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
-	lastText = textEdit->toPlainText();
+	
 }
 
 void TextEdit::updateText() {

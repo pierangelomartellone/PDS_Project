@@ -328,7 +328,7 @@ int Controller::notifyBigChange(QList<Message> m) {
 		std::copy(start_itr, end_itr, split.begin());
 		
 		QStringList list = s.symbolsSerialize(split);
-		QString message = s.WrapSerialize(list, CRDTBigMessage);
+		QString message = s.WrapSerialize(list, CRDTBigMessage, m.at(0).getType());
 
 		socket->write(message.toStdString().c_str());
 		socket->waitForBytesWritten(WAITING_TIME);
@@ -389,6 +389,7 @@ int Controller::receiveMessage() {
 		QStringList list = s.WrapUnSerialize(bigjson);
 		std::vector<Symbol> m = s.symbolsUnserialize(list);
 		lastBigMessage = m;
+		bigMessageOption = s.WrapUnSerializeGetOption(bigjson);
 		Symbol sym = m.at(sizeof(m) - 2);
 		fromOutside = true;
 		qDebug() << sym.getC();
@@ -648,4 +649,8 @@ QTextEdit& Controller::symbolstoRichText() // NON FUNZIONA
 
 int Controller::getDeleteIndex() {
 	return crdt.getDeleteIndex();
+}
+
+int Controller::getBigMessageOption() {
+	return bigMessageOption;
 }

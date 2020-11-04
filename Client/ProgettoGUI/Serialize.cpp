@@ -274,7 +274,7 @@ std::vector<Symbol> Serialize::symbolsUnserialize(QStringList symbols)
 	return vett;
 }
 
-QString Serialize::WrapSerialize(QStringList list, int type) {
+QString Serialize::WrapSerialize(QStringList list, int type, int option) {
 	QJsonObject obj;
 	QString str = "";
 	for (QString s : list) {
@@ -282,6 +282,7 @@ QString Serialize::WrapSerialize(QStringList list, int type) {
 	}
 	obj.insert("l", QJsonValue(str));
 	obj.insert("type", QJsonValue(type));
+	obj.insert("opt", option);
 	QJsonDocument doc(obj);
 	QString strJson(doc.toJson(QJsonDocument::Compact));
 	return strJson;
@@ -294,6 +295,12 @@ QStringList Serialize::WrapUnSerialize(QString str) {
 	QStringList list = l.split("_");
 	list.pop_back();
 	return list;
+}
+
+int Serialize::WrapUnSerializeGetOption(QString str) {
+	QJsonDocument doc = QJsonDocument::fromJson(str.toLatin1());
+	QJsonObject obj = doc.object();
+	return obj.value("opt").toInt();
 }
 
 

@@ -38,6 +38,7 @@ private:
 	CRDT crdt;
 	Message lastMessage;
 	std::vector<Symbol> lastBigMessage;
+	int bigMessageOption = -1;
 public:
 
 	static Controller& getInstance();
@@ -75,6 +76,7 @@ public:
 	QTextEdit& Controller::symbolstoRichText();
 
 	int getDeleteIndex();
+	int getBigMessageOption();
 
 signals:
 	void textupdatefromserver(void);
