@@ -13,7 +13,7 @@ private:
 
 public:	
 	void process(const Message& m);
-	void processBig(std::vector<Symbol> v);
+	void processBig(std::vector<Symbol> v, int option);
 	void fromFiletoSymbols(std::string filename);
 	void fromFileFormattedtoSymbols(std::string filename);
 	void fromSymbolstoFile(std::string filename);

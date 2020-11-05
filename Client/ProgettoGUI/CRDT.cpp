@@ -38,22 +38,37 @@ void CRDT::process(const Message& m)
 			}
 		}
 	}
-
+	
 }
 
-void CRDT::processBig(std::vector<Symbol> v) {
+void CRDT::processBig(std::vector<Symbol> v, int type) { //type = 0 cancellazione type = 1 inserimento
 	int i = 0;
 	for (int j = 0; j < v.size(); j++) {
-		if (this->_symbols.size() != 0) {
-			while (i != this->_symbols.size() && v[j].getFrz() > this->_symbols[i].getFrz()) {
-				i++;
+		if(type == 1){
+			if (this->_symbols.size() != 0) {
+				while (i != this->_symbols.size() && v[j].getFrz() > this->_symbols[i].getFrz()) {
+					i++;
+				}
+				this->_symbols.insert(this->_symbols.begin() + i, v[j]);
 			}
-			this->_symbols.insert(this->_symbols.begin() + i, v[j]);
+
+			else
+				this->_symbols.push_back(v[j]);
 		}
 
-		else
-			this->_symbols.push_back(v[j]);
+		if (type == 0) {  //messaggio di tipo cancellazione
+			for (i = 0; i < this->_symbols.size(); i++) {
+				if ((v[j].getFrz() == this->_symbols[i].getFrz()) && (v[j].getSID() == this->_symbols[i].getSID())) {
+					this->_symbols.erase(this->_symbols.begin() + i);
+					_deleteIndex = i;
+					break;
+				}
+			}
+		}
+
+
 	}
+		
 }
 
 void CRDT::fromFiletoSymbols(std::string filename){
@@ -113,10 +128,12 @@ Message CRDT::localInsert(int index, QChar value, QFont f, QColor c) {    //inde
 	if (index == 0) {
 		if (this->_symbols.size() != 0) {
 			temp = this->_symbols[index].getFrz();
-			temp.at(temp.size() - 1)--;
-			s.Initialize(temp);
-			this->_symbols.insert(this->_symbols.begin() + index, s);
-			this->_counter++;
+			if (temp.size() != 0) {
+				temp.at(temp.size() - 1)--;
+				s.Initialize(temp);
+				this->_symbols.insert(this->_symbols.begin() + index, s);
+				this->_counter++;
+			}
 		}
 		else {
 			temp.push_back(0);

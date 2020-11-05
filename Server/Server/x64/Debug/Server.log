@@ -1,1 +1,8 @@
-﻿LINK : fatal error LNK1104: impossibile aprire il file 'D:\Lavoro\PDS_Project\Server\x64\Debug\\Server.exe'
+﻿  CRDT.cpp
+  Server.cpp
+  Service.cpp
+  TaskExecutor.cpp
+  main.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+  moc_Server.cpp
+  Server.vcxproj -> C:\Users\marte\OneDrive\Documenti\PoliTo\PDS\Server\x64\Debug\Server.exe

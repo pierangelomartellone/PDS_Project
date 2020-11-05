@@ -1396,11 +1396,20 @@ void TextEdit::updateBigText() {
 		alignmentChanged(textBlockFormat.alignment());
 		currentCursor.mergeBlockFormat(textBlockFormat);
 		lastIndexFirstSearch = charIndex;
-	} 
+	}
 	else if (option == 0) { // cancellazione
-		
-		int charIndextoDelete = Controller::getInstance().getDeleteIndex();
-		currentCursor.setPosition(lastCounter + 1, QTextCursor::MoveAnchor);
+
+		int deleteIndex = 0;
+		int tmpIndex = 0;
+		for (Symbol s : crdt.getSymbols()) {
+			if (s.getSID() == SID && lastCounter == s.getCounter()) {
+				deleteIndex = tmpIndex;
+				break;
+			}
+			tmpIndex++;
+		}
+
+		currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
 		for (int i = 0; i < lastBigMessage.size(); i++) {
 			currentCursor.deletePreviousChar();
 		}

@@ -394,7 +394,7 @@ int Controller::receiveMessage() {
 		fromOutside = true;
 		qDebug() << sym.getC();
 		emit userwriting(sym.getSID());
-		crdt.processBig(m);
+		crdt.processBig(m, bigMessageOption);
 		emit bigtextfromserver();
 		return 2;
 	}

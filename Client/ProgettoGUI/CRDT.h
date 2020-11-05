@@ -17,7 +17,7 @@ public:
 	CRDT(int siteid);
 	CRDT();
 	void process(const Message& m);
-	void processBig(std::vector<Symbol> v);
+	void processBig(std::vector<Symbol> v ,int type);
 	void fromFiletoSymbols(std::string filename);
 	void fromSymbolstoFile(std::string filename);
 	Message localInsert(int index, QChar value, QFont f, QColor c);

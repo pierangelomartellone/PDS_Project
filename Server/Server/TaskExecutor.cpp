@@ -108,7 +108,7 @@ void TaskExecutor::work(int codep) {
 			//qDebug() << QString(m.getSymbol().getC());
 
 			crdt = service.getListafileCRDT().value(f);       //otteniamo crdt associato al file
-			crdt.processBig(syms);                                  //aggiungo il messaggio al vettore di simboli salvato nell'istanza del crdt
+			crdt.processBig(syms, option);                                  //aggiungo il messaggio al vettore di simboli salvato nell'istanza del crdt
 			service.insert_crdt(f, crdt);                     //inserisce nella QHash contenente FIle e istanza del crdt
 
 			std::thread t([&]() { this->sendBigToClients(syms, f,user.getID(), option); });

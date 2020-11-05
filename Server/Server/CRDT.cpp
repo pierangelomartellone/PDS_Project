@@ -28,18 +28,30 @@ void CRDT::process(const Message& m)
 
 }
 
-void CRDT::processBig(std::vector<Symbol> v) {
+void CRDT::processBig(std::vector<Symbol> v, int option) {
 	int i = 0;
 	for (int j = 0; j < v.size(); j++) {
-		if (this->_symbols.size() != 0) {
-			while (i != this->_symbols.size() && v[j].getFrz() > this->_symbols[i].getFrz()) {
-				i++;
+		if (option == 1) {
+			if (this->_symbols.size() != 0) {
+				while (i != this->_symbols.size() && v[j].getFrz() > this->_symbols[i].getFrz()) {
+					i++;
+				}
+				this->_symbols.insert(this->_symbols.begin() + i, v[j]);
 			}
-			this->_symbols.insert(this->_symbols.begin() + i, v[j]);
-		}
 
-		else
-			this->_symbols.push_back(v[j]);
+			else
+				this->_symbols.push_back(v[j]);
+		}
+		
+
+		if (option == 0) {  //messaggio di tipo cancellazione
+			for (i = 0; i < this->_symbols.size(); i++) {
+				if ((v[j].getFrz() == this->_symbols[i].getFrz()) && (v[j].getSID() == this->_symbols[i].getSID())) {
+					this->_symbols.erase(this->_symbols.begin() + i);
+					break;
+				}
+			}
+		}
 	}
 }
 
