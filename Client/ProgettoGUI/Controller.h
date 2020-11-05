@@ -76,6 +76,7 @@ public:
 	QTextEdit& Controller::symbolstoRichText();
 
 	int getDeleteIndex();
+	int getBigDeleteLastIndex();
 	int getBigMessageOption();
 
 signals:

@@ -27,6 +27,7 @@ public:
 	bool changedFormat = false;
 	bool cursorMovefromAlignement = false;
 	bool cursorMovefromBlockFormat = false;
+	int multipleDelete = 0;
 
 	bool whoTypedEnabled = false;
 	int lastIndexFirstSearch = 0;

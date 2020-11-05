@@ -13,6 +13,7 @@ private:
 	int _counter;  //contatore dei simboli inseriti
 	int _siteId;   //identificatore per ogni editor
 	int _deleteIndex;
+	int _deleteBigIndex;
 public:	
 	CRDT(int siteid);
 	CRDT();
@@ -25,6 +26,7 @@ public:
 	Message localErase(int index);
 	void copySymbols(std::vector<Symbol>& listaSimboli);
 	int getDeleteIndex();
+	int getBigDeleteLastIndex();
 	void deleteSymbols();
 	int getSiteID();
 	std::vector<Symbol> getSymbols();

@@ -651,6 +651,10 @@ int Controller::getDeleteIndex() {
 	return crdt.getDeleteIndex();
 }
 
+int Controller::getBigDeleteLastIndex() {
+	return crdt.getBigDeleteLastIndex();
+}
+
 int Controller::getBigMessageOption() {
 	return bigMessageOption;
 }

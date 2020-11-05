@@ -1151,6 +1151,11 @@ void TextEdit::textChanged() {
 		// antibounce quando una modifica viene da WhoTyped
 		return;
 	}
+	if (multipleDelete > 0) {
+		// antibounce quando accade una cancellazione BIG (maggiore di n caratteri)
+		multipleDelete--;
+		return;
+	}
 
 	CRDT crdt = Controller::getInstance().getCRDT();
 	int tosee = currentCursor.anchor();
@@ -1396,27 +1401,25 @@ void TextEdit::updateBigText() {
 		alignmentChanged(textBlockFormat.alignment());
 		currentCursor.mergeBlockFormat(textBlockFormat);
 		lastIndexFirstSearch = charIndex;
+
+		//visualizza dove l'utente esterno sta facendo modifiche
+		showUserCursor(SID, currentCursor);
 	}
 	else if (option == 0) { // cancellazione
 
-		int deleteIndex = 0;
-		int tmpIndex = 0;
-		for (Symbol s : crdt.getSymbols()) {
-			if (s.getSID() == SID && lastCounter == s.getCounter()) {
-				deleteIndex = tmpIndex;
-				break;
+		int deleteIndex = Controller::getInstance().getBigDeleteLastIndex();
+		if (deleteIndex != -9) {
+			multipleDelete = lastBigMessage.size();
+
+			currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
+			for (int i = 0; i < lastBigMessage.size(); i++) {
+				currentCursor.deletePreviousChar();
 			}
-			tmpIndex++;
 		}
-
-		currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
-		for (int i = 0; i < lastBigMessage.size(); i++) {
-			currentCursor.deletePreviousChar();
-		}
+		
+		//visualizza dove l'utente esterno sta facendo modifiche
+		showUserCursor(SID, currentCursor);
 	}
-
-	//visualizza dove l'utente esterno sta facendo modifiche
-	showUserCursor(SID, currentCursor);
 
 	//  reset original position
 	currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);

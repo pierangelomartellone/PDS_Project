@@ -60,7 +60,7 @@ void CRDT::processBig(std::vector<Symbol> v, int type) { //type = 0 cancellazion
 			for (i = 0; i < this->_symbols.size(); i++) {
 				if ((v[j].getFrz() == this->_symbols[i].getFrz()) && (v[j].getSID() == this->_symbols[i].getSID())) {
 					this->_symbols.erase(this->_symbols.begin() + i);
-					_deleteIndex = i;
+					_deleteBigIndex = i;
 					break;
 				}
 			}
@@ -247,6 +247,13 @@ void CRDT::copySymbols(std::vector<Symbol>& listaSimboli)
 
 int CRDT::getDeleteIndex() {
 	int valore = _deleteIndex;
+	this->_deleteIndex = -9;
+	return valore;
+}
+
+int CRDT::getBigDeleteLastIndex()
+{
+	int valore = _deleteBigIndex;
 	this->_deleteIndex = -9;
 	return valore;
 }
