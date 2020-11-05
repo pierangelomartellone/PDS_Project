@@ -1409,12 +1409,11 @@ void TextEdit::updateBigText() {
 
 		int deleteIndex = Controller::getInstance().getBigDeleteLastIndex();
 		if (deleteIndex != -9) {
-			multipleDelete = lastBigMessage.size();
-
+			multipleDelete = 1;
+			qDebug() << QString("TODELETE") + deleteIndex;
 			currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
-			for (int i = 0; i < lastBigMessage.size(); i++) {
-				currentCursor.deletePreviousChar();
-			}
+			currentCursor.setPosition(deleteIndex - lastBigMessage.size(), QTextCursor::KeepAnchor);
+			currentCursor.removeSelectedText();
 		}
 		
 		//visualizza dove l'utente esterno sta facendo modifiche
