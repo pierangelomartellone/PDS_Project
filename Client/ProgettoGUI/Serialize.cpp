@@ -271,6 +271,10 @@ std::vector<Symbol> Serialize::symbolsUnserialize(QStringList symbols)
 		s.Initialize(vec);
 		vett.push_back(s);
 	}
+	if (vett.size() != 0) {
+		if (vett.at(vett.size() - 1).getC() == '\0')
+			vett.pop_back();
+	}
 	return vett;
 }
 

@@ -188,8 +188,8 @@ int Controller::openFile(std::string name) {
 	QString read(datas);
 	listasimboli = s.fromBlockToList(read);  //trasforma la lettura in una lista di json
 	symbolList = s.symbolsUnserialize(listasimboli);
-	if(symbolList.size() != 1 && symbolList.at(0).getC() != '\0')
-		crdt.copySymbols(symbolList);
+	//if(symbolList.size() != 1 && symbolList.at(0).getC() != '\0')
+	crdt.copySymbols(symbolList);
 	fromOutside = true;
 	return 1;
 }
