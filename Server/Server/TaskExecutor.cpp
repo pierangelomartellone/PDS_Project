@@ -74,7 +74,7 @@ void TaskExecutor::work(int codep) {
 		bloccoshared.unlock();
 
 		std::string toprint = std::to_string(code) + local.toStdString();
-		qDebug() << toprint.c_str();
+		//qDebug() << toprint.c_str();
 
 		int messageType = serialize.getTypeSerialization(local);
 		if (messageType == saveFileAs) {
@@ -89,7 +89,7 @@ void TaskExecutor::work(int codep) {
 			CRDT crdt;
 			File f = service.getFilefromUser(user);
 			Message m = serialize.messageUnserialize(local);
-			qDebug() << QString(m.getSymbol().getC());
+		//	qDebug() << QString(m.getSymbol().getC());
 
 			crdt = service.getListafileCRDT().value(f);       //otteniamo crdt associato al file
 			crdt.process(m);                                  //aggiungo il messaggio al vettore di simboli salvato nell'istanza del crdt

@@ -188,7 +188,8 @@ int Controller::openFile(std::string name) {
 	QString read(datas);
 	listasimboli = s.fromBlockToList(read);  //trasforma la lettura in una lista di json
 	symbolList = s.symbolsUnserialize(listasimboli);
-	crdt.copySymbols(symbolList);
+	if(symbolList.size() != 1 && symbolList.at(0).getC() != '\0')
+		crdt.copySymbols(symbolList);
 	fromOutside = true;
 	return 1;
 }
@@ -380,7 +381,7 @@ int Controller::receiveMessage() {
 	QString ack("MSGOK");
 
 	QByteArray datas = socket->readAll();
-	qDebug() << datas;
+	//qDebug() << datas;
 	
 	QString bigjson(datas); int typebig;
 	if (bigjson.startsWith("{\"l\":") )
@@ -392,7 +393,7 @@ int Controller::receiveMessage() {
 		bigMessageOption = s.WrapUnSerializeGetOption(bigjson);
 		Symbol sym = m.at(sizeof(m) - 2);
 		fromOutside = true;
-		qDebug() << sym.getC();
+	//	qDebug() << sym.getC();
 		emit userwriting(sym.getSID());
 		crdt.processBig(m, bigMessageOption);
 		emit bigtextfromserver();
@@ -411,7 +412,7 @@ int Controller::receiveMessage() {
 			lastMessage = m;
 			Symbol sym = m.getSymbol();
 			fromOutside = true;
-			qDebug() << sym.getC();
+			//qDebug() << sym.getC();
 
 			emit userwriting(sym.getSID());
 			crdt.process(m);

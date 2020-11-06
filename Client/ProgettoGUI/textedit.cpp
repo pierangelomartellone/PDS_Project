@@ -1165,7 +1165,7 @@ void TextEdit::textChanged() {
 	if (lastCursor < currentCursor.anchor()) {
 		insertordelete = 1; 		 // inserimento
 
-		for (int cursore = lastCursor; cursore < currentCursor.anchor(); cursore++) {
+		for (int cursore = lastCursor; cursore < currentCursor.anchor(); cursore++) {  /*errore in last cursor che è una posizione indietro*/
 			// FORMATO : Segoe UI Semilight, 20,-1,0,75,1,1,0,-,-
 			// FORMATO : Font_family, size, size_pix, weight (our alignment), bold, italic, underlin,
 			// per implementare il copia e incolla formattato bisognerebbe spostare il cursore. 
@@ -1186,7 +1186,7 @@ void TextEdit::textChanged() {
 
 			char inserito = qinserito.toLatin1();
 			int usercode = 0;  // taken from server
-			qDebug() << inserito;
+			//qDebug() << inserito;
 
 			Message m = crdt.localInsert(cursore, qinserito, font, color);
 
@@ -1210,7 +1210,7 @@ void TextEdit::textChanged() {
 			//Symbol s(cursore, usercode, inserito, font, color);
 			//Message m(s, insertordelete, usercode);
 			Message m = crdt.localErase(cursore);
-			qDebug() << m.getSymbol().getC();
+			//qDebug() << m.getSymbol().getC();
 
 			toSend.append(m);
 		}
@@ -1235,7 +1235,7 @@ void TextEdit::textChanged() {
 				int usercode = 0;  // taken from server
 
 				Message m = crdt.localErase(cursore);
-				qDebug() << m.getSymbol().getC();
+				//qDebug() << m.getSymbol().getC();
 
 				toSend.append(m);
 			}
@@ -1268,7 +1268,7 @@ void TextEdit::textChanged() {
 			toSend.append(m);
 		}
 	}
-
+	this->lastCursor = currentCursor.position();
 	std::thread t([=]() {
 		if (toSend.size() > 50)
 			Controller::getInstance().notifyBigChange(toSend, insertordelete);
@@ -1280,7 +1280,7 @@ void TextEdit::textChanged() {
 		});
 
 	Controller::getInstance().saveCRDT(crdt);
-	this->lastCursor = currentCursor.position();
+	
 	this->lastText = textEdit->toPlainText();
 	t.join();
 }
@@ -1304,7 +1304,7 @@ QFont TextEdit::produceFontwithAlignment(QString s, int alignCode) {
 		}
 	}
 	QString newfontstring = leftpart + rightpart;
-	qDebug() << newfontstring;
+	//qDebug() << newfontstring;
 	newfont.fromString(leftpart + rightpart);
 	return newfont;
 }
@@ -1410,7 +1410,7 @@ void TextEdit::updateBigText() {
 		int deleteIndex = Controller::getInstance().getBigDeleteLastIndex();
 		if (deleteIndex != -9) {
 			multipleDelete = 1;
-			qDebug() << QString("TODELETE") + deleteIndex;
+			//qDebug() << QString("TODELETE") + deleteIndex;
 			currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
 			currentCursor.setPosition(deleteIndex - lastBigMessage.size(), QTextCursor::KeepAnchor);
 			currentCursor.removeSelectedText();
