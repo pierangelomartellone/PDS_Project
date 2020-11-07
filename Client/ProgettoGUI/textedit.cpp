@@ -1151,9 +1151,9 @@ void TextEdit::textChanged() {
 		// antibounce quando una modifica viene da WhoTyped
 		return;
 	}
-	if (multipleDelete > 0) {
+	if (multipleDelete == true) {
 		// antibounce quando accade una cancellazione BIG (maggiore di n caratteri)
-		multipleDelete--;
+		multipleDelete = false;
 		return;
 	}
 
@@ -1409,7 +1409,7 @@ void TextEdit::updateBigText() {
 
 		int deleteIndex = Controller::getInstance().getBigDeleteLastIndex();
 		if (deleteIndex != -9) {
-			multipleDelete = 1;
+			multipleDelete = true;
 
 			currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
 			currentCursor.setPosition(deleteIndex - lastBigMessage.size() +1, QTextCursor::KeepAnchor);
