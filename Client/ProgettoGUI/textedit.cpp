@@ -1410,9 +1410,9 @@ void TextEdit::updateBigText() {
 		int deleteIndex = Controller::getInstance().getBigDeleteLastIndex();
 		if (deleteIndex != -9) {
 			multipleDelete = 1;
-			//qDebug() << QString("TODELETE") + deleteIndex;
+
 			currentCursor.setPosition(deleteIndex + 1, QTextCursor::MoveAnchor);
-			currentCursor.setPosition(deleteIndex - lastBigMessage.size(), QTextCursor::KeepAnchor);
+			currentCursor.setPosition(deleteIndex - lastBigMessage.size() +1, QTextCursor::KeepAnchor);
 			currentCursor.removeSelectedText();
 		}
 		

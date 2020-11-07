@@ -13,7 +13,7 @@ private:
 	int _counter;  //contatore dei simboli inseriti
 	int _siteId;   //identificatore per ogni editor
 	int _deleteIndex;
-	int _deleteBigIndex;
+	int _deleteBigIndex = -9;
 public:	
 	CRDT(int siteid);
 	CRDT();

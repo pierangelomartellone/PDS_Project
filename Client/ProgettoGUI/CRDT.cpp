@@ -60,7 +60,9 @@ void CRDT::processBig(std::vector<Symbol> v, int type) { //type = 0 cancellazion
 			for (i = 0; i < this->_symbols.size(); i++) {
 				if ((v[j].getFrz() == this->_symbols[i].getFrz()) && (v[j].getSID() == this->_symbols[i].getSID())) {
 					this->_symbols.erase(this->_symbols.begin() + i);
-					_deleteBigIndex = i;
+					//aggiorna il primo carattere
+					if(_deleteBigIndex == -9) 
+						_deleteBigIndex = i;
 					break;
 				}
 			}
@@ -254,7 +256,7 @@ int CRDT::getDeleteIndex() {
 int CRDT::getBigDeleteLastIndex()
 {
 	int valore = _deleteBigIndex;
-	this->_deleteIndex = -9;
+	this->_deleteBigIndex = -9;
 	return valore;
 }
 
