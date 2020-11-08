@@ -28,6 +28,7 @@ public:
 	bool cursorMovefromAlignement = false;
 	bool cursorMovefromBlockFormat = false;
 	bool multipleDelete = false;
+	bool anotherbounce = false;
 
 	bool whoTypedEnabled = false;
 	int lastIndexFirstSearch = 0;
@@ -90,9 +91,11 @@ private:
 	void updateCursorSAFE();
 
 	void updateBigText();
-
 	void updateText();
 	void updateTextAll();
+
+	bool compareColors(QColor c1, QColor c2);
+	bool compareFonts(QFont c1, QFont c2);
 
 	void showUserCursor(int id, QTextCursor currentCursor);
 
