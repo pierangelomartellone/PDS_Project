@@ -3,7 +3,7 @@
 
 //Costruttore Default
 uri::uri() :encoded(false), data("") {
-	if (_DEBUG) std::cout << std::endl << "--- Costruttore di Default ---" << std::endl;
+	//if (_DEBUG) std::cout << std::endl << "--- Costruttore di Default ---" << std::endl;
 }
 
 

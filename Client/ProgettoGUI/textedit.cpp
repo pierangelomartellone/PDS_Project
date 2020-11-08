@@ -1391,16 +1391,19 @@ void TextEdit::updateBigText() {
 		QColor previousColor;
 		int sameFontCounter = 1;
 		int start = charIndex;
+		int charCounter = 0;
 
 		for(Symbol s : lastBigMessage) {
 			if (enableFormatting == false) break;
+
+			charCounter++;
 
 			// fetching part
 			QFont font = s.getFont();
 			QColor color = s.getColor();
 
 			if (compareFonts(font, previousFont) == true && 
-				compareColors(color, previousColor) == true) {
+				compareColors(color, previousColor) == true && charCounter!= lastBigMessage.size()) {
 				sameFontCounter++;
 			}
 			else {

@@ -1,2 +1,5 @@
-﻿  textedit.cpp
-  ProgettoGUI.vcxproj -> D:\Lavoro\PDS_Project\Client\x64\Debug\ProgettoGUI.exe
+﻿  Uic'ing RegisterWindow.ui...
+  MyFirstWindow.cpp
+  RegisterWindow.cpp
+  moc_RegisterWindow.cpp
+  ProgettoGUI.vcxproj -> C:\Users\simon\Source\Repos\PDS_Project\Client\x64\Debug\ProgettoGUI.exe
