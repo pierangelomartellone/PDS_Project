@@ -1,5 +1,5 @@
 # PDS_Project
-###This is a project developed at Politecnico di Torino in C++ and Qt.
+###### This is a project developed at **_Politecnico di Torino_** in C++ and Qt.
 
 It deploy a Client-Server text editing system wich allows multiple users to type a document at the same time(Google docs suite like). It is guaranteed that multiple characters insert or delete, made by users simultaneously, produce the same effects on client documents. This is accomplished by using *CRDT algorithm* running on each client and on the server. We stored users on a database and for each of them a list of file wich is readable according to its permissions, using Mariadb (tables are not included in this project); the editor allows users to share with an appropriate link a document, in order to give permission to edit it. In the user table we saved username, SHA-256 hash of salted password and its corresponded salt. Every cryptographic funtionalities leverage **OpenSSL** library. 
 The GUI includes register and edit profile windows, other than text editor itself; the user can upload an image using drag and drop (both during registration and editing profile) and changes its username and password. The editor window includes "Who types" function, the share link and pdf export buttons in addition to basic text-editing functionalities. 
