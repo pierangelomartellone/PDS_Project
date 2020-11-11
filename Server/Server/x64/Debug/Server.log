@@ -1,1 +1,17 @@
-﻿C:\program files (x86)\microsoft visual studio\2019\community\MSBuild\Microsoft\VC\v160\Microsoft.CppClean.targets(76,5): warning : Il processo non può accedere al file 'c:\users\marte\onedrive\documenti\polito\pds\server\x64\debug\server.pdb' perché è in uso da un altro processo.
+﻿  Moc'ing Server.h...
+  Moc'ing Serialize.h...
+  CRDT.cpp
+  File.cpp
+  main.cpp
+  Message.cpp
+  Serialize.cpp
+  Server.cpp
+  Service.cpp
+  Symbol.cpp
+  TaskExecutor.cpp
+  Utente.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+  qrc_Server.cpp
+  moc_Server.cpp
+  moc_Serialize.cpp
+  Server.vcxproj -> C:\Users\marte\OneDrive\Documenti\PoliTo\PDS\Server\x64\Debug\Server.exe

@@ -1,13 +1,2 @@
-﻿  FileExplorerWindow.cpp
-  Settings.cpp
-  qrc_ProgettoGUI.cpp
-  moc_ProgettoGUI.cpp
-  moc_Settings.cpp
-  moc_Controller.cpp
-  moc_RegisterWindow.cpp
-  moc_Serialize.cpp
-  moc_textedit.cpp
-  moc_MyFirstWindow.cpp
-  moc_mainwindow.cpp
-  moc_FileExplorerWindow.cpp
+﻿  textedit.cpp
   ProgettoGUI.vcxproj -> C:\Users\marte\OneDrive\Documenti\PoliTo\PDS\Client\x64\Release\ProgettoGUI.exe

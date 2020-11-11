@@ -1,31 +1,22 @@
-{"Sid":3,"blue":0,"carattere":0,"counter":62,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[0],"red":0}
-{"Sid":3,"blue":0,"carattere":67,"counter":63,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[1],"red":0}
-{"Sid":3,"blue":0,"carattere":105,"counter":64,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[2],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":65,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[3],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":66,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[4],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":67,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[5],"red":0}
-{"Sid":3,"blue":0,"carattere":99,"counter":68,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[6],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":69,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[7],"red":0}
-{"Sid":3,"blue":0,"carattere":109,"counter":70,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[8],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":71,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[9],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":72,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[10],"red":0}
-{"Sid":3,"blue":0,"carattere":118,"counter":73,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[11],"red":0}
-{"Sid":3,"blue":0,"carattere":97,"counter":74,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[12],"red":0}
-{"Sid":3,"blue":0,"carattere":63,"counter":75,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[13],"red":0}
-{"Sid":3,"blue":0,"carattere":10,"counter":76,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[14],"red":0}
-{"Sid":3,"blue":0,"carattere":84,"counter":77,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[15],"red":0}
-{"Sid":3,"blue":0,"carattere":117,"counter":78,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[16],"red":0}
-{"Sid":3,"blue":0,"carattere":116,"counter":79,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[17],"red":0}
-{"Sid":3,"blue":0,"carattere":116,"counter":80,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[18],"red":0}
-{"Sid":3,"blue":0,"carattere":111,"counter":81,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[19],"red":0}
-{"Sid":3,"blue":0,"carattere":32,"counter":82,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[20],"red":0}
-{"Sid":3,"blue":0,"carattere":98,"counter":83,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[21],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":84,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[22],"red":0}
-{"Sid":3,"blue":0,"carattere":110,"counter":85,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[23],"red":0}
-{"Sid":3,"blue":0,"carattere":101,"counter":86,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[24],"red":0}
-{"Sid":3,"blue":0,"carattere":10,"counter":87,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[25],"red":0}
-{"Sid":3,"blue":0,"carattere":10,"counter":88,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[26],"red":0}
-{"Sid":3,"blue":0,"carattere":10,"counter":89,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[27],"red":0}
-{"Sid":3,"blue":0,"carattere":79,"counter":90,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[28],"red":0}
-{"Sid":3,"blue":0,"carattere":107,"counter":91,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[29],"red":0}
-{"Sid":3,"blue":0,"carattere":46,"counter":92,"font":"MS Shell Dlg 2,26,-1,4,50,0,0,0,0,0","green":0,"parte_frazionaria":[30],"red":0}
+{"Sid":2,"b":0,"c":81,"ct":1,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[-2],"r":0}
+{"Sid":2,"b":0,"c":117,"ct":2,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[-2,5],"r":0}
+{"Sid":2,"b":0,"c":101,"ct":3,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[-2,6],"r":0}
+{"Sid":2,"b":0,"c":115,"ct":4,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[-2,7],"r":0}
+{"Sid":3,"b":0,"c":10,"ct":18,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[-1],"r":0}
+{"Sid":3,"b":0,"c":81,"ct":1,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[0],"r":0}
+{"Sid":3,"b":0,"c":117,"ct":2,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[1],"r":0}
+{"Sid":3,"b":0,"c":101,"ct":3,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[2],"r":0}
+{"Sid":3,"b":0,"c":115,"ct":4,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[3],"r":0}
+{"Sid":3,"b":0,"c":116,"ct":5,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[4],"r":0}
+{"Sid":3,"b":0,"c":111,"ct":6,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[5],"r":0}
+{"Sid":3,"b":0,"c":32,"ct":7,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[6],"r":0}
+{"Sid":3,"b":0,"c":232,"ct":8,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[7],"r":0}
+{"Sid":3,"b":0,"c":32,"ct":9,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[8],"r":0}
+{"Sid":3,"b":0,"c":117,"ct":10,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[9],"r":0}
+{"Sid":3,"b":0,"c":110,"ct":11,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[10],"r":0}
+{"Sid":3,"b":0,"c":32,"ct":12,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[11],"r":0}
+{"Sid":3,"b":0,"c":116,"ct":13,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[12],"r":0}
+{"Sid":3,"b":0,"c":101,"ct":14,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[13],"r":0}
+{"Sid":3,"b":0,"c":115,"ct":15,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[14],"r":0}
+{"Sid":3,"b":0,"c":116,"ct":16,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[15],"r":0}
+{"Sid":3,"b":0,"c":46,"ct":17,"f":"Segoe UI Semilight,20,-1,1,50,0,0,0,0,0","g":0,"pt":[16],"r":0}

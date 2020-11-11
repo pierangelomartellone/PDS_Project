@@ -1480,6 +1480,7 @@ void TextEdit::updateBigText() {
 	//  reset original position
 	currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
 	lastText = textEdit->toPlainText();
+	cursorMovefromUpdate = false;
 }
 
 
@@ -1581,6 +1582,7 @@ void TextEdit::updateText() {
 	//  reset original position
 	currentCursor.setPosition(lastCursor, QTextCursor::MoveAnchor);
 	lastText = textEdit->toPlainText();
+	cursorMovefromUpdate = false;
 }
 
 
